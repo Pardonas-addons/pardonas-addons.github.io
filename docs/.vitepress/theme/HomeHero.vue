@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
+import { homeShots } from './addons'
 import { usePardona } from './usePardona'
 import ShotFrame from './ShotFrame.vue'
 import MockBuffList from './MockBuffList.vue'
@@ -30,9 +31,34 @@ const { texts, prefix } = usePardona()
       <div class="home-hero-collage">
         <div class="collage-stage">
           <img class="collage-emblem" :src="withBase('/pardona.svg')" alt="" width="420" height="420" />
-          <ShotFrame class="collage-buffs" :tilt="-5"><MockBuffList variant="short" /></ShotFrame>
-          <ShotFrame class="collage-item" :tilt="4"><MockItemTooltip /></ShotFrame>
-          <ShotFrame class="collage-minimap" :tilt="-2"><MockMinimap /></ShotFrame>
+          <!-- The mocks are the fallback when an entry in homeShots is removed. -->
+          <ShotFrame
+            class="collage-buffs"
+            v-bind="homeShots.buffList"
+            :alt="texts.shotAlt.hero.buffList"
+            loading="eager"
+            :tilt="-5"
+          >
+            <MockBuffList variant="short" />
+          </ShotFrame>
+          <ShotFrame
+            class="collage-item"
+            v-bind="homeShots.tooltip"
+            :alt="texts.shotAlt.hero.tooltip"
+            loading="eager"
+            :tilt="4"
+          >
+            <MockItemTooltip />
+          </ShotFrame>
+          <ShotFrame
+            class="collage-minimap"
+            v-bind="homeShots.minimap"
+            :alt="texts.shotAlt.hero.minimap"
+            loading="eager"
+            :tilt="-2"
+          >
+            <MockMinimap />
+          </ShotFrame>
         </div>
       </div>
     </div>
@@ -225,20 +251,22 @@ const { texts, prefix } = usePardona()
   width: 360px;
 }
 
+/* Sizes follow the screenshots' aspect ratios: buff list ~237px high, tooltip ~201px, minimap ~302px.
+   The tooltip sits below the buff list and right of the minimap so no text is covered. */
 .collage-item {
   position: absolute;
-  top: 190px;
+  top: 245px;
   right: 0;
   z-index: 2;
-  width: 330px;
+  width: 320px;
 }
 
 .collage-minimap {
   position: absolute;
   bottom: 10px;
-  left: 30px;
+  left: 0;
   z-index: 3;
-  width: 300px;
+  width: 240px;
 }
 
 @supports (overflow: clip) {

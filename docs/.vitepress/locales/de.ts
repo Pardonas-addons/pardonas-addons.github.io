@@ -106,6 +106,18 @@ const de: PardonaLocale = {
             "World of Warcraft ist eine Marke von Blizzard Entertainment. Pardona's Addons stehen in keiner Verbindung zu Blizzard."
         },
         placeholderShot: 'Platzhalter-Screenshot',
+        shotAlt: {
+          addons: {
+            buffReminder: 'Warnliste des Buff Reminders mit dem Essensmenü',
+            tooltips: 'Item-Tooltip mit Vergleich zum angelegten Gegenstand',
+            ui: 'Minimap im Pardona-Stil'
+          },
+          hero: {
+            buffList: 'Warnliste des Buff Reminders',
+            tooltip: 'Item-Tooltip',
+            minimap: 'Minimap im Pardona-Stil'
+          }
+        },
         emblemAlt: 'Pardona-Emblem',
         links: {
           handbook: 'Handbuch',
