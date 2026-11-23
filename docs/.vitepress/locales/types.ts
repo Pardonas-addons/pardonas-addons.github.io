@@ -1,28 +1,116 @@
 import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
 
-/** Texts used by the custom theme components (footer, addon cards). */
+type AddonId = 'buffReminder' | 'tooltips' | 'ui'
+
+/** Tooltip lines of one addon, shown as a WoW item tooltip (AddonTooltip.vue). */
+export interface AddonTexts {
+  name: string
+  /** Bind line, e.g. "Binds when installed". */
+  bind: string
+  /** Left column of the type line, e.g. "Addon". */
+  type: string
+  /** Right column of the type line, e.g. "Interface". */
+  slot: string
+  /** Lines starting with "+". */
+  stats: string[]
+  /** Green "Equip:" line. */
+  equip: string
+  /** Flavour quote, including quotation marks. */
+  flavour: string
+  /** Requirement line (shown in red when the addon is not available). */
+  requirement: string
+  /** Sell price line; leave out to hide it. */
+  price?: string
+}
+
+/** Texts used by the custom theme components. */
 export interface PardonaTexts {
   footer: {
     legalNotice: string
     privacy: string
     trademark: string
   }
-  cards: {
+  /** Caption of a ShotFrame that shows a mock instead of a screenshot. */
+  placeholderShot: string
+  /** Alt text of the Pardona emblem. */
+  emblemAlt: string
+  links: {
     handbook: string
     curseforge: string
     wago: string
     comingSoon: string
-    notReleased: string
-    status: {
+  }
+  versions: {
+    stable: string
+    beta: string
+    alpha: string
+  }
+  /** Status pill on the addon index pages. */
+  status: Record<AddonId, string>
+  /** Quality legend on the home page. */
+  quality: {
+    epic: string
+    rare: string
+    uncommon: string
+  }
+  addons: Record<AddonId, AddonTexts>
+  mocks: {
+    buffList: {
+      title: string
+      hintShort: string
+      hintFull: string
+      missing: string
+      expiring: string
+      inBags: string
+      arcaneIntellect: string
+      wellFed: string
+      markOfTheWild: string
+      sharpeningStone: string
+      wizardOil: string
+      manaStone: string
+      ammunition: string
+    }
+    itemTooltip: {
+      name: string
+      bind: string
+      slot: string
+      stats: string
+      equip: string
+      sellPrice: string
+    }
+    minimap: {
       buffReminder: string
+      move: string
+      demo: string
       tooltips: string
       ui: string
     }
-    description: {
+    settings: {
+      suite: string
       buffReminder: string
       tooltips: string
       ui: string
+      tabModules: string
+      tabLook: string
+      minimap: string
+      buffs: string
+      loot: string
+      roll: string
+      trade: string
+      beta: string
     }
+  }
+  home: {
+    eyebrow: string
+    /** Hero title, one entry per line. */
+    title: string[]
+    tagline: string
+    primary: string
+    secondary: string
+    chips: string[]
+    pillars: { title: string; text: string }[]
+    addonsTitle: string
+    addonsSubline: string
   }
 }
 

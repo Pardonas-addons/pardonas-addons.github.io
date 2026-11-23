@@ -105,22 +105,130 @@ const de: PardonaLocale = {
           trademark:
             "World of Warcraft ist eine Marke von Blizzard Entertainment. Pardona's Addons stehen in keiner Verbindung zu Blizzard."
         },
-        cards: {
+        placeholderShot: 'Platzhalter-Screenshot',
+        emblemAlt: 'Pardona-Emblem',
+        links: {
           handbook: 'Handbuch',
           curseforge: 'CurseForge',
           wago: 'Wago',
-          comingSoon: 'folgt',
-          notReleased: 'noch nicht veröffentlicht',
-          status: {
-            buffReminder: 'Stabil + Beta',
-            tooltips: 'Beta',
-            ui: 'Alpha / in Entwicklung'
+          comingSoon: 'folgt'
+        },
+        versions: { stable: 'Version', beta: 'Beta', alpha: 'Alpha' },
+        status: {
+          buffReminder: 'Stabil + Beta',
+          tooltips: 'Beta',
+          ui: 'Alpha – in Entwicklung'
+        },
+        quality: {
+          epic: 'Episch = stabil',
+          rare: 'Selten = Beta',
+          uncommon: 'Ungewöhnlich = Alpha'
+        },
+        addons: {
+          buffReminder: {
+            name: "Pardona's Buff Reminder",
+            bind: 'Beim Installieren gebunden',
+            type: 'Addon',
+            slot: 'Oberfläche',
+            stats: ['+3 Stile', '+1 Klick bis zum Buff', '+Ablaufwarnung'],
+            equip:
+              'Anlegen: Erinnert dich an fehlende Buffs, Verbrauchsgüter und Vorräte, bevor der Pull beginnt.',
+            flavour: '„Niemand pullt ohne Wohlgenährt.“',
+            requirement: 'Benötigt WoW Forever',
+            price: 'Verkaufspreis: kostenlos'
           },
-          description: {
-            buffReminder: 'Erinnert dich an fehlende Buffs und Verbrauchsgüter.',
-            tooltips: 'Verbesserte Tooltips im Pardona-Stil.',
-            ui: 'Gestaltet Teile der Blizzard-Oberfläche im Pardona-Look um, rein optisch.'
+          tooltips: {
+            name: "Pardona's ToolTips",
+            bind: 'Beim Installieren gebunden',
+            type: 'Addon',
+            slot: 'Oberfläche',
+            stats: ['+Stil Blizzard oder Pardona', '+Rahmen in Qualitätsfarbe', '+Gesundheitsbalken'],
+            equip: 'Anlegen: Zeigt Tooltips aufgeräumt und im Pardona-Look.',
+            flavour: '„Endlich lesbar.“',
+            requirement: 'Benötigt WoW Forever',
+            price: 'Verkaufspreis: kostenlos'
+          },
+          ui: {
+            name: "Pardona's UI",
+            bind: 'Einzigartig',
+            type: 'Addon',
+            slot: 'Oberfläche',
+            stats: ['+Minimap', '+Buffs & Debuffs', '+Beute-, Würfel- und Handelsfenster'],
+            equip: 'Anlegen: Kleidet Teile der Blizzard-Oberfläche im Pardona-Look ein, rein optisch.',
+            flavour: '„Noch in der Schmiede.“',
+            requirement: 'Noch nicht verfügbar'
           }
+        },
+        mocks: {
+          buffList: {
+            title: 'Buff Reminder',
+            hintShort: '3 fehlen',
+            hintFull: 'Pardona-Stil',
+            missing: 'fehlt',
+            expiring: 'läuft ab',
+            inBags: 'in der Tasche',
+            arcaneIntellect: 'Arkane Intelligenz',
+            wellFed: 'Wohlgenährt',
+            markOfTheWild: 'Mal der Wildnis',
+            sharpeningStone: 'Wetzstein (Waffe)',
+            wizardOil: 'Zaubererleuchtöl',
+            manaStone: 'Manastein',
+            ammunition: 'Munition'
+          },
+          itemTooltip: {
+            name: 'Stab des Leerenrufers',
+            bind: 'Wird beim Aufheben gebunden',
+            slot: 'Zweihand · Stab',
+            stats: '+18 Intelligenz · +12 Ausdauer',
+            equip: 'Anlegen: Erhöht Zauberschaden um bis zu 21.',
+            sellPrice: 'Verkaufspreis: 4 g 12 s'
+          },
+          minimap: {
+            buffReminder: 'Buff Reminder',
+            move: 'Verschieben',
+            demo: 'Demo',
+            tooltips: 'ToolTips',
+            ui: 'UI'
+          },
+          settings: {
+            suite: "Pardona's Addons",
+            buffReminder: 'Buff Reminder',
+            tooltips: 'ToolTips',
+            ui: 'UI',
+            tabModules: 'Module',
+            tabLook: 'Optik',
+            minimap: 'Minimap',
+            buffs: 'Buffs & Debuffs',
+            loot: 'Beutefenster',
+            roll: 'Würfelfenster',
+            trade: 'Handelsfenster',
+            beta: '(beta)'
+          }
+        },
+        home: {
+          eyebrow: 'Made for WoW Forever',
+          title: ["Pardona's", 'Addons'],
+          tagline:
+            'Eine kleine Suite von Addons, die deine Oberfläche ordnen – jedes für sich nützlich, zusammen aus einem Guss.',
+          primary: 'Zum Buff Reminder',
+          secondary: 'Die Suite entdecken',
+          chips: ['Ein Minimap-Button', 'Eine Einstellungsgruppe', 'Ein Look'],
+          pillars: [
+            {
+              title: 'Jedes Addon für sich',
+              text: 'Installiere nur, was du brauchst. Jedes Addon bringt alles mit und läuft allein.'
+            },
+            {
+              title: 'Zusammen eine Suite',
+              text: 'Ein gemeinsamer Minimap-Button, eine Einstellungsgruppe „Pardona\'s Addons“ – nichts doppelt.'
+            },
+            {
+              title: 'Ein Look',
+              text: 'Dunkles Violett, feiner Goldrand: Alles fühlt sich an wie aus einer Hand.'
+            }
+          ],
+          addonsTitle: 'Die Addons',
+          addonsSubline: 'Fahr mit der Maus über ein Addon – wie über ein Item in der Tasche.'
         }
       }
     }

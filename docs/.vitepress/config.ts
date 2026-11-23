@@ -1,5 +1,20 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type MarkdownRenderer } from 'vitepress'
 import { locales, searchLocales } from './locales'
+
+/** Puts a small <OrnamentDivider> right after every H1 of the Markdown pages. */
+function ornamentAfterH1(md: MarkdownRenderer) {
+  md.core.ruler.push('pardona_ornament_after_h1', (state) => {
+    const tokens = state.tokens
+    for (let i = tokens.length - 1; i >= 0; i--) {
+      const t = tokens[i]
+      if (t.type === 'heading_close' && t.tag === 'h1' && t.level === 0) {
+        const divider = new state.Token('html_block', '', 0)
+        divider.content = '<OrnamentDivider size="small" align="start" class="h1-ornament" />\n'
+        tokens.splice(i + 1, 0, divider)
+      }
+    }
+  })
+}
 
 // Site-wide settings. Everything language-specific lives in ./locales/<code>.ts.
 export default defineConfig({
@@ -17,7 +32,10 @@ export default defineConfig({
 
   markdown: {
     // External links in Markdown open in a new tab.
-    externalLinks: { target: '_blank', rel: 'noopener noreferrer' }
+    externalLinks: { target: '_blank', rel: 'noopener noreferrer' },
+    config: (md) => {
+      md.use(ornamentAfterH1)
+    }
   },
 
   themeConfig: {

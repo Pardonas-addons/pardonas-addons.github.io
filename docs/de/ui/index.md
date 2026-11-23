@@ -1,5 +1,7 @@
 # UI
 
+<AddonHeader id="ui" />
+
 ::: warning
 Pardona's UI ist in Entwicklung und noch nicht veröffentlicht.
 :::
