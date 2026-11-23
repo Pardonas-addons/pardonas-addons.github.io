@@ -8,7 +8,7 @@ This repository contains the handbook and help site for **Pardona's Addons**, a 
 docs/                     English pages (root locale)
 docs/de/                  German pages (same paths as English)
 docs/public/              Static files served as-is (e.g. pardona.svg)
-docs/public/shots/        Screenshots of the addons (replace the mock placeholders)
+docs/public/shots/        Screenshots shown on the home page (see "Screenshots")
 docs/.vitepress/config.ts Site-wide configuration
 docs/.vitepress/locales/  One file per language (nav, sidebar, UI texts, search texts)
   en.ts, de.ts            Language files
@@ -66,10 +66,10 @@ All components live in `docs/.vitepress/theme/` and are registered globally, so 
 | Component | Purpose |
 | --- | --- |
 | `HomePage.vue` | The home page: `HomeHero`, an `OrnamentDivider`, `HomePillars` and `HomeAddons`. |
-| `HomeHero.vue` | Hero with title, tagline, buttons and a collage of three framed mocks. |
+| `HomeHero.vue` | Hero with title, tagline, buttons and a collage of three framed screenshots (`homeShots`). |
 | `HomePillars.vue` | Three cards: "On its own", "Together a suite", "One look". |
 | `HomeAddons.vue` | One showcase row per addon (screenshot frame + tooltip) and the quality legend. |
-| `ShotFrame.vue` | Gold "screenshot" frame. Shows `src` as an image, or the default slot (a mock) on a dark game-scene background with a "Placeholder screenshot" caption. Props: `src`, `alt`, `width`, `height`, `tilt`, `perspective` (`left`/`right`). |
+| `ShotFrame.vue` | Gold "screenshot" frame. Shows `src` as an image, or the default slot (a mock) on a dark game-scene background with a "Placeholder screenshot" caption. Props: `src`, `alt`, `width`, `height`, `fit` (`fill`/`center`), `loading` (`lazy`/`eager`), `tilt`, `perspective` (`left`/`right`). |
 | `MockBuffList.vue` | Mock of the Buff Reminder list (`variant`: `short` or `full`). |
 | `MockItemTooltip.vue` | Mock of an item tooltip (an invented item). |
 | `MockMinimap.vue` | Mock of the minimap with the shared Pardona button and its menu. |
@@ -83,14 +83,33 @@ All motion (hover lift of the tooltips, button hover) is switched off for visito
 
 ## Addon data and versions
 
-- **`docs/.vitepress/theme/addons.ts`** is the single source of truth for each addon: `id`, `quality` (`epic`/`rare`/`uncommon`), `versions` (`stable`, `beta`, `alpha`), `handbook` path, `stores` (CurseForge/Wago URL, or `'soon'`), `available` and an optional `shot`. After a release, update the version numbers there; the tooltips and headers on all pages and in all languages pick them up.
+- **`docs/.vitepress/theme/addons.ts`** is the single source of truth for each addon: `id`, `quality` (`epic`/`rare`/`uncommon`), `versions` (`stable`, `beta`, `alpha`), `handbook` path, `stores` (CurseForge/Wago URL, or `'soon'`), `available` and an optional `shot` (see "Screenshots"); `homeShots` holds the hero collage images. After a release, update the version numbers there; the tooltips and headers on all pages and in all languages pick them up.
 - **All texts** (tooltip lines, status labels, link labels, home page texts) are in the language files under `themeConfig.pardona` (`docs/.vitepress/locales/<code>.ts`); the types are in `locales/types.ts`.
 
-## Replacing placeholders with screenshots
+## Screenshots
 
-Until an addon has a screenshot, the home page shows a mock in a frame captioned "Placeholder screenshot". To replace it:
+The home page shows real in-game screenshots from `docs/public/shots/`:
 
-1. Put the image into `docs/public/shots/`, e.g. `docs/public/shots/buff-reminder.png` (16:10 works best).
+| File | Size | Shows | Used in |
+| --- | --- | --- | --- |
+| `br-list-hero.png` | 424 × 272 | Buff Reminder warning list (5 rows) | Hero collage (`homeShots.buffList`) |
+| `br-list-menu.png` | 798 × 563 | Full Buff Reminder warning list with the right-click food menu | Buff Reminder showcase (`shot`) |
+| `tt-tooltip-hero.png` | 486 × 296 | Item tooltip | Hero collage (`homeShots.tooltip`) |
+| `tt-tooltip-compare.png` | 796 × 414 | Item tooltip with the equipped-item comparison | Tooltips showcase (`shot`) |
+| `ui-minimap.png` | 303 × 374 | Minimap in the Pardona style | UI showcase (`shot`) and hero collage (`homeShots.minimap`) |
+
+A screenshot is described in `docs/.vitepress/theme/addons.ts` as `{ src, width, height, fit? }`:
+
+- `src` is the path below `docs/public/` (e.g. `'/shots/br-list-menu.png'`); the base path is added by `ShotFrame.vue`.
+- `width`/`height` are the image's real pixel size. They are set as attributes on the `<img>`, so the image does not cause layout shift.
+- `fit: 'fill'` (default): the frame takes the image's aspect ratio and the image fills the frame width. Best for screenshots cropped tightly around the interface.
+- `fit: 'center'`: the frame stays 16:10 with the dark "game scene" background and the image is centred at its natural size (scaled down if needed, never up). Best for small or portrait images.
+
+Each addon's `shot` is used in its showcase row on the home page (lazy loading). `homeShots` holds the three images of the hero collage (eager loading). Alt texts are in the language files under `themeConfig.pardona.shotAlt`. Without a screenshot, `ShotFrame` falls back to its mock, captioned "Placeholder screenshot".
+
+### Adding or replacing a screenshot
+
+1. Put the image into `docs/public/shots/`, e.g. `docs/public/shots/buff-reminder.png`.
 2. Strip all metadata before committing, e.g.
    ```bash
    exiftool -all= -overwrite_original docs/public/shots/buff-reminder.png
@@ -99,9 +118,10 @@ Until an addon has a screenshot, the home page shows a mock in a frame captioned
    ```bash
    mogrify -strip docs/public/shots/buff-reminder.png
    ```
-3. Set `shot: '/shots/buff-reminder.png'` for the addon in `docs/.vitepress/theme/addons.ts`.
+3. Set `shot: { src: '/shots/buff-reminder.png', width: …, height: …, fit: 'fill' }` for the addon in `docs/.vitepress/theme/addons.ts` (or change the entry in `homeShots`), using the image's real size.
+4. Add or adjust the alt text in every language file (`shotAlt`).
 
-The image is shown with fixed `width`/`height` attributes and lazy loading, so it does not cause layout shift. Do not use images that contain Blizzard or WoW logos or artwork beyond the in-game interface you are showing.
+Do not use images that contain Blizzard or WoW logos or artwork beyond the in-game interface you are showing.
 
 ## Build locally
 

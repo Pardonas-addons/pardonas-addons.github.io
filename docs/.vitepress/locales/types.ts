@@ -32,6 +32,17 @@ export interface PardonaTexts {
   }
   /** Caption of a ShotFrame that shows a mock instead of a screenshot. */
   placeholderShot: string
+  /** Alt texts of the screenshots (see `shot` and `homeShots` in theme/addons.ts). */
+  shotAlt: {
+    /** Showcase screenshot of each addon. */
+    addons: Record<AddonId, string>
+    /** Hero collage. */
+    hero: {
+      buffList: string
+      tooltip: string
+      minimap: string
+    }
+  }
   /** Alt text of the Pardona emblem. */
   emblemAlt: string
   links: {

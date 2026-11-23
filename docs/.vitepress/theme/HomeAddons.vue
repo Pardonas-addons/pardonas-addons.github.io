@@ -32,8 +32,11 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
     >
       <ShotFrame
         class="showcase-shot"
-        :src="a.shot"
-        :alt="texts.addons[a.id].name"
+        :src="a.shot?.src"
+        :width="a.shot?.width"
+        :height="a.shot?.height"
+        :fit="a.shot?.fit"
+        :alt="texts.shotAlt.addons[a.id]"
         :perspective="i % 2 === 1 ? 'left' : 'right'"
       >
         <component :is="mocks[a.id].component" v-bind="mocks[a.id].props" />

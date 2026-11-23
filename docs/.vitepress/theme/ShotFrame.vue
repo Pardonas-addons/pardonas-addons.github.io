@@ -5,21 +5,37 @@ import { usePardona } from './usePardona'
 
 const props = withDefaults(
   defineProps<{
-    /** Screenshot path (e.g. '/shots/buff-reminder.png'). Without it the default slot (a mock) is shown. */
+    /** Screenshot path without base (e.g. '/shots/br-list-menu.png'). Without it the default slot (a mock) is shown. */
     src?: string
     alt?: string
-    /** Intrinsic image size; avoids layout shift. Defaults to a 16:10 box. */
+    /** Intrinsic image size; avoids layout shift. Defaults to 16:10. */
     width?: number
     height?: number
+    /**
+     * 'fill': the frame takes the image's aspect ratio and the image fills its width.
+     * 'center': the frame stays 16:10 with the dark scene; the image is centred, never upscaled.
+     */
+    fit?: 'fill' | 'center'
+    /** 'eager' for images visible on first paint (hero), 'lazy' elsewhere. */
+    loading?: 'lazy' | 'eager'
     /** Rotation in degrees. */
     tilt?: number
     /** Turn the frame slightly towards one side. */
     perspective?: 'left' | 'right'
   }>(),
-  { alt: '', tilt: 0 }
+  { alt: '', width: 1600, height: 1000, fit: 'fill', loading: 'lazy', tilt: 0 }
 )
 
 const { texts } = usePardona()
+
+const imgAttrs = computed(() => ({
+  src: withBase(props.src ?? ''),
+  alt: props.alt,
+  width: props.width,
+  height: props.height,
+  loading: props.loading,
+  decoding: 'async' as const
+}))
 
 const transform = computed(() => {
   const parts: string[] = []
@@ -32,16 +48,10 @@ const transform = computed(() => {
 <template>
   <figure class="shot-frame" :style="{ transform }">
     <div class="shot-inner">
-      <img
-        v-if="src"
-        class="shot-img"
-        :src="withBase(src)"
-        :alt="alt"
-        :width="width ?? 1600"
-        :height="height ?? 1000"
-        loading="lazy"
-        decoding="async"
-      />
+      <img v-if="src && fit === 'fill'" class="shot-img" v-bind="imgAttrs" />
+      <div v-else-if="src" class="shot-scene shot-scene--center">
+        <img class="shot-img-center" v-bind="imgAttrs" />
+      </div>
       <div v-else class="shot-scene">
         <div class="shot-mock"><slot /></div>
         <span class="shot-caption">{{ texts.placeholderShot }}</span>
@@ -91,6 +101,24 @@ const transform = computed(() => {
     radial-gradient(ellipse at 15% 90%, rgba(46, 92, 52, 0.55), transparent 55%),
     radial-gradient(ellipse at 85% 10%, rgba(115, 64, 166, 0.45), transparent 55%),
     linear-gradient(160deg, #1c2a2a 0%, #0d1414 55%, #1a1022 100%);
+}
+
+/* fit="center": fixed 16:10 scene, image centred at natural size (scaled down only). */
+.shot-scene--center {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.shot-img-center {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 24px);
 }
 
 .shot-mock {
