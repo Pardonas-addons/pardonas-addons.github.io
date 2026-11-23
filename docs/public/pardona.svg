@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="disc" cx="50%" cy="40%" r="65%"><stop offset="0%" stop-color="#4a3586"/><stop offset="100%" stop-color="#140c2b"/></radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffd36b" stop-opacity="0.55"/><stop offset="100%" stop-color="#ffd36b" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff1b8"/><stop offset="50%" stop-color="#f2c14e"/><stop offset="100%" stop-color="#a8681a"/></linearGradient>
+    <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff6d6"/><stop offset="55%" stop-color="#f2c14e"/><stop offset="100%" stop-color="#b8741c"/></linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="url(#gold)"/>
+  <circle cx="128" cy="128" r="112" fill="url(#disc)"/>
+  <circle cx="128" cy="128" r="92" fill="url(#glow)"/>
+  <g fill="#f2c14e" opacity="0.85">
+    <path d="M128 24 l6 9 -6 9 -6 -9z"/><path d="M128 232 l6 -9 -6 -9 -6 9z"/>
+    <path d="M 24 128 l9 -6 9 6 -9 6z"/><path d="M 232 128 l-9 -6 -9 6 9 6z"/>
+  </g>
+  <g transform="translate(128 132)">
+    <path d="M-30 -62 H12 C44 -62 58 -44 58 -22 C58 2 42 18 10 18 H-6 V52 H14 V64 H-46 V52 H-30 V-50 H-46 V-62 Z M-6 -50 V6 H8 C26 6 34 -6 34 -22 C34 -38 26 -50 8 -50 Z"
+          fill="url(#pg)" stroke="#5a3408" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+</svg>

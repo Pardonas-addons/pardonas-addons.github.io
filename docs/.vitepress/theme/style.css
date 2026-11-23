@@ -1,0 +1,196 @@
+/*
+ * "Pardona" theme: dark purple with gold accents.
+ * The site is dark only (appearance: 'force-dark'), but the variables are set
+ * for :root and .dark so nothing falls back to the light defaults.
+ */
+
+:root,
+.dark {
+  /* Backgrounds */
+  --vp-c-bg: #140821;
+  --vp-c-bg-alt: rgba(51, 23, 76, 0.72);
+  --vp-c-bg-elv: #241036;
+  --vp-c-bg-soft: #472466;
+  --pardona-card-bg: rgba(51, 23, 76, 0.6);
+
+  /* Text */
+  --vp-c-text-1: #f2edff;
+  --vp-c-text-2: #a894c2;
+  --vp-c-text-3: #8c7aa6;
+
+  /* Brand: gold */
+  --vp-c-brand-1: #d9ad40;
+  --vp-c-brand-2: #ffd140;
+  --vp-c-brand-3: #d9ad40;
+  --vp-c-brand-soft: rgba(217, 173, 64, 0.16);
+
+  /* Accent: purple */
+  --vp-c-tip-1: #c9a6f0;
+  --vp-c-tip-2: #b58ae6;
+  --vp-c-tip-3: #7340a6;
+  --vp-c-tip-soft: rgba(115, 64, 166, 0.3);
+
+  /* Dividers */
+  --vp-c-divider: rgba(217, 173, 64, 0.35);
+  --vp-c-border: rgba(217, 173, 64, 0.35);
+  --vp-c-gutter: rgba(217, 173, 64, 0.2);
+
+  /* Nav and sidebar */
+  --vp-nav-bg-color: rgba(51, 23, 76, 0.82);
+  --vp-nav-screen-bg-color: #1f0d33;
+  --vp-local-nav-bg-color: rgba(51, 23, 76, 0.82);
+  --vp-sidebar-bg-color: rgba(51, 23, 76, 0.55);
+
+  /* Buttons */
+  --vp-button-brand-border: #d9ad40;
+  --vp-button-brand-text: #ffd140;
+  --vp-button-brand-bg: #472466;
+  --vp-button-brand-hover-border: #ffd140;
+  --vp-button-brand-hover-text: #ffd140;
+  --vp-button-brand-hover-bg: #5a2e80;
+  --vp-button-brand-active-border: #ffd140;
+  --vp-button-brand-active-text: #ffd140;
+  --vp-button-brand-active-bg: #7340a6;
+
+  --vp-button-alt-border: #d9ad40;
+  --vp-button-alt-text: #ffd140;
+  --vp-button-alt-bg: #472466;
+  --vp-button-alt-hover-border: #ffd140;
+  --vp-button-alt-hover-text: #ffd140;
+  --vp-button-alt-hover-bg: #5a2e80;
+  --vp-button-alt-active-border: #ffd140;
+  --vp-button-alt-active-text: #ffd140;
+  --vp-button-alt-active-bg: #7340a6;
+
+  /* Home hero */
+  --vp-home-hero-name-color: #ffd140;
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle,
+    rgba(255, 209, 64, 0.28) 0%,
+    rgba(115, 64, 166, 0.35) 45%,
+    rgba(20, 8, 33, 0) 70%
+  );
+  --vp-home-hero-image-filter: blur(48px);
+
+  /* Custom blocks */
+  --vp-custom-block-info-border: rgba(217, 173, 64, 0.35);
+  --vp-custom-block-info-text: #f2edff;
+  --vp-custom-block-info-bg: rgba(71, 36, 102, 0.6);
+
+  --vp-custom-block-tip-border: #7340a6;
+  --vp-custom-block-tip-text: #f2edff;
+  --vp-custom-block-tip-bg: rgba(115, 64, 166, 0.3);
+
+  --vp-custom-block-warning-border: #d9ad40;
+  --vp-custom-block-warning-text: #f2edff;
+  --vp-custom-block-warning-bg: rgba(217, 173, 64, 0.14);
+
+  --vp-custom-block-danger-border: #e0607a;
+  --vp-custom-block-danger-text: #f2edff;
+  --vp-custom-block-danger-bg: rgba(224, 96, 122, 0.14);
+
+  /* Code */
+  --vp-code-block-bg: rgba(20, 8, 33, 0.75);
+  --vp-code-bg: rgba(115, 64, 166, 0.35);
+  --vp-code-color: #ffd140;
+
+  /* Local search */
+  --vp-local-search-bg: #1f0d33;
+  --vp-local-search-result-bg: #2a1340;
+  --vp-local-search-result-border: rgba(217, 173, 64, 0.35);
+  --vp-local-search-result-selected-bg: #472466;
+  --vp-local-search-result-selected-border: #d9ad40;
+  --vp-local-search-highlight-bg: #d9ad40;
+  --vp-local-search-highlight-text: #140821;
+}
+
+/* Page background: fixed vertical gradient. */
+html,
+body {
+  background-color: #140821;
+}
+
+body {
+  background-image: linear-gradient(180deg, #33174c 0%, #140821 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Headings */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  color: var(--vp-c-brand-2);
+}
+
+.vp-doc h2 {
+  border-top-color: var(--vp-c-divider);
+}
+
+/* Links */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+}
+
+/* Rounded corners and thin borders */
+.custom-block {
+  border-radius: 8px;
+}
+
+.custom-block.info {
+  border-width: 1px;
+}
+
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
+}
+
+@media (min-width: 640px) {
+  .vp-doc div[class*='language-'] {
+    border-radius: 8px;
+  }
+}
+
+.VPButton {
+  border-radius: 8px !important;
+}
+
+.VPFeature,
+.VPLocalSearchBox .shell {
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 8px;
+}
+
+/* Tables */
+.vp-doc table {
+  border-radius: 8px;
+}
+
+.vp-doc tr {
+  border-top-color: var(--vp-c-divider);
+}
+
+.vp-doc th,
+.vp-doc td {
+  border-color: var(--vp-c-divider);
+}
+
+.vp-doc th {
+  background-color: rgba(71, 36, 102, 0.8);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: rgba(51, 23, 76, 0.45);
+}
+
+/* Home page section below the hero */
+.pardona-home {
+  max-width: 1152px;
+  margin: 0 auto;
+}
