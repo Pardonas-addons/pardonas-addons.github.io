@@ -19,3 +19,5 @@ If you are not sure whether the problem is in the library, use the issues of the
 - the **full Lua error text**, if there is one,
 - which **other addons** are active,
 - the **steps to reproduce** the problem.
+
+To see Lua errors, type `/console scriptErrors 1` once, or use an error addon such as BugSack.

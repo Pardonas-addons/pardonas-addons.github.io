@@ -8,7 +8,7 @@ This repository contains the handbook and help site for **Pardona's Addons**, a 
 docs/                     English pages (root locale)
 docs/de/                  German pages (same paths as English)
 docs/public/              Static files served as-is (e.g. pardona.svg)
-docs/public/shots/        Screenshots shown on the home page (see "Screenshots")
+docs/public/shots/        Screenshots shown on the home page and in the handbook (see "Screenshots")
 docs/.vitepress/config.ts Site-wide configuration
 docs/.vitepress/locales/  One file per language (nav, sidebar, UI texts, search texts)
   en.ts, de.ts            Language files
@@ -22,13 +22,15 @@ docs/.vitepress/theme/    Custom "Pardona" theme (extends the default theme)
   PardonaFooter.vue       Footer shown on every page (legal notice, privacy, trademark note)
   Home*.vue               Sections of the home page (see "Design")
   Addon*.vue, Mock*.vue,  Building blocks (see "Design")
-  ShotFrame.vue, OrnamentDivider.vue
+  ShotFrame.vue, OrnamentDivider.vue,
+  DocShot.vue, DocShotRow.vue
 .github/workflows/pages.yml  Build and (optional) deployment
 ```
 
 ## Editing content
 
 - Pages are Markdown files under `docs/` (English) and `docs/de/` (German).
+- The handbook content of each addon comes from the addon's team and is kept here in `docs/` (English) and `docs/de/` (German).
 - **Every page has the same path in every language**, e.g. `docs/buff-reminder/getting-started.md` and `docs/de/buff-reminder/getting-started.md`. This way the language switcher always lands on the same page. When you add a page, add it in every language.
 - The sidebar and the navigation are defined per language in `docs/.vitepress/locales/<code>.ts`. When you add a page, add it to the sidebar in every language file.
 - Texts of the custom components (footer, home page, addon tooltips, mocks) are also in the language files (`themeConfig.pardona`).
@@ -77,6 +79,8 @@ All components live in `docs/.vitepress/theme/` and are registered globally, so 
 | `AddonTooltip.vue` | An addon shown as an item tooltip (`<AddonTooltip id="buffReminder" />`). |
 | `AddonHeader.vue` | Compact strip with icon, name, status and links for the addon index pages (`<AddonHeader id="tooltips" />`). |
 | `AddonIcon.vue`, `AddonLinks.vue` | Icon and chat-link style links shared by the two components above. |
+| `DocShot.vue` | A screenshot in a handbook page: centred figure in the gold frame, shown at its real size at most (never upscaled), lazy loading, optional caption. Props: `src`, `alt`, `width`, `height`, `caption`. |
+| `DocShotRow.vue` | Shows several `DocShot`s side by side; each shrinks in proportion to its width and the row wraps on small screens. |
 | `OrnamentDivider.vue` | Gold lines with a diamond (`size`: `large`/`small`, `align`: `center`/`start`). A small one is inserted after every H1 by a Markdown plugin in `config.ts`, so pages need no extra markup. |
 
 All motion (hover lift of the tooltips, button hover) is switched off for visitors who prefer reduced motion.
@@ -88,15 +92,19 @@ All motion (hover lift of the tooltips, button hover) is switched off for visito
 
 ## Screenshots
 
-The home page shows real in-game screenshots from `docs/public/shots/`:
+The home page and the handbook show real in-game screenshots from `docs/public/shots/`:
 
 | File | Size | Shows | Used in |
 | --- | --- | --- | --- |
-| `br-list-hero.png` | 424 × 272 | Buff Reminder warning list (5 rows) | Hero collage (`homeShots.buffList`) |
+| `br-list-hero.png` | 424 × 272 | Buff Reminder warning list (5 rows) | Hero collage (`homeShots.buffList`); handbook: `buff-reminder/index.md` |
 | `br-list-menu.png` | 798 × 563 | Full Buff Reminder warning list with the right-click food menu | Buff Reminder showcase (`shot`) |
 | `tt-tooltip-hero.png` | 486 × 296 | Item tooltip | Hero collage (`homeShots.tooltip`) |
-| `tt-tooltip-compare.png` | 796 × 414 | Item tooltip with the equipped-item comparison | Tooltips showcase (`shot`) |
-| `ui-minimap.png` | 303 × 374 | Minimap in the Pardona style | UI showcase (`shot`) and hero collage (`homeShots.minimap`) |
+| `tt-tooltip-compare.png` | 796 × 414 | Item tooltip with the equipped-item comparison | Tooltips showcase (`shot`); handbook: `tooltips/index.md` |
+| `ui-minimap.png` | 303 × 374 | Minimap in the Pardona style | UI showcase (`shot`) and hero collage (`homeShots.minimap`); handbook: `ui/index.md`, `ui/modules.md` |
+| `br-settings-display.png` | 1102 × 878 | Buff Reminder settings, Display tab | Handbook: `buff-reminder/getting-started.md` |
+| `br-style-pardona.png` | 424 × 563 | Buff Reminder warning list, Pardona style | Handbook: `buff-reminder/features.md` (style row) |
+| `br-style-classic.png` | 424 × 563 | Buff Reminder warning list, Classic style | Handbook: `buff-reminder/features.md` (style row) |
+| `br-style-compact.png` | 328 × 321 | Buff Reminder warning list, Compact style | Handbook: `buff-reminder/features.md` (style row) |
 
 A screenshot is described in `docs/.vitepress/theme/addons.ts` as `{ src, width, height, fit? }`:
 
@@ -106,6 +114,21 @@ A screenshot is described in `docs/.vitepress/theme/addons.ts` as `{ src, width,
 - `fit: 'center'`: the frame stays 16:10 with the dark "game scene" background and the image is centred at its natural size (scaled down if needed, never up). Best for small or portrait images.
 
 Each addon's `shot` is used in its showcase row on the home page (lazy loading). `homeShots` holds the three images of the hero collage (eager loading). Alt texts are in the language files under `themeConfig.pardona.shotAlt`. Without a screenshot, `ShotFrame` falls back to its mock, captioned "Placeholder screenshot".
+
+### Screenshots in handbook pages
+
+Handbook pages use `DocShot` (one image) and `DocShotRow` (several images side by side). Pass the real pixel size; alt text and caption are written in the page's language:
+
+```md
+<DocShot src="/shots/br-settings-display.png" alt="Buff Reminder settings, Display tab" :width="1102" :height="878" />
+
+<DocShotRow>
+  <DocShot src="/shots/br-style-pardona.png" alt="Warning list in the Pardona style" :width="424" :height="563" caption="Pardona" />
+  <DocShot src="/shots/br-style-compact.png" alt="Warning list in the Compact style" :width="328" :height="321" caption="Compact" />
+</DocShotRow>
+```
+
+Screenshots that do not exist yet are kept in the page as an HTML comment (`<!-- screenshot: … -->`) describing the planned image.
 
 ### Adding or replacing a screenshot
 

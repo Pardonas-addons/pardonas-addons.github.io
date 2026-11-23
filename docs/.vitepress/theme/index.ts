@@ -8,6 +8,8 @@ import '@fontsource/cinzel/700.css'
 import PardonaFooter from './PardonaFooter.vue'
 import HomePage from './HomePage.vue'
 import ShotFrame from './ShotFrame.vue'
+import DocShot from './DocShot.vue'
+import DocShotRow from './DocShotRow.vue'
 import OrnamentDivider from './OrnamentDivider.vue'
 import AddonTooltip from './AddonTooltip.vue'
 import AddonHeader from './AddonHeader.vue'
@@ -27,6 +29,8 @@ export default {
   enhanceApp({ app }) {
     app.component('HomePage', HomePage)
     app.component('ShotFrame', ShotFrame)
+    app.component('DocShot', DocShot)
+    app.component('DocShotRow', DocShotRow)
     app.component('OrnamentDivider', OrnamentDivider)
     app.component('AddonTooltip', AddonTooltip)
     app.component('AddonHeader', AddonHeader)

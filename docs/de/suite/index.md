@@ -6,7 +6,7 @@ Pardona's Addons sind eine kleine Familie von Addons für WoW Forever, die einen
 - **Zusammen installiert wirken sie wie eine Suite.** Alle Pardona-Addons teilen sich
   - einen [Minimap-Button](./minimap-button) mit einem Menü für jedes installierte Addon,
   - einen Look (den Pardona-Stil),
-  - eine Einstellungsgruppe „Pardona's Addons“ mit jedem installierten Addon als Unterseite (siehe [Einstellungen](./settings)).
+  - eine Einstellungsgruppe „Pardona's Addons“, deren Hauptseite eine Übersicht aller installierten Pardona-Addons ist, mit jedem installierten Addon als Unterseite (siehe [Einstellungen](./settings)).
 - **Jedes Addon behält seine eigenen Einstellungen.** Wenn du ein Addon entfernst, bleiben die anderen unberührt.
 
 ## Hilfe für die ganze Suite

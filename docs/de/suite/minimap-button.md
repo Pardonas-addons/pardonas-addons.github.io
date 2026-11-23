@@ -4,13 +4,21 @@ Alle installierten Pardona-Addons teilen sich **einen Minimap-Button** mit dem P
 
 ## Linksklick
 
-Ein Linksklick öffnet ein Menü mit jedem installierten Pardona-Addon. Hat ein Addon eigene Menüeinträge, stehen sie eingerückt unter dem Namen des Addons.
+Ein Linksklick öffnet ein Menü mit jedem installierten Pardona-Addon. Ein Klick auf den Namen öffnet das Addon. Hat ein Addon eigene Menüeinträge (Schnellaktionen), stehen sie eingerückt unter seinem Namen. Der letzte Eintrag, „Pardona-Einstellungen“, öffnet die Übersicht.
 
 Ist nur ein Pardona-Addon installiert und hat es keine eigenen Menüeinträge, öffnet ein Linksklick dieses Addon direkt.
 
-## Addon-Fach und LDB-Launcher
+## Rechtsklick
 
-Dasselbe Menü gibt es auch
+Ein Rechtsklick öffnet die Übersicht „Pardona's Addons“ in den Optionen (siehe [Einstellungen](./settings)).
 
-- im **Addon-Fach** (dem Addon-Button an der Minimap) und
+## Button verschieben und ausblenden
+
+Zieh den Button mit der linken Maustaste, um ihn am Rand der Minimap zu verschieben. Zum Ausblenden entferne den Haken bei „Minimap-Button anzeigen“ auf der Übersichtsseite **Optionen › Addons › Pardona's Addons**. Position und Sichtbarkeit gelten für alle Pardona-Addons. Auch bei ausgeblendetem Button erreichst du das Menü über den Addons-Knopf an der Minimap.
+
+## Addons-Knopf und LDB-Launcher
+
+Dasselbe Menü (Linksklick) und die Übersicht (Rechtsklick) gibt es auch
+
+- im **Addons-Knopf an der Minimap** und
 - als **LDB-Launcher**, zum Beispiel in Anzeige-Addons, die LDB-Launcher darstellen.
