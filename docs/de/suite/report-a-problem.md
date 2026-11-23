@@ -19,3 +19,5 @@ Wenn du nicht sicher bist, ob das Problem in der Bibliothek liegt, nutze die Iss
 - den **vollständigen Lua-Fehlertext**, falls es einen gibt,
 - welche **anderen Addons** aktiv sind,
 - die **Schritte, um das Problem nachzustellen**.
+
+Damit Lua-Fehler angezeigt werden, gib einmal `/console scriptErrors 1` ein oder nutze ein Fehler-Addon wie BugSack.

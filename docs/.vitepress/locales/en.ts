@@ -152,7 +152,7 @@ const en: PardonaLocale = {
             bind: 'Binds when installed',
             type: 'Addon',
             slot: 'Interface',
-            stats: ['+Blizzard or Pardona style', '+Border in item quality colour', '+Health bar'],
+            stats: ['+4 color sets', '+Gear comparison, always visible', '+Disenchant info'],
             equip: 'Equip: Shows tooltips tidy and in the Pardona look.',
             flavour: '“Finally readable.”',
             requirement: 'Requires WoW Forever',
@@ -163,7 +163,7 @@ const en: PardonaLocale = {
             bind: 'Unique',
             type: 'Addon',
             slot: 'Interface',
-            stats: ['+Minimap', '+Buffs & debuffs', '+Loot, roll and trade windows'],
+            stats: ['+Square minimap', '+Buffs & debuffs', '+Loot, roll and trade windows (in development)'],
             equip: 'Equip: Dresses parts of the Blizzard interface in the Pardona look, visual only.',
             flavour: '“Still in the forge.”',
             requirement: 'Not yet available'

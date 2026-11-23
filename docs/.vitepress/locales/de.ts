@@ -154,7 +154,7 @@ const de: PardonaLocale = {
             bind: 'Beim Installieren gebunden',
             type: 'Addon',
             slot: 'Oberfläche',
-            stats: ['+Stil Blizzard oder Pardona', '+Rahmen in Qualitätsfarbe', '+Gesundheitsbalken'],
+            stats: ['+4 Farb-Sets', '+Ständiger Ausrüstungsvergleich', '+Entzauberungs-Infos'],
             equip: 'Anlegen: Zeigt Tooltips aufgeräumt und im Pardona-Look.',
             flavour: '„Endlich lesbar.“',
             requirement: 'Benötigt WoW Forever',
@@ -165,7 +165,7 @@ const de: PardonaLocale = {
             bind: 'Einzigartig',
             type: 'Addon',
             slot: 'Oberfläche',
-            stats: ['+Minimap', '+Buffs & Debuffs', '+Beute-, Würfel- und Handelsfenster'],
+            stats: ['+Eckige Minimap', '+Buffs & Debuffs', '+Beute-, Würfel- und Handelsfenster (in Entwicklung)'],
             equip: 'Anlegen: Kleidet Teile der Blizzard-Oberfläche im Pardona-Look ein, rein optisch.',
             flavour: '„Noch in der Schmiede.“',
             requirement: 'Noch nicht verfügbar'
