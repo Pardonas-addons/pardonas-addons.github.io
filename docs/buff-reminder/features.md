@@ -8,7 +8,7 @@
 - **Sound:** **Off**, **Ping**, **Bell**, **Alarm**, **Ready check**, **Quest complete**, **Map ping**, **Coins**, **Group invite**, **Alarm clock**, **Boss emote**, plus LibSharedMedia sounds if installed; you hear a preview when you pick one
 - **Size** and **Opacity** of the list
 - The current key for **Use top warning**
-- **Expiry warning** (beta): warns before a buff runs out. **Threshold** sets when (share of the buff's duration), **Opacity (relative)** how faint the warning is compared to the list. When the buff runs out, the warning turns into a missing reminder right away.
+- **Expiry warning** (beta): warns before a buff runs out. **Threshold** sets when (share of the buff's duration), **Opacity (relative)** how faint the warning is compared to the list. When the buff runs out, the warning turns into a missing reminder right away. Poisons also run out of charges: the warning appears when the time **or** the charges run low, e.g. "Main-hand poison expires · 12 charges".
 
 <DocShotRow>
   <DocShot src="/shots/br-style-pardona.png" alt="Warning list in the Pardona style" :width="424" :height="563" caption="Pardona" />
@@ -37,6 +37,17 @@ All self-buffs of your class with a tick box each, e.g. Power Word: Fortitude an
 - **Add item:** click the field, then Shift-click an item (bags, bank, chat link) or drag it onto the field. **Only items in your bags are counted.**
 
 <!-- screenshot: Tab Supplies mit eigenen Items -->
+
+### Restock at vendors <Badge type="warning" text="beta" />
+- Every supply except pet food has a **Refill to** amount next to **Min.** and **Critical** (default: twice the Min., ammunition 1000).
+- When you open a vendor who sells one of your low supplies, the **Restock** window opens next to the vendor. One line per item: tick box, icon, name, count and target, amount and price. The amount is rounded up to the vendor's bundle size.
+- Below the list: **Total** and **Your gold**. **Not enough gold** or **Not enough bag space** tell you why you can't buy everything.
+- **Buy** buys exactly the ticked lines; a chat line **Bought: …** confirms each item. **Nothing is ever bought automatically.**
+- Close the window and it stays closed for this visit. While the vendor is open, left-click a supply reminder (**Left-click: restock**) to bring it back.
+- **Also restock above the minimum:** off (default) – only supplies below **Min.** are offered; on – everything below **Refill to** is offered at every vendor visit.
+- Only items the vendor sells for gold are offered. Soul shards and pet food are never restocked.
+
+<!-- screenshot: Fenster Restock beim Händler, aus /br demo -->
 
 ## Group (Priest, Mage, Druid, Paladin)
 - **Group buffs** (beta) with **Check group buffs** and **Check in**: **Always**, **Dungeons & raids only**, **Raids only**

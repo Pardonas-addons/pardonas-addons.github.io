@@ -25,7 +25,7 @@ Open the settings with `/br` or via **Options › AddOns › Pardona's Addons �
 | Tracking off | turns on all missing trackings | mute |
 | Group buff | group version on the player who misses it; **Ctrl+Left-click**: single version | mute |
 | Pet (Hunter) / Demon (Warlock) | call, revive, feed or summon | choose the spell or food, mute |
-| Supplies low | outside of towns: **remind me in the next town** | mute |
+| Supplies low | outside of towns: **remind me in the next town**; at an open vendor: **restock** | mute |
 
 The small hint line under each reminder always tells you what a click does. Left-click needs **Left-click casts buff** to be on (default).
 

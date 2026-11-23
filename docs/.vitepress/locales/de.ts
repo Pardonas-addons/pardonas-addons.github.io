@@ -171,6 +171,45 @@ const de: PardonaLocale = {
             requirement: 'Noch nicht verfügbar'
           }
         },
+        classes: {
+          druid: {
+            name: 'Druide',
+            text: 'Mal der Wildnis, Dornen, Gabe der Wildnis für die Gruppe, Samen für Wiedergeburt.'
+          },
+          hunter: {
+            name: 'Jäger',
+            text: 'Aspekte, dein Tier (rufen, wiederbeleben, füttern) und Munition mit Auffüllen per Klick.'
+          },
+          mage: {
+            name: 'Magier',
+            text: 'Arkane Intelligenz, Rüstung, herbeigezaubertes Essen, Wasser und Manastein, Runen und Pulver.'
+          },
+          paladin: {
+            name: 'Paladin',
+            text: 'Aura, Siegel und Segen per Klick, Große Segen für den Schlachtzug.'
+          },
+          priest: {
+            name: 'Priester',
+            text: 'Seelenstärke, Inneres Feuer, Gebete für die Gruppe und ihre Kerzen.'
+          },
+          rogue: {
+            name: 'Schurke',
+            text: 'Gifte auf beiden Waffen, Warnung nach Zeit und Ladungen, Pulver für Verschwinden und Blenden.'
+          },
+          shaman: {
+            name: 'Schamane',
+            text: 'Schilde und Waffenverzauberungen, Ankh und Reagenzien.'
+          },
+          warlock: {
+            name: 'Hexenmeister',
+            text: 'Rüstung, Gesundheitsstein, Seelenstein, dein Dämon und Seelensplitter.'
+          },
+          warrior: {
+            name: 'Krieger',
+            text: 'Rufe, Wetz- und Gewichtssteine, Essen, Fläschchen und Tränke.'
+          }
+        },
+        classHeaderAddon: 'Buff Reminder',
         mocks: {
           buffList: {
             title: 'Buff Reminder',

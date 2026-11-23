@@ -8,7 +8,7 @@
 - **Ton:** **Aus**, **Ping**, **Glocke**, **Alarm**, **Bereitschaftscheck**, **Quest abgeschlossen**, **Kartenmarkierung**, **Münzen**, **Gruppeneinladung**, **Wecker**, **Boss-Emote**, dazu LibSharedMedia-Töne, falls installiert; beim Auswählen hörst du eine Vorschau
 - **Größe** und **Deckkraft** der Liste
 - Die aktuelle Taste für **Oberste Warnung auslösen**
-- **Warnung vor Ablauf** (beta): warnt, bevor ein Buff ausläuft. **Schwelle** legt fest, wann (Anteil an der Laufzeit des Buffs), **Deckkraft (relativ)**, wie blass die Warnung im Vergleich zur Liste ist. Läuft der Buff ab, wird die Warnung sofort zur Fehlt-Erinnerung.
+- **Warnung vor Ablauf** (beta): warnt, bevor ein Buff ausläuft. **Schwelle** legt fest, wann (Anteil an der Laufzeit des Buffs), **Deckkraft (relativ)**, wie blass die Warnung im Vergleich zur Liste ist. Läuft der Buff ab, wird die Warnung sofort zur Fehlt-Erinnerung. Gifte laufen auch nach Ladungen ab: Die Warnung erscheint, wenn die Zeit **oder** die Ladungen knapp werden, z. B. „Gift Haupthand läuft ab · 12 Ladungen“.
 
 <DocShotRow>
   <DocShot src="/shots/br-style-pardona.png" alt="Warnliste im Stil Pardona" :width="424" :height="563" caption="Pardona" />
@@ -37,6 +37,17 @@ Alle eigenen Buffs deiner Klasse mit je einem Häkchen, z. B. Machtwort: Seelens
 - **Item hinzufügen:** ins Feld klicken, dann ein Item per Shift-Klick wählen (Taschen, Bank, Chat-Link) oder auf das Feld ziehen. **Gezählt werden nur Items in den Taschen.**
 
 <!-- screenshot: Tab Vorräte mit eigenen Items -->
+
+### Beim Händler auffüllen <Badge type="warning" text="beta" />
+- Jeder Vorrat außer Tierfutter hat neben **Min.** und **Kritisch** eine Menge **Auffüllen** (Standard: doppelte Mindestmenge, Munition 1000).
+- Öffnest du einen Händler, der einen deiner knappen Vorräte verkauft, geht neben dem Händler das Fenster **Auffüllen** auf. Je Item eine Zeile: Häkchen, Icon, Name, Bestand und Ziel, Menge und Preis. Die Menge wird auf die Bündelgröße des Händlers aufgerundet.
+- Unter der Liste: **Summe** und **Dein Gold**. **Nicht genug Gold** bzw. **Nicht genug Taschenplatz** sagen dir, warum nicht alles geht.
+- **Kaufen** kauft genau die angehakten Zeilen; eine Chatzeile **Gekauft: …** bestätigt jedes Item. **Automatisch wird nie etwas gekauft.**
+- Schließt du das Fenster, bleibt es für diesen Besuch zu. Solange der Händler offen ist, holt ein Linksklick auf eine Vorratswarnung (**Linksklick: auffüllen**) es zurück.
+- **Auch oberhalb der Mindestmenge auffüllen:** aus (Standard) – nur Vorräte unter **Min.** werden angeboten; an – alles unter **Auffüllen** wird bei jedem Händlerbesuch angeboten.
+- Angeboten werden nur Items, die der Händler für Gold verkauft. Seelensplitter und Tierfutter werden nie aufgefüllt.
+
+<!-- screenshot: Fenster Restock beim Händler, aus /br demo -->
 
 ## Gruppe (Priester, Magier, Druide, Paladin)
 - **Gruppen-Buffs** (beta) mit **Gruppen-Buffs prüfen** und **Prüfen in**: **Immer**, **Nur Dungeon & Raid**, **Nur Raid**

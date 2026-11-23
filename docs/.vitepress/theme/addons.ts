@@ -64,7 +64,7 @@ export const addons: Addon[] = [
   {
     id: 'buffReminder',
     quality: 'epic',
-    versions: { stable: '1.4.0', beta: '1.5.0' },
+    versions: { stable: '1.4.1', beta: '1.5.0' },
     handbook: '/buff-reminder/',
     stores: {
       curseforge: 'https://www.curseforge.com/wow/addons/pardonas-buff-reminder',

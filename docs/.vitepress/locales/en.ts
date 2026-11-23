@@ -169,6 +169,45 @@ const en: PardonaLocale = {
             requirement: 'Not yet available'
           }
         },
+        classes: {
+          druid: {
+            name: 'Druid',
+            text: 'Mark of the Wild, Thorns, Gift of the Wild for the group, seeds for Rebirth.'
+          },
+          hunter: {
+            name: 'Hunter',
+            text: 'Aspects, your pet (call, revive, feed) and ammunition with one-click restocking.'
+          },
+          mage: {
+            name: 'Mage',
+            text: 'Arcane Intellect, armor, conjured food, water and mana gem, runes and powder.'
+          },
+          paladin: {
+            name: 'Paladin',
+            text: 'Aura, seal and blessing with one click, Greater Blessings for the raid.'
+          },
+          priest: {
+            name: 'Priest',
+            text: 'Fortitude, Inner Fire, prayers for the group and their candles.'
+          },
+          rogue: {
+            name: 'Rogue',
+            text: 'Poisons on both weapons, warnings by time and charges, powders for Vanish and Blind.'
+          },
+          shaman: {
+            name: 'Shaman',
+            text: 'Shields and weapon imbues, Ankh and reagents.'
+          },
+          warlock: {
+            name: 'Warlock',
+            text: 'Armor, healthstone, soulstone, your demon and soul shards.'
+          },
+          warrior: {
+            name: 'Warrior',
+            text: 'Shouts, sharpening stones and weightstones, food, flasks and potions.'
+          }
+        },
+        classHeaderAddon: 'Buff Reminder',
         mocks: {
           buffList: {
             title: 'Buff Reminder',

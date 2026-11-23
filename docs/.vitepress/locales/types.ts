@@ -1,4 +1,5 @@
 import type { DefaultTheme, LocaleSpecificConfig } from 'vitepress'
+import type { ClassId } from '../theme/classes'
 
 type AddonId = 'buffReminder' | 'tooltips' | 'ui'
 
@@ -65,6 +66,10 @@ export interface PardonaTexts {
     uncommon: string
   }
   addons: Record<AddonId, AddonTexts>
+  /** Buff Reminder class pages: localized class name and one-line card text (ClassCards.vue). */
+  classes: Record<ClassId, { name: string; text: string }>
+  /** Addon name after the class name in ClassHeader.vue ("Druid · Buff Reminder"). */
+  classHeaderAddon: string
   mocks: {
     buffList: {
       title: string

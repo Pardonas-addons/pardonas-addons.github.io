@@ -1,5 +1,39 @@
 # Druide
 
-- **Klassenbuffs:** Mal der Wildnis; Dornen (standardmäßig aus)
-- **Gruppe** (beta): Gabe der Wildnis auf Gruppen- oder Schlachtzugsmitglieder, denen er fehlt
-- **Vorräte** (beta): Reagenzien für Gabe der Wildnis und Wiedergeburt
+<ClassHeader cls="druid" />
+
+Als Druide hältst du Mal der Wildnis auf dir und in der Gruppe Gabe der Wildnis auf allen. Der Buff Reminder prüft beides und sagt dir, wenn die Reagenzien knapp werden.
+
+Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Versionen an, in Releases standardmäßig aus – siehe [Versionen](../#versionen).
+
+## Auf einen Blick
+| Erinnerung | Erscheint, wenn | Linksklick | Tab |
+|---|---|---|---|
+| Mal der Wildnis | er dir fehlt | zaubert ihn (höchster Rang) | **Klassenbuffs** |
+| Dornen | er dir fehlt (standardmäßig aus) | zaubert ihn | **Klassenbuffs** |
+| Gabe der Wildnis <Badge type="warning" text="beta" /> | Gruppen- oder Schlachtzugsmitgliedern fehlt er | Gruppenversion auf einen von ihnen | **Gruppe** |
+| Reagenzien <Badge type="warning" text="beta" /> | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
+
+## Klassenbuffs
+- Mal der Wildnis ab Stufe 1, Dornen ab Stufe 6. Dornen ist situativ und deshalb standardmäßig aus – hak es an, wenn du tankst.
+- Der Linksklick zaubert immer die Einzelversion auf dich, nie Gabe der Wildnis.
+
+## Gruppe <Badge type="warning" text="beta" />
+Hak **Gruppen-Buffs** an und wähle **Prüfen in**: **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**. Eine Gruppenzeile zeigt, wie vielen Spielern Mal der Wildnis fehlt. Linksklick zaubert Gabe der Wildnis auf einen von ihnen, **Strg+Linksklick** die Einzelversion.
+
+## Vorräte <Badge type="warning" text="beta" />
+Geprüft wird nur das Reagenz deines höchsten erlernten Rangs.
+
+| Reagenz | Wofür | Ab Stufe | Min. | Auffüllen |
+|---|---|---|---|---|
+| Wilde Beeren | Gabe der Wildnis (Rang 1) | 50 | 10 | 20 |
+| Wilde Dornwurzel | Gabe der Wildnis (Rang 2) | 60 | 10 | 20 |
+| Ahornsamen … Eisenholzsamen | Wiedergeburt (ein Samen je Rang) | 20–60 | 1 | 2 |
+
+::: tip Empfohlene Einstellung
+Hak **Gruppen-Buffs** mit **Nur Dungeon & Raid** an und setz **Min.** für deinen Wiedergeburts-Samen vor einem Raid auf 2 oder 3.
+:::
+
+<!-- screenshot: Druide mit Gruppenzeile Mal der Wildnis -->
+
+Siehe auch: [Vorräte](../features#vorrate) · [Gruppen-Buffs](../features#gruppe-priester-magier-druide-paladin)
