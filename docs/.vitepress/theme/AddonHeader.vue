@@ -5,7 +5,7 @@ import { usePardona } from './usePardona'
 import AddonIcon from './AddonIcon.vue'
 import AddonLinks from './AddonLinks.vue'
 
-/** Compact addon strip for the addon index pages. */
+/** Compact addon strip for the addon index pages (no handbook link: the reader is already on it). */
 const props = defineProps<{ id: AddonId }>()
 
 const { texts } = usePardona()
@@ -21,7 +21,7 @@ const color = computed(() => qualityColors[addon.value.quality])
         <span class="addon-header-name">{{ texts.addons[id].name }}</span>
         <span class="addon-header-pill">{{ texts.status[id] }}</span>
       </div>
-      <AddonLinks :id="id" />
+      <AddonLinks :id="id" hide-handbook />
     </div>
   </div>
 </template>

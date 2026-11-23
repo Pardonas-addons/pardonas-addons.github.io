@@ -9,7 +9,7 @@ next: false
 
 ## Angaben gemäß § 5 DDG
 
-Pardona — Lars Hendrik Kempa<br>
+Pardona — Lars Kempa<br>
 c/o Online-Impressum 13378<br>
 Europaring 90<br>
 53757 Sankt Augustin<br>
@@ -21,7 +21,7 @@ E-Mail: [pardona@mail.online-impressum.de](mailto:pardona@mail.online-impressum.
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 
-Lars Hendrik Kempa, Anschrift wie oben
+Lars Kempa, Anschrift wie oben
 
 ## Aufsichtsbehörde
 
