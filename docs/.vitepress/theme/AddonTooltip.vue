@@ -1,0 +1,162 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { getAddon, qualityColors, type AddonId } from './addons'
+import { usePardona } from './usePardona'
+import AddonIcon from './AddonIcon.vue'
+import AddonLinks from './AddonLinks.vue'
+
+/** An addon shown as a WoW item tooltip. */
+const props = defineProps<{ id: AddonId }>()
+
+const { texts } = usePardona()
+const addon = computed(() => getAddon(props.id))
+const t = computed(() => texts.value.addons[props.id])
+const color = computed(() => qualityColors[addon.value.quality])
+
+/** Version line: [left, right]. With only one entry it sits on the left. */
+const versionLine = computed<[string, string?]>(() => {
+  const v = addon.value.versions
+  const l = texts.value.versions
+  const parts: string[] = []
+  if (v.stable) parts.push(`${l.stable} ${v.stable}`)
+  if (v.beta) parts.push(`${l.beta} ${v.beta}`)
+  if (v.alpha) parts.push(l.alpha)
+  return [parts[0] ?? '', parts[1]]
+})
+</script>
+
+<template>
+  <div class="addon-tooltip" :style="{ '--q': color }">
+    <AddonIcon />
+    <div class="tt-box">
+      <h3 class="tt-name">{{ t.name }}</h3>
+      <div class="tt-white">{{ t.bind }}</div>
+      <div class="tt-white tt-cols">
+        <span>{{ t.type }}</span><span>{{ t.slot }}</span>
+      </div>
+      <div class="tt-white tt-cols">
+        <span>{{ versionLine[0] }}</span><span v-if="versionLine[1]">{{ versionLine[1] }}</span>
+      </div>
+      <div class="tt-stats">
+        <div v-for="s in t.stats" :key="s" class="tt-white">{{ s }}</div>
+      </div>
+      <div class="tt-equip">{{ t.equip }}</div>
+      <div class="tt-flavour">{{ t.flavour }}</div>
+      <div :class="addon.available ? 'tt-white' : 'tt-red'">{{ t.requirement }}</div>
+      <div v-if="t.price" class="tt-white tt-price">{{ t.price }} <span class="tt-coin" aria-hidden="true" /></div>
+      <div class="tt-sep" />
+      <AddonLinks :id="id" />
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.addon-tooltip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 446px;
+}
+
+.tt-box {
+  flex: 0 1 380px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px 16px 16px;
+  border: 2px solid #d9ad40;
+  border-radius: 9px;
+  background: linear-gradient(rgba(51, 23, 76, 0.97), rgba(20, 8, 33, 0.97));
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.55),
+    0 0 34px color-mix(in srgb, var(--q) 28%, transparent);
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.addon-tooltip:hover .tt-box,
+.addon-tooltip:focus-within .tt-box {
+  transform: translateY(-4px);
+  border-color: #ffd140;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.55),
+    0 0 46px color-mix(in srgb, var(--q) 55%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tt-box {
+    transition: none;
+  }
+
+  .addon-tooltip:hover .tt-box,
+  .addon-tooltip:focus-within .tt-box {
+    transform: none;
+  }
+}
+
+.tt-name {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--vp-font-family-base);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: var(--q);
+}
+
+.tt-white {
+  color: #ffffff;
+}
+
+.tt-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tt-stats {
+  margin-top: 6px;
+}
+
+.tt-equip {
+  margin-top: 6px;
+  color: #1eff00;
+}
+
+.tt-flavour {
+  margin-top: 6px;
+  font-style: italic;
+  color: #ffd100;
+}
+
+.tt-red {
+  color: #ff2020;
+}
+
+.tt-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tt-coin {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff2a8, #d4a017 55%, #8a6a00);
+}
+
+.tt-sep {
+  height: 1px;
+  margin: 10px 0 8px;
+  background: rgba(217, 173, 64, 0.35);
+}
+</style>
