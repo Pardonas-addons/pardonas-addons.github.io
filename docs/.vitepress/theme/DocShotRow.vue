@@ -1,6 +1,7 @@
 <script setup lang="ts">
-// Shows several <DocShot> side by side. Each image shrinks in proportion to its
-// real width and the row wraps when an image would become too small.
+// Shows several <DocShot> side by side. On wider screens the images stay in one
+// row and shrink in proportion to their real width; on small screens they wrap,
+// each at most its real width and centred.
 </script>
 
 <template>
@@ -20,8 +21,21 @@
 }
 
 .doc-shot-row > :deep(.doc-shot) {
-  flex: 1 1 var(--doc-shot-w);
-  min-width: 160px;
+  flex: 0 1 auto;
+  width: min(100%, var(--doc-shot-w));
+  max-width: var(--doc-shot-w);
+  min-width: 0;
   margin: 0;
+}
+
+@media (min-width: 640px) {
+  .doc-shot-row {
+    flex-wrap: nowrap;
+  }
+
+  .doc-shot-row > :deep(.doc-shot) {
+    flex: 0 1 var(--doc-shot-w);
+    width: auto;
+  }
 }
 </style>

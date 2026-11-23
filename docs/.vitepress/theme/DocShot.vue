@@ -35,9 +35,10 @@ const frameStyle = computed(() => ({ '--doc-shot-w': `${props.width + 6}px` }))
 </template>
 
 <style scoped>
+/* Never wider than the image's real size plus the frame, also inside a row. */
 .doc-shot {
-  width: var(--doc-shot-w);
-  max-width: 100%;
+  width: min(100%, var(--doc-shot-w));
+  max-width: var(--doc-shot-w);
   margin: 24px auto;
 }
 

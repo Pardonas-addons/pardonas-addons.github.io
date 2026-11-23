@@ -1,6 +1,6 @@
 # Module
 
-::: warning
+::: warning Hinweis
 Pardona's UI ist in Entwicklung und noch nicht veröffentlicht.
 :::
 
