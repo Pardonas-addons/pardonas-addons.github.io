@@ -15,6 +15,12 @@ Sie reagiert nur auf fehlende oder ablaufende Buffs, nicht auf Vorratswarnungen 
 ## Eine Vorratswarnung ist verschwunden
 Du hast sie vermutlich außerhalb einer Stadt angeklickt: Sie kommt im nächsten Gasthaus, in der nächsten Stadt, beim Händler oder an der Bank wieder. Unter ihrer **Kritisch**-Menge kommt sie immer zurück.
 
+## Das Fenster „Auffüllen“ geht nicht auf
+Es öffnet sich nur mit **Beim Händler auffüllen** (beta), wenn ein Vorrat unter **Min.** liegt (mit **Auch oberhalb der Mindestmenge auffüllen**: unter **Auffüllen**) und der Händler genau dieses Item für Gold verkauft. Hast du es geschlossen, bleibt es bis zum nächsten Besuch zu – ein Linksklick auf die Vorratswarnung öffnet es wieder.
+
+## Mein Essen wird nicht angeboten
+Angeboten wird nur Essen, das „Satt“ gibt (normales Essen und Wasser nicht). Fehlt ein Buff-Essen, melde es mit `/br debug` und dem Namen des Items.
+
 ## Segen werden in meiner Gruppe nicht geprüft
 Mit geladenem Pally Power überlässt das Addon die Segen Pally Power (**Aus, solange Pally Power geladen ist**).
 

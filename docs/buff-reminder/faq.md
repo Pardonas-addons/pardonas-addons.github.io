@@ -15,6 +15,12 @@ It only acts on missing or expiring buffs, not on supply warnings or while you a
 ## A supply warning disappeared
 You probably left-clicked it outside of town: it comes back at the next inn, city, vendor or bank. Below its **Critical** amount it always comes back.
 
+## The Restock window does not open
+It opens only with **Restock at vendors** (beta) on, when a supply is below **Min.** (or below **Refill to** with **Also restock above the minimum**) and the vendor sells exactly that item for gold. If you closed it, it stays closed until your next visit – left-click the supply reminder to open it again.
+
+## My food is not offered
+Only food that gives Well Fed is offered (plain food and water are not). If a buff food is missing, report it with `/br debug` and the item name.
+
 ## Paladin blessings are not checked in my group
 With Pally Power loaded the addon leaves blessings to Pally Power (**Off while Pally Power is loaded**).
 

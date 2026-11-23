@@ -82,6 +82,11 @@
   --vp-custom-block-danger-text: #f2edff;
   --vp-custom-block-danger-bg: rgba(224, 96, 122, 0.14);
 
+  /* Badges: <Badge type="warning" text="beta" /> marks beta features (orange). */
+  --vp-badge-warning-border: rgba(255, 154, 46, 0.55);
+  --vp-badge-warning-text: #ff9a2e;
+  --vp-badge-warning-bg: rgba(255, 154, 46, 0.12);
+
   /* Code */
   --vp-code-block-bg: rgba(20, 8, 33, 0.75);
   --vp-code-bg: rgba(115, 64, 166, 0.35);
@@ -192,6 +197,13 @@ body {
 
 .vp-doc th {
   background-color: rgba(71, 36, 102, 0.8);
+  /* Short column heads stay on one line; narrow screens scroll the table sideways. */
+  white-space: nowrap;
+}
+
+/* Badges use the body font, also inside Cinzel headings. */
+.vp-doc .VPBadge {
+  font-family: var(--vp-font-family-base);
 }
 
 .vp-doc tr:nth-child(2n) {

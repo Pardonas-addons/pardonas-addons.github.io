@@ -25,7 +25,7 @@ Mit **Neue Warnungen erscheinen** **unterhalb** oder **oberhalb** legst du fest,
 | Verfolgung aus | schaltet alle fehlenden Verfolgungen ein | stummschalten |
 | Gruppenbuff | Gruppenversion auf den Spieler, dem er fehlt; **Strg+Linksklick**: Einzelversion | stummschalten |
 | Tier (Jäger) / Dämon (Hexenmeister) | rufen, wiederbeleben, füttern oder beschwören | Zauber oder Futter wählen, stummschalten |
-| Vorrat knapp | außerhalb von Städten: **in der nächsten Stadt erinnern** | stummschalten |
+| Vorrat knapp | außerhalb von Städten: **in der nächsten Stadt erinnern**; bei offenem Händler: **auffüllen** | stummschalten |
 
 Die kleine Hinweiszeile unter jeder Erinnerung sagt dir immer, was ein Klick tut. Der Linksklick braucht **Linksklick zaubert Buff** (standardmäßig an).
 

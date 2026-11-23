@@ -13,6 +13,8 @@ import DocShotRow from './DocShotRow.vue'
 import OrnamentDivider from './OrnamentDivider.vue'
 import AddonTooltip from './AddonTooltip.vue'
 import AddonHeader from './AddonHeader.vue'
+import ClassHeader from './ClassHeader.vue'
+import ClassCards from './ClassCards.vue'
 import MockBuffList from './MockBuffList.vue'
 import MockItemTooltip from './MockItemTooltip.vue'
 import MockMinimap from './MockMinimap.vue'
@@ -34,6 +36,8 @@ export default {
     app.component('OrnamentDivider', OrnamentDivider)
     app.component('AddonTooltip', AddonTooltip)
     app.component('AddonHeader', AddonHeader)
+    app.component('ClassHeader', ClassHeader)
+    app.component('ClassCards', ClassCards)
     app.component('MockBuffList', MockBuffList)
     app.component('MockItemTooltip', MockItemTooltip)
     app.component('MockMinimap', MockMinimap)

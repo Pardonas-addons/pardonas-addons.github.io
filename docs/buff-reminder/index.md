@@ -16,7 +16,7 @@ Pardona's Buff Reminder shows every buff you are missing in one small list on yo
 Every class. Classes with many self-buffs (Priest, Mage, Paladin, Warlock, Shaman, Hunter) get the most out of it; every class benefits from the food, flask, scroll and supply reminders.
 
 ## Versions
-- **Stable:** 1.4.0
-- **Beta:** 1.5.0-beta2 – new: pet reminders, supplies with your own items, several trackings at once, size and opacity, a smarter keybinding.
+- **Stable:** 1.4.1
+- **Beta:** 1.5.0-beta4 – new: pet reminders, supplies with your own items and one-click restocking at vendors, poison warnings by charges, several trackings at once, size and opacity, a smarter keybinding.
 
 Features marked **(beta)** are experimental: on in beta builds, off by default in releases. You can switch them on in the settings at any time.

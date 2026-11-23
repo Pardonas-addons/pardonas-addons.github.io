@@ -10,7 +10,7 @@ Wetzsteine, Gewichtssteine, Zauber- und Manaöle: Mit **Steine, Öle, Gifte per 
 Hak **Fläschchen** unter **Weitere Buffs** an; mit **Elixiere** (beta) wählst du, welche Elixiere aktiv bleiben. Der Linksklick trinkt das beste aus den Taschen.
 
 ## Kochkunst
-Hak Satt unter **Weitere Buffs** an. Der Linksklick isst das beste Essen aus den Taschen; das Menü zeigt die Kategorie jedes Essens (z. B. **Ausdauer**, **Willenskraft**) und ein **XP**-Abzeichen für Essen mit Erfahrungsbonus. Während du isst, zeigt die Erinnerung **Isst … s** – **Sitzen bleiben**.
+Hak Satt unter **Weitere Buffs** an. Der Linksklick isst das beste Essen aus den Taschen; das Menü zeigt die Kategorie jedes Essens (z. B. **Ausdauer**, **Willenskraft**) und ein **XP**-Abzeichen für Essen mit Erfahrungsbonus. Während du isst, zeigt die Erinnerung **Isst … s** – **Sitzen bleiben**. Erkannt wird jedes Essen, das „Satt“ gibt, nicht nur Essen mit XP-Bonus; XP-Essen steht vorne.
 
 ## Erste Hilfe und alles andere
 Verbände, Tränke oder jedes andere Item trägst du unter **Eigene Items** im Tab **Vorräte** mit einer Mindestmenge ein.

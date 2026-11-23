@@ -18,12 +18,14 @@ docs/.vitepress/theme/    Custom "Pardona" theme (extends the default theme)
   index.ts                Theme entry, loads the Cinzel font, registers components
   style.css               Colours and global styles (sub-pages, sidebar, shared panel look)
   addons.ts               Addon data: quality, versions, handbook path, store links, screenshots
+  classes.ts              Buff Reminder classes: order and class colours (see "Class pages")
   usePardona.ts           Localized texts and path prefix of the current language
   PardonaFooter.vue       Footer shown on every page (legal notice, privacy, trademark note)
   Home*.vue               Sections of the home page (see "Design")
   Addon*.vue, Mock*.vue,  Building blocks (see "Design")
   ShotFrame.vue, OrnamentDivider.vue,
-  DocShot.vue, DocShotRow.vue
+  DocShot.vue, DocShotRow.vue,
+  ClassHeader.vue, ClassCards.vue
 .github/workflows/pages.yml  Build and (optional) deployment
 ```
 
@@ -81,9 +83,28 @@ All components live in `docs/.vitepress/theme/` and are registered globally, so 
 | `AddonIcon.vue`, `AddonLinks.vue` | Icon and chat-link style links shared by the two components above. |
 | `DocShot.vue` | A screenshot in a handbook page: centred figure in the gold frame, shown at its real size at most (never upscaled), lazy loading, optional caption. Props: `src`, `alt`, `width`, `height`, `caption`. |
 | `DocShotRow.vue` | Shows several `DocShot`s side by side; each shrinks in proportion to its width and the row wraps on small screens. |
+| `ClassHeader.vue` | Class accent below the H1 of a Buff Reminder class page: a 3px bar fading from the class colour to transparent and the label "<class name> · Buff Reminder" (`<ClassHeader cls="druid" />`). See "Class pages". |
+| `ClassCards.vue` | Card grid of the nine classes on `/buff-reminder/classes/` (`<ClassCards />`): 3 columns from 960px, 2 from 640px, 1 below; each card links to its class page. See "Class pages". |
 | `OrnamentDivider.vue` | Gold lines with a diamond (`size`: `large`/`small`, `align`: `center`/`start`). A small one is inserted after every H1 by a Markdown plugin in `config.ts`, so pages need no extra markup. |
 
-All motion (hover lift of the tooltips, button hover) is switched off for visitors who prefer reduced motion.
+All motion (hover lift of the tooltips and class cards, button hover) is switched off for visitors who prefer reduced motion.
+
+### Class pages
+
+The Buff Reminder has one page per class under `docs/buff-reminder/classes/` (and `docs/de/…`). Each page has the same structure: H1, `<ClassHeader cls="…" />`, intro, one sentence explaining the beta badge, "At a glance" table, one section per settings tab, supplies table, `::: tip Recommended setup` box, screenshot comment, "See also" line.
+
+- **`docs/.vitepress/theme/classes.ts`** lists the nine classes in sidebar order (druid, hunter, mage, paladin, priest, rogue, shaman, warlock, warrior) with `color` (class colour) and `textColor` (colour for the class name as text; the same as `color` except Shaman, `#4DA3FF` instead of `#0070DD`, which is too dark on the dark background). The class colour is an accent only (bar, card top edge, class name) and never used for body text.
+- Class names and the one-line card texts are in the language files under `themeConfig.pardona.classes`; the addon name after the class name in `ClassHeader` is `themeConfig.pardona.classHeaderAddon`.
+- The sidebar order of the class pages must match `classes.ts` in every language, so that the "Previous page" / "Next page" links go from class to class.
+- No class icons or other Blizzard graphics.
+
+### Beta badge
+
+Beta features are marked with VitePress' built-in badge: `<Badge type="warning" text="beta" />`. Use it where a heading or a table cell ends with "(beta)"; in running text "(beta)" stays as plain text. The badge is orange (`#ff9a2e` text, transparent orange background, thin orange border); the colours are set through the `--vp-badge-warning-*` variables in `theme/style.css`, and the badge always uses the body font, also inside Cinzel headings.
+
+### Tables
+
+Header cells do not wrap (`white-space: nowrap`); on narrow screens VitePress scrolls wide tables sideways. Keep column heads short.
 
 ## Addon data and versions
 
