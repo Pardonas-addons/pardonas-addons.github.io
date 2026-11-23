@@ -7,13 +7,9 @@ next: false
 
 # Privacy policy
 
-::: warning Draft
-Draft – not yet reviewed.
-:::
-
 ## 1. Controller
 
-Pardona — Lars Hendrik Kempa<br>
+Pardona — Lars Kempa<br>
 c/o Online-Impressum 13378<br>
 Europaring 90<br>
 53757 Sankt Augustin<br>
@@ -22,11 +18,7 @@ E-mail: [pardona@mail.online-impressum.de](mailto:pardona@mail.online-impressum.
 
 ## 2. Hosting
 
-This site is hosted by GitHub Pages, a service of GitHub, Inc., USA. When you visit the site, GitHub processes technical access data, including your IP address (server logs), in order to deliver the site and for security purposes. The legal basis is Art. 6(1)(f) GDPR; our legitimate interest is the secure and reliable delivery of this site. The data may be transferred to the USA. For details, see the [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
-
-::: warning TODO
-TODO (Lars): verify transfer mechanism (EU-US Data Privacy Framework) and GitHub's role.
-:::
+This site is hosted by GitHub Pages, a service of GitHub, Inc., USA. When you visit the site, GitHub processes technical access data, including your IP address (server logs), in order to deliver the site and for security purposes. The legal basis is Art. 6(1)(f) GDPR; our legitimate interest is the secure and reliable delivery of this site. The data may be transferred to the USA. According to its privacy statement, GitHub complies with the EU-U.S. Data Privacy Framework (DPF) and generally relies on the European Commission's standard contractual clauses for transfers from the EU (Art. 45 and 46 GDPR). For details, see the [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## 3. No cookies, no tracking
 

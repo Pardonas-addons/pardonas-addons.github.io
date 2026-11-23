@@ -4,8 +4,11 @@ import { withBase } from 'vitepress'
 import { getAddon, type AddonId } from './addons'
 import { usePardona } from './usePardona'
 
-/** Handbook and store links of one addon in WoW chat-link style ("[Handbook]"). */
-const props = defineProps<{ id: AddonId }>()
+/**
+ * Handbook and store links of one addon in WoW chat-link style ("[Handbook]").
+ * hideHandbook drops the handbook link where it would point to the current page.
+ */
+const props = defineProps<{ id: AddonId; hideHandbook?: boolean }>()
 
 const { texts, prefix } = usePardona()
 const addon = computed(() => getAddon(props.id))
@@ -18,7 +21,10 @@ interface Link {
 
 const links = computed<Link[]>(() => {
   const t = texts.value.links
-  const list: Link[] = [{ label: t.handbook, href: withBase(`${prefix.value}${addon.value.handbook}`) }]
+  const list: Link[] = []
+  if (!props.hideHandbook) {
+    list.push({ label: t.handbook, href: withBase(`${prefix.value}${addon.value.handbook}`) })
+  }
   const stores = [
     ['curseforge', t.curseforge],
     ['wago', t.wago]

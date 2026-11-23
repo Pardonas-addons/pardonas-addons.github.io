@@ -7,13 +7,9 @@ next: false
 
 # Datenschutzerklärung
 
-::: warning Entwurf
-Entwurf – noch nicht geprüft.
-:::
-
 ## 1. Verantwortlicher
 
-Pardona — Lars Hendrik Kempa<br>
+Pardona — Lars Kempa<br>
 c/o Online-Impressum 13378<br>
 Europaring 90<br>
 53757 Sankt Augustin<br>
@@ -22,11 +18,7 @@ E-Mail: [pardona@mail.online-impressum.de](mailto:pardona@mail.online-impressum.
 
 ## 2. Hosting
 
-Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., USA. Beim Aufruf der Website verarbeitet GitHub technische Zugriffsdaten einschließlich deiner IP-Adresse (Server-Logfiles), um die Website auszuliefern und aus Sicherheitsgründen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist die sichere und zuverlässige Bereitstellung dieser Website. Dabei können Daten in die USA übermittelt werden. Einzelheiten findest du im [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
-
-::: warning TODO
-TODO (Lars): Übermittlungsmechanismus (EU-US Data Privacy Framework) und die Rolle von GitHub prüfen.
-:::
+Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., USA. Beim Aufruf der Website verarbeitet GitHub technische Zugriffsdaten einschließlich deiner IP-Adresse (Server-Logfiles), um die Website auszuliefern und aus Sicherheitsgründen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist die sichere und zuverlässige Bereitstellung dieser Website. Dabei können Daten in die USA übermittelt werden. Nach eigenen Angaben hält GitHub das EU-U.S. Data Privacy Framework (DPF) ein und stützt Übermittlungen aus der EU zudem in der Regel auf die Standardvertragsklauseln der Europäischen Kommission (Art. 45, 46 DSGVO). Einzelheiten findest du im [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## 3. Keine Cookies, kein Tracking
 
