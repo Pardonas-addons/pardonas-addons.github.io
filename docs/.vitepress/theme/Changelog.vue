@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { qualityColors, type AddonId } from './addons'
+import type { AddonId } from './addons'
 import { data } from './changelog.data'
 import { usePardona } from './usePardona'
+import VersionPill from './VersionPill.vue'
 
 /**
  * Changelog of one addon, loaded at build time from its CHANGELOG.md (see changelog.data.ts).
@@ -16,9 +17,6 @@ const changelog = computed(() => data[props.id])
 const versions = computed(() => changelog.value?.versions ?? [])
 const failed = computed(() => !changelog.value || changelog.value.error)
 const permalinkLabel = (version: string) => `Permalink to "${version}"`
-
-const pill = (isBeta: boolean) =>
-  isBeta ? { label: 'beta', color: qualityColors.rare } : { label: 'stable', color: qualityColors.epic }
 </script>
 
 <template>
@@ -30,9 +28,7 @@ const pill = (isBeta: boolean) =>
       <h2 :id="v.anchor" tabindex="-1" class="changelog-version">
         {{ v.version }}
         <span class="changelog-date ignore-header">{{ v.date }}</span>
-        <span class="changelog-pill ignore-header" :style="{ '--q': pill(v.isBeta).color }">{{
-          pill(v.isBeta).label
-        }}</span>
+        <VersionPill class="ignore-header" :beta="v.isBeta" />
         <a class="header-anchor" :href="`#${v.anchor}`" :aria-label="permalinkLabel(v.version)">&#8203;</a>
       </h2>
       <!-- eslint-disable-next-line vue/no-v-html -->
@@ -62,21 +58,6 @@ const pill = (isBeta: boolean) =>
   font-weight: 500;
   letter-spacing: 0;
   color: #a894c2;
-}
-
-/* Same family as the status pill in AddonHeader. */
-.changelog-pill {
-  align-self: center;
-  padding: 0 9px;
-  border: 1px solid color-mix(in srgb, var(--q) 70%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--q) 16%, transparent);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0;
-  color: #f2edff;
-  white-space: nowrap;
 }
 
 .changelog-section {

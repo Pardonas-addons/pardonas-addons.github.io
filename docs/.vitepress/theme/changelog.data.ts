@@ -22,6 +22,13 @@ export interface ChangelogVersion {
   /** Paragraphs between the version heading and its first subsection, rendered inline. */
   notes: string[]
   sections: ChangelogSection[]
+  /**
+   * Short form of the first SUMMARY_ITEMS list items over all sections (see shortenItem),
+   * rendered inline; the first note when the version has no items. Used by HomeNews.vue.
+   */
+  summary: string[]
+  /** Number of list items over all sections. */
+  total: number
 }
 
 export interface Changelog {
@@ -38,6 +45,8 @@ declare const data: ChangelogData
 export { data }
 
 const TIMEOUT_MS = 15_000
+/** Summary entries kept per version (the home page box shows this many). */
+const SUMMARY_ITEMS = 3
 
 /** "## 1.5.0-beta4 – 2026-11-23" (en dash; a plain hyphen is accepted as well). */
 const VERSION_RE = /^##\s+(\S+)\s+[–-]\s+(\d{4}-\d{2}-\d{2})\s*$/
@@ -45,6 +54,28 @@ const SECTION_RE = /^###\s+(.+?)\s*$/
 const ITEM_RE = /^\s*[-*]\s+(.*)$/
 
 type Renderer = (src: string) => string
+
+/**
+ * Short form of a raw markdown list item for the home page box: the part before the first
+ * ": " outside inline code, without a trailing period; " (beta)" is kept when the full item
+ * ended with it.
+ */
+export function shortenItem(item: string): string {
+  const full = item.trim()
+  let cut = -1
+  let inCode = false
+  for (let i = 0; i < full.length; i++) {
+    const ch = full[i]
+    if (ch === '`') inCode = !inCode
+    else if (!inCode && ch === ':' && full[i + 1] === ' ') {
+      cut = i
+      break
+    }
+  }
+  let short = (cut > 0 ? full.slice(0, cut) : full).trim().replace(/\.$/, '').trim()
+  if (/\(beta\)$/.test(full) && !/\(beta\)$/.test(short)) short += ' (beta)'
+  return short
+}
 
 /**
  * Parses a CHANGELOG.md. Everything before the first version heading (title, intro,
@@ -57,17 +88,27 @@ export function parseChangelog(text: string, render: Renderer): ChangelogVersion
   let section: ChangelogSection | undefined
   let items: string[] = [] // raw markdown of the current section's items
   let notes: string[] = [] // raw markdown of the current version's notes
+  let allItems: string[] = [] // raw markdown of all items of the current version, in file order
 
   const flushSection = () => {
-    if (section) section.items = items.map(render)
+    if (section) {
+      section.items = items.map(render)
+      allItems.push(...items)
+    }
     section = undefined
     items = []
   }
   const flushVersion = () => {
     flushSection()
-    if (version) version.notes = notes.map(render)
+    if (version) {
+      version.notes = notes.map(render)
+      version.total = allItems.length
+      const short = allItems.length ? allItems.map(shortenItem) : notes.slice(0, 1)
+      version.summary = short.slice(0, SUMMARY_ITEMS).map(render)
+    }
     version = undefined
     notes = []
+    allItems = []
   }
 
   for (const line of text.replace(/\r\n?/g, '\n').split('\n')) {
@@ -80,7 +121,9 @@ export function parseChangelog(text: string, render: Renderer): ChangelogVersion
         isBeta: /-(beta|alpha)/i.test(v[1]),
         anchor: changelogAnchor(v[1]),
         notes: [],
-        sections: []
+        sections: [],
+        summary: [],
+        total: 0
       }
       versions.push(version)
       continue

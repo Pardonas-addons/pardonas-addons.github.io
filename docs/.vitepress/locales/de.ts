@@ -286,7 +286,14 @@ const de: PardonaLocale = {
             }
           ],
           addonsTitle: 'Die Addons',
-          addonsSubline: 'Fahr mit der Maus über ein Addon – wie über ein Item in der Tasche.'
+          addonsSubline: 'Fahr mit der Maus über ein Addon – wie über ein Item in der Tasche.',
+          news: {
+            title: 'Neu in den Addons',
+            subline: 'Frisch aus den Changelogs – jeden Morgen aktualisiert.',
+            more: '+{n} weitere',
+            fullChangelog: 'Ganzer Changelog →',
+            dateFormat: 'dmy'
+          }
         }
       }
     }
