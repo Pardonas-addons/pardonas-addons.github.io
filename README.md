@@ -127,7 +127,7 @@ The home page and the handbook show real in-game screenshots from `docs/public/s
 | `tt-tooltip-hero.png` | 486 × 296 | Item tooltip | Hero collage (`homeShots.tooltip`) |
 | `tt-tooltip-compare.png` | 796 × 414 | Item tooltip with the equipped-item comparison | Tooltips showcase (`shot`); handbook: `tooltips/index.md` |
 | `ui-minimap.png` | 303 × 374 | Minimap in the Pardona style | UI showcase (`shot`) and hero collage (`homeShots.minimap`); handbook: `ui/index.md`, `ui/modules.md` |
-| `br-settings-display.png` | 1102 × 878 | Buff Reminder settings, Display tab | Handbook: `buff-reminder/getting-started.md` |
+| `br/*.png` | real size, shown 1:1 | Buff Reminder screenshots from the demo run: reminder lists, right-click menus, Restock window, settings tabs (e.g. `br/e01-settings-display.png`, 782 × 668) | Handbook: `buff-reminder/` pages (getting started, features, professions, settings, classes) |
 | `br-style-pardona.png` | 424 × 563 | Buff Reminder warning list, Pardona style | Handbook: `buff-reminder/features.md` (style row) |
 | `br-style-classic.png` | 424 × 563 | Buff Reminder warning list, Classic style | Handbook: `buff-reminder/features.md` (style row) |
 | `br-style-compact.png` | 328 × 321 | Buff Reminder warning list, Compact style | Handbook: `buff-reminder/features.md` (style row) |
@@ -158,7 +158,7 @@ and commit the generated PNGs and the JSON.
 Handbook pages use `DocShot` (one image) and `DocShotRow` (several images side by side). Pass the real pixel size; alt text and caption are written in the page's language:
 
 ```md
-<DocShot src="/shots/br-settings-display.png" alt="Buff Reminder settings, Display tab" :width="1102" :height="878" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Buff Reminder settings, Display tab" :width="782" :height="668" />
 
 <DocShotRow>
   <DocShot src="/shots/br-style-pardona.png" alt="Warning list in the Pardona style" :width="424" :height="563" caption="Pardona" />

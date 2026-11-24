@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { withBase } from 'vitepress'
 
 const props = defineProps<{
-  /** Image path without base (e.g. '/shots/br-settings-display.png'). */
+  /** Image path without base (e.g. '/shots/br/e01-settings-display.png'). */
   src: string
   alt: string
   /** Real pixel size of the image; the image is never shown larger than this. */
