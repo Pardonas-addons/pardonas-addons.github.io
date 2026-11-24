@@ -37,7 +37,6 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
         :height="a.shot?.height"
         :fit="a.shot?.fit"
         :alt="texts.shotAlt.addons[a.id]"
-        :perspective="i % 2 === 1 ? 'left' : 'right'"
       >
         <component :is="mocks[a.id].component" v-bind="mocks[a.id].props" />
       </ShotFrame>
@@ -146,10 +145,6 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
   .showcase-tooltip,
   .showcase-row--flip .showcase-tooltip {
     justify-content: center;
-  }
-
-  .showcase-shot {
-    transform: none !important;
   }
 }
 

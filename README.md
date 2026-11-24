@@ -141,6 +141,16 @@ A screenshot is described in `docs/.vitepress/theme/addons.ts` as `{ src, width,
 
 Each addon's `shot` is used in its showcase row on the home page (lazy loading). `homeShots` holds the three images of the hero collage (eager loading). Alt texts are in the language files under `themeConfig.pardona.shotAlt`. Without a screenshot, `ShotFrame` falls back to its mock, captioned "Placeholder screenshot".
 
+### Home page collage
+
+The three tilted screenshots in the hero collage are pre-rendered: `scripts/hero-shots.mjs` draws each gold frame straight at 4x size, rotates it and scales it down, and writes `docs/public/shots/hero/*.png` (1x and @2x) plus their positions in `docs/.vitepress/theme/hero-shots.json`. The browser then shows them 1:1 without scaling or rotating, so thin lines stay sharp. The collage geometry (frame widths, angles, positions) lives at the top of the script. After replacing `br-list-hero.png`, `tt-tooltip-hero.png` or `ui-minimap.png`, or changing the geometry, run
+
+```bash
+npm i --no-save sharp && node scripts/hero-shots.mjs
+```
+
+and commit the generated PNGs and the JSON.
+
 ### Screenshots in handbook pages
 
 Handbook pages use `DocShot` (one image) and `DocShotRow` (several images side by side). Pass the real pixel size; alt text and caption are written in the page's language:
