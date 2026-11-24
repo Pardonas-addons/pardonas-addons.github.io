@@ -1,27 +1,37 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { getAddon, qualityColors, type AddonId } from './addons'
+import { withBase } from 'vitepress'
+import { changelogAnchor, changelogPath, getAddon, qualityColors, type AddonId } from './addons'
 import { usePardona } from './usePardona'
+import { data as changelogs } from './changelog.data'
 import AddonIcon from './AddonIcon.vue'
 import AddonLinks from './AddonLinks.vue'
 
 /** An addon shown as a WoW item tooltip. */
 const props = defineProps<{ id: AddonId }>()
 
-const { texts } = usePardona()
+const { texts, prefix } = usePardona()
 const addon = computed(() => getAddon(props.id))
 const t = computed(() => texts.value.addons[props.id])
 const color = computed(() => qualityColors[addon.value.quality])
 
+interface VersionPart {
+  text: string
+  /** Link to the changelog: the stable version to its anchor, the beta to the page (newest beta on top). */
+  href?: string
+}
+
 /** Version line: [left, right]. With only one entry it sits on the left. */
-const versionLine = computed<[string, string?]>(() => {
-  const v = addon.value.versions
+const versionLine = computed<[VersionPart, VersionPart?]>(() => {
+  const a = addon.value
+  const v = a.versions
   const l = texts.value.versions
-  const parts: string[] = []
-  if (v.stable) parts.push(`${l.stable} ${v.stable}`)
-  if (v.beta) parts.push(`${l.beta} ${v.beta}`)
-  if (v.alpha) parts.push(l.alpha)
-  return [parts[0] ?? '', parts[1]]
+  const page = changelogs[a.id] ? withBase(`${prefix.value}${changelogPath(a)}`) : undefined
+  const parts: VersionPart[] = []
+  if (v.stable) parts.push({ text: `${l.stable} ${v.stable}`, href: page && `${page}#${changelogAnchor(v.stable)}` })
+  if (v.beta) parts.push({ text: `${l.beta} ${v.beta}`, href: page })
+  if (v.alpha) parts.push({ text: l.alpha })
+  return [parts[0] ?? { text: '' }, parts[1]]
 })
 </script>
 
@@ -35,7 +45,10 @@ const versionLine = computed<[string, string?]>(() => {
         <span>{{ t.type }}</span><span>{{ t.slot }}</span>
       </div>
       <div class="tt-white tt-cols">
-        <span>{{ versionLine[0] }}</span><span v-if="versionLine[1]">{{ versionLine[1] }}</span>
+        <template v-for="(part, i) in versionLine" :key="i">
+          <a v-if="part?.href" class="tt-version-link" :href="part.href">{{ part.text }}</a>
+          <span v-else-if="part">{{ part.text }}</span>
+        </template>
       </div>
       <div class="tt-stats">
         <div v-for="s in t.stats" :key="s" class="tt-white">{{ s }}</div>
@@ -119,6 +132,19 @@ const versionLine = computed<[string, string?]>(() => {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+}
+
+/* Version linked to the changelog: same colour as the line, underline on hover only. */
+.tt-version-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tt-version-link:hover,
+.tt-version-link:focus-visible {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .tt-stats {

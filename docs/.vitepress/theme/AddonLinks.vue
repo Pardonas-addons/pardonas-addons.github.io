@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
-import { getAddon, type AddonId } from './addons'
+import { changelogPath, getAddon, type AddonId } from './addons'
+import { data as changelogs } from './changelog.data'
 import { usePardona } from './usePardona'
 
 /**
  * Handbook and store links of one addon in WoW chat-link style ("[Handbook]").
  * hideHandbook drops the handbook link where it would point to the current page;
- * showRepo adds a link to the addon's GitHub repository after the store links.
+ * showRepo adds a link to the addon's GitHub repository after the store links;
+ * showChangelog adds a link to its changelog page after that (only if it has one).
  */
-const props = defineProps<{ id: AddonId; hideHandbook?: boolean; showRepo?: boolean }>()
+const props = defineProps<{ id: AddonId; hideHandbook?: boolean; showRepo?: boolean; showChangelog?: boolean }>()
 
 const { texts, prefix } = usePardona()
 const addon = computed(() => getAddon(props.id))
@@ -36,6 +38,9 @@ const links = computed<Link[]>(() => {
     list.push(link === 'soon' ? { label: `${label}: ${t.comingSoon}` } : { label, href: link, external: true })
   }
   if (props.showRepo) list.push({ label: t.github, href: addon.value.repo, external: true })
+  if (props.showChangelog && changelogs[props.id]) {
+    list.push({ label: t.changelog, href: withBase(`${prefix.value}${changelogPath(addon.value)}`) })
+  }
   return list
 })
 </script>

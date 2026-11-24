@@ -112,7 +112,7 @@ Header cells do not wrap (`white-space: nowrap`); on narrow screens VitePress sc
 
 ## Addon data and versions
 
-- **`docs/.vitepress/theme/addons.ts`** is the single source of truth for each addon: `id`, `quality` (`epic`/`rare`/`uncommon`), `versions` (`stable`, `beta`, `alpha`), `handbook` path, `stores` (CurseForge/Wago URL, or `'soon'`), `available` and an optional `shot` (see "Screenshots"); `homeShots` holds the hero collage images. After a release, update the version numbers there; the tooltips and headers on all pages and in all languages pick them up.
+- **`docs/.vitepress/theme/addons.ts`** is the single source of truth for each addon: `id`, `quality` (`epic`/`rare`/`uncommon`), `versions` (`stable`, `beta`, `alpha`), `handbook` path, `stores` (CurseForge/Wago URL, or `'soon'`), `available`, `repo` and an optional `shot` (see "Screenshots"); `homeShots` holds the hero collage images. After a release, update the version numbers there; the tooltips and headers on all pages and in all languages pick them up.
 - **GitHub links** come from `repo` in `addons.ts`: the `[GitHub]` link in the addon header and the GitHub icon in the nav bar (`theme/NavGitHub.vue`), which points to the addon's repository inside its handbook section and to the organisation everywhere else.
 - **All texts** (tooltip lines, status labels, link labels, home page texts) are in the language files under `themeConfig.pardona` (`docs/.vitepress/locales/<code>.ts`); the types are in `locales/types.ts`.
 
@@ -257,6 +257,16 @@ The workflow `.github/workflows/pages.yml` builds the site on every push and pul
 Until then the workflow only builds and stays green.
 
 A custom domain can be added later with a `docs/public/CNAME` file containing the domain name.
+
+## Changelogs
+
+The changelog pages of the Buff Reminder and ToolTips (`<addon>/changelog`, EN and DE) are built from the `CHANGELOG.md` on the `develop` branch of each addon's repository; the addon maintains that file, not this site.
+
+- `docs/.vitepress/theme/changelog.data.ts` loads the files **at build time only** (visitors never contact GitHub) and parses them: everything before the first version heading, including `## Unreleased`, is hidden. `Changelog.vue` (`<Changelog id="buffReminder" />`) shows one heading per version with its date and a stable/beta badge; the heading ids are `v` + version with non-alphanumerics as `-` (e.g. `#v1-4-1`, `#v1-5-0-beta4`). The changelog stays English in both languages.
+- The workflow `.github/workflows/pages.yml` rebuilds the site **daily at 04:17 UTC**, so new versions appear without a commit here. A rebuild can also be started by hand with **Run workflow** (Actions › Pages).
+- In CI (`CI` is set) the build **fails** if a changelog cannot be loaded or has no version heading, so the old site stays online. Local builds show a short note on the page instead.
+- GitHub disables scheduled workflows in public repositories after 60 days without repository activity. If that happens, re-enable the workflow under **Actions**.
+- To add the changelog of another addon: add the raw URL of its `CHANGELOG.md` to `changelogSources` in `docs/.vitepress/theme/addons.ts` (only the build-time loader reads it, so the URL is not shipped to visitors), add `docs/<addon>/changelog.md` and `docs/de/<addon>/changelog.md` with `<Changelog id="…" />` and add the sidebar entries in every language file.
 
 ## Visitor statistics
 

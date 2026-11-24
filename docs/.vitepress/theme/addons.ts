@@ -89,8 +89,7 @@ export const addons: Addon[] = [
     handbook: '/tooltips/',
     repo: 'https://github.com/Pardonas-addons/pardonas-tooltip',
     stores: {
-      curseforge: 'https://www.curseforge.com/wow/addons/pardonas-tooltips',
-      wago: 'soon'
+      curseforge: 'https://www.curseforge.com/wow/addons/pardonas-tooltips'
     },
     available: true,
     shot: { src: '/shots/tt-tooltip-compare.png', width: 796, height: 414, fit: 'fill' }
@@ -126,6 +125,28 @@ export const githubOrg = 'https://github.com/Pardonas-addons'
 export function githubLinkForPath(path: string, localePrefix: string): string {
   const p = localePrefix && path.startsWith(`${localePrefix}/`) ? path.slice(localePrefix.length) : path
   return addons.find((a) => p.startsWith(a.handbook))?.repo ?? githubOrg
+}
+
+/**
+ * Raw URL of each addon's CHANGELOG.md (branch develop), loaded at build time by
+ * changelog.data.ts for the changelog page. Leave an addon out while it has none.
+ * Kept apart from `addons` on purpose: only the build-time loader imports it, so the
+ * URLs are not part of the JavaScript sent to visitors. The pages and links check
+ * the loader's data instead.
+ */
+export const changelogSources: Partial<Record<AddonId, string>> = {
+  buffReminder: 'https://raw.githubusercontent.com/Pardonas-addons/pardonas-buff-reminder/develop/CHANGELOG.md',
+  tooltips: 'https://raw.githubusercontent.com/Pardonas-addons/pardonas-tooltip/develop/CHANGELOG.md'
+}
+
+/** Heading id of a version on the changelog page: "v" + version, non-alphanumerics as "-" (1.5.0-beta4 → v1-5-0-beta4). */
+export function changelogAnchor(version: string): string {
+  return 'v' + version.replace(/[^A-Za-z0-9]/g, '-')
+}
+
+/** Path of the addon's changelog page without language prefix and base. */
+export function changelogPath(addon: Addon): string {
+  return `${addon.handbook}changelog`
 }
 
 export function getAddon(id: AddonId): Addon {

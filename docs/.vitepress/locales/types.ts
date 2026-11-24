@@ -44,6 +44,11 @@ export interface PardonaTexts {
       minimap: string
     }
   }
+  /** Changelog pages (Changelog.vue). */
+  changelog: {
+    /** Shown when the changelog could not be loaded during a local build. */
+    loadError: string
+  }
   /** aria-label of the GitHub icon in the nav bar. */
   githubAria: string
   /** Alt text of the Pardona emblem. */
@@ -53,6 +58,7 @@ export interface PardonaTexts {
     curseforge: string
     wago: string
     github: string
+    changelog: string
     comingSoon: string
   }
   versions: {
