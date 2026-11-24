@@ -136,6 +136,17 @@ export interface PardonaTexts {
     pillars: { title: string; text: string }[]
     addonsTitle: string
     addonsSubline: string
+    /** "Latest updates" box (HomeNews.vue); the entries themselves stay English. */
+    news: {
+      title: string
+      subline: string
+      /** Last list entry when a version has more changes; {n} is replaced by the number. */
+      more: string
+      /** Link to the full changelog of the version. */
+      fullChangelog: string
+      /** Date format of the cards: 'iso' (2026-11-23) or 'dmy' (23.11.2026). */
+      dateFormat: 'iso' | 'dmy'
+    }
   }
 }
 

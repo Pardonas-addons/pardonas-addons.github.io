@@ -284,7 +284,14 @@ const en: PardonaLocale = {
             }
           ],
           addonsTitle: 'The Addons',
-          addonsSubline: 'Hover over an addon – just like an item in your bags.'
+          addonsSubline: 'Hover over an addon – just like an item in your bags.',
+          news: {
+            title: 'Latest updates',
+            subline: 'Fresh from the changelogs – updated every morning.',
+            more: '+{n} more',
+            fullChangelog: 'Full changelog →',
+            dateFormat: 'iso'
+          }
         }
       }
     }

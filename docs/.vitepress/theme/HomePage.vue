@@ -2,6 +2,7 @@
 import HomeHero from './HomeHero.vue'
 import HomePillars from './HomePillars.vue'
 import HomeAddons from './HomeAddons.vue'
+import HomeNews from './HomeNews.vue'
 import OrnamentDivider from './OrnamentDivider.vue'
 </script>
 
@@ -10,6 +11,7 @@ import OrnamentDivider from './OrnamentDivider.vue'
     <HomeHero />
     <OrnamentDivider size="large" class="home-page-divider" />
     <HomePillars />
+    <HomeNews />
     <HomeAddons />
   </div>
 </template>
