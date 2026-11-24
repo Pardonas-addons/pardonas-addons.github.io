@@ -14,7 +14,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Funktionen', link: `${p}/buff-reminder/features` },
         { text: 'Einstellungen', link: `${p}/buff-reminder/settings` },
         { text: 'Berufe', link: `${p}/buff-reminder/professions` },
-        { text: 'FAQ', link: `${p}/buff-reminder/faq` }
+        { text: 'FAQ', link: `${p}/buff-reminder/faq` },
+        { text: 'Changelog', link: `${p}/buff-reminder/changelog` }
       ]
     },
     {
@@ -41,7 +42,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Überblick', link: `${p}/tooltips/` },
         { text: 'Erste Schritte', link: `${p}/tooltips/getting-started` },
         { text: 'Funktionen', link: `${p}/tooltips/features` },
-        { text: 'FAQ', link: `${p}/tooltips/faq` }
+        { text: 'FAQ', link: `${p}/tooltips/faq` },
+        { text: 'Changelog', link: `${p}/tooltips/changelog` }
       ]
     }
   ],
@@ -119,6 +121,7 @@ const de: PardonaLocale = {
             minimap: 'Minimap im Pardona-Stil'
           }
         },
+        changelog: { loadError: 'Der Changelog konnte beim Bauen nicht geladen werden.' },
         githubAria: 'GitHub-Repository',
         emblemAlt: 'Pardona-Emblem',
         links: {
@@ -126,6 +129,7 @@ const de: PardonaLocale = {
           curseforge: 'CurseForge',
           wago: 'Wago',
           github: 'GitHub',
+          changelog: 'Changelog',
           comingSoon: 'folgt'
         },
         versions: { stable: 'Version', beta: 'Beta', alpha: 'Alpha' },

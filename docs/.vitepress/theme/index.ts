@@ -18,6 +18,7 @@ import AddonHeader from './AddonHeader.vue'
 import ClassHeader from './ClassHeader.vue'
 import ClassCards from './ClassCards.vue'
 import ClassTags from './ClassTags.vue'
+import Changelog from './Changelog.vue'
 import MockBuffList from './MockBuffList.vue'
 import MockItemTooltip from './MockItemTooltip.vue'
 import MockMinimap from './MockMinimap.vue'
@@ -46,6 +47,7 @@ export default {
     app.component('ClassHeader', ClassHeader)
     app.component('ClassCards', ClassCards)
     app.component('ClassTags', ClassTags)
+    app.component('Changelog', Changelog)
     app.component('MockBuffList', MockBuffList)
     app.component('MockItemTooltip', MockItemTooltip)
     app.component('MockMinimap', MockMinimap)
