@@ -16,6 +16,7 @@ const { texts, prefix } = usePardona()
   <section class="home-hero">
     <div class="home-hero-inner">
       <div class="home-hero-text">
+        <img class="home-hero-logo" :src="withBase('/pardona.svg')" alt="" aria-hidden="true" width="112" height="112" />
         <p class="home-hero-eyebrow">{{ texts.home.eyebrow }}</p>
         <h1 class="home-hero-title">
           <template v-for="(line, i) in texts.home.title" :key="line"><br v-if="i" />{{ line }}</template>
@@ -100,6 +101,14 @@ const { texts, prefix } = usePardona()
 }
 
 /* Text column */
+.home-hero-logo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 22px -6px;
+  filter: drop-shadow(0 0 24px rgba(255, 209, 64, 0.35)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+}
+
 .home-hero-eyebrow {
   display: flex;
   align-items: center;
@@ -328,6 +337,13 @@ const { texts, prefix } = usePardona()
 @media (max-width: 639px) {
   .home-hero {
     padding: 36px 16px 48px;
+  }
+
+  .home-hero-logo {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+    margin-left: -4px;
   }
 
   .home-hero-title {
