@@ -4,6 +4,7 @@ import { withBase } from 'vitepress'
 import { addons, changelogPath, qualityColors } from './addons'
 import { data as changelogs } from './changelog.data'
 import { usePardona } from './usePardona'
+import VersionPill from './VersionPill.vue'
 
 /**
  * "Latest updates": the two newest versions across all addons, from the changelog data
@@ -30,7 +31,7 @@ const cards = computed(() => {
     name: texts.value.addons[addon.id].name,
     color: qualityColors[addon.quality],
     version: v.version,
-    pill: v.isBeta ? { label: 'beta', color: qualityColors.rare } : { label: 'stable', color: qualityColors.epic },
+    isBeta: v.isBeta,
     date: formatDate(v.date),
     items: v.summary.slice(0, LIST_ITEMS),
     more: v.total > LIST_ITEMS ? news.value.more.replace('{n}', String(v.total - LIST_ITEMS)) : '',
@@ -58,7 +59,7 @@ function formatDate(iso: string): string {
         </div>
         <div class="news-meta">
           <span class="news-version">{{ c.version }}</span>
-          <span class="news-pill" :style="{ '--p': c.pill.color }">{{ c.pill.label }}</span>
+          <VersionPill :beta="c.isBeta" />
           <span class="news-date">{{ c.date }}</span>
         </div>
         <!-- Summary entries are English in every language, like the changelogs. -->
@@ -160,32 +161,25 @@ function formatDate(iso: string): string {
   color: #f2edff;
 }
 
-/* Same as the pills on the changelog pages (Changelog.vue). */
-.news-pill {
-  padding: 0 9px;
-  border: 1px solid color-mix(in srgb, var(--p) 70%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--p) 16%, transparent);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #f2edff;
-  white-space: nowrap;
-}
-
 .news-date {
   margin-left: auto;
   font-size: 13px;
   color: #a894c2;
 }
 
+/* The theme resets list-style outside .vp-doc, so the bullets are set here. */
 .news-list {
   flex: 1;
   margin: 0 0 14px;
   padding-left: 18px;
+  list-style: disc;
   font-size: 14.5px;
   line-height: 1.55;
   color: #f2edff;
+}
+
+.news-list li {
+  display: list-item;
 }
 
 .news-list li + li {
@@ -204,6 +198,10 @@ function formatDate(iso: string): string {
 }
 
 .news-more {
+  color: #a894c2;
+}
+
+.news-list li.news-more::marker {
   color: #a894c2;
 }
 
