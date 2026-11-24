@@ -35,6 +35,6 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 Verstärker: Zauber Haupthand- und Nebenhand-Verzauberung je einmal – das Addon merkt sich beide getrennt. Setz **Min.** für Ankh vor einem Raid auf 2.
 :::
 
-<!-- screenshot: Schamane mit Schild und Waffenverzauberung, aus /br demo -->
+<DocShot src="/shots/br/c07-shaman-shield-imbue.png" alt="Erinnerungen für Schild und Waffenverzauberung" :width="362" :height="122" />
 
 Siehe auch: [Rechtsklick-Menü](../features#rechtsklick-menu) · [Vorräte](../features#vorrate)

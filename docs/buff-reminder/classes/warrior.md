@@ -33,6 +33,6 @@ With **Stones, oils, poisons by click** sharpening stones go on edged weapons (a
 Tick **Other buffs only in instances** so food and flask reminders don't bother you while questing, and add your healing potions under **Your items**.
 :::
 
-<!-- screenshot: Krieger mit Satt, Fläschchen und Wetzstein, aus /br demo -->
+<DocShot src="/shots/br/c09-warrior-food-flask-stone.png" alt="Well Fed, flask and sharpening stone" :width="362" :height="173" />
 
 See also: [Features: Other Buffs](../features#other-buffs) · [Professions](../professions)

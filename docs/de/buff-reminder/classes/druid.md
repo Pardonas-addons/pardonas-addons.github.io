@@ -38,6 +38,6 @@ Geprüft wird nur das Reagenz deines höchsten erlernten Rangs.
 Hak **Gruppen-Buffs** mit **Nur Dungeon & Raid** an und setz **Min.** für deinen Wiedergeburts-Samen vor einem Raid auf 2 oder 3.
 :::
 
-<!-- screenshot: Druide mit Gruppenzeile Mal der Wildnis -->
+<DocShot src="/shots/br/c01-druid-group.png" alt="Gruppen-Erinnerung für Mal der Wildnis" :width="362" :height="87" />
 
 Siehe auch: [Vorräte](../features#vorrate) · [Gruppen-Buffs](../features#gruppe-priester-magier-druide-paladin)

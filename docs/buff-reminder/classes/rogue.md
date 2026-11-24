@@ -37,6 +37,6 @@ Add your poisons under **Your items** as well: you are warned before your last s
 Turn on the **Expiry warning** and bind **Use top warning** to a key – one press renews the poison that runs out first.
 :::
 
-<!-- screenshot: Schurke mit Gift-Warnung nach Ladungen, aus /br demo -->
+<DocShot src="/shots/br/c06-rogue-poison-charges.png" alt="Missing off-hand poison and a poison running out of charges" :width="362" :height="122" />
 
 See also: [Display: Expiry warning](../features#display) · [Supplies](../features#supplies)

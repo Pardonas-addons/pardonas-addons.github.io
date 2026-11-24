@@ -41,6 +41,6 @@ Soul shards can't be bought, so there is no **Restock** for them. Below **Critic
 Set **Demon to summon** to the demon you play most, and raise **Min.** for soul shards before a raid so you have enough for healthstones, soulstone and summons.
 :::
 
-<!-- screenshot: Hexenmeister mit Dämonenauswahl im Rechtsklick-Menü, aus /br demo -->
+<DocShot src="/shots/br/c08-warlock-demon-menu.png" alt="Right-click menu: demon to summon" :width="360" :height="378" />
 
 See also: [Supplies](../features#supplies) · [Getting started](../getting-started)

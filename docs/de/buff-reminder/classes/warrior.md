@@ -33,6 +33,6 @@ Mit **Steine, Öle, Gifte per Klick** kommen Wetzsteine auf Klingenwaffen (Äxte
 Hak **Weitere Buffs nur in Instanzen** an, damit dich Essen und Fläschchen beim Questen nicht stören, und trag deine Heiltränke unter **Eigene Items** ein.
 :::
 
-<!-- screenshot: Krieger mit Satt, Fläschchen und Wetzstein, aus /br demo -->
+<DocShot src="/shots/br/c09-warrior-food-flask-stone.png" alt="Satt, Fläschchen und Wetzstein" :width="362" :height="173" />
 
 Siehe auch: [Funktionen: Weitere Buffs](../features#weitere-buffs) · [Berufe](../professions)

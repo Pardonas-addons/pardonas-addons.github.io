@@ -14,7 +14,7 @@ Die Einstellungen haben bis zu sechs Tabs: **Anzeige**, **Klassenbuffs**, **Tier
 Schalter mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Versionen an, in Releases standardmäßig aus. Die Einstellungen unter einem Schalter sind ausgegraut oder eingeklappt, solange er aus ist. Sobald du einen Schalter selbst an- oder abhakst, bleibt deine Wahl erhalten.
 
 ## Anzeige
-<!-- screenshot: E01 Einstellungen, Tab Anzeige -->
+<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen, Tab Anzeige" :width="782" :height="668" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -34,14 +34,14 @@ Schalter mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Ve
 | **Schwelle** | Die Warnung erscheint, wenn die Restzeit – bei Giften auch die Ladungen – auf diesen Anteil fällt. 5–50 %. | 10 % |
 | **Deckkraft (relativ)** | Wie blass die Ablauf-Zeile im Vergleich zur Liste ist. 20–100 %. | 50 % |
 
-<!-- screenshot: E09 Auswahlliste Ton aufgeklappt -->
+<DocShot src="/shots/br/e09-dropdown-sound.png" alt="Auswahlliste Ton aufgeklappt" :width="216" :height="564" />
 
 ::: tip Tipp
 Ändere **Stil**, **Größe** oder **Deckkraft** und klick dann auf **Test** – die Test-Erinnerung erscheint genau dort, wo deine Liste sitzt.
 :::
 
 ## Klassenbuffs
-<!-- screenshot: E02 Einstellungen, Tab Klassenbuffs -->
+<DocShot src="/shots/br/e02-settings-class-buffs.png" alt="Einstellungen, Tab Klassenbuffs" :width="782" :height="668" />
 
 - Ein Häkchen je eigenem Buff deiner Klasse. Noch nicht gelernte Buffs sind ausgegraut mit **nicht erlernt**, **ab Stufe …** oder **Talent (ab Stufe …)**.
 - Situative Buffs sind standardmäßig aus: Dornen, Zorn der Gerechtigkeit, Vampirumarmung, Schattengestalt und die Kriegerrufe.
@@ -75,7 +75,7 @@ Nur für Jäger und Hexenmeister; andere Klassen sehen diesen Tab nicht.
 <!-- screenshot: E10 Auswahlliste Dämon beschwören aufgeklappt -->
 
 ## Weitere Buffs
-<!-- screenshot: E03 Einstellungen, Tab Weitere Buffs, oben -->
+<DocShot src="/shots/br/e03-settings-other-top.png" alt="Einstellungen, Tab Weitere Buffs, oben" :width="782" :height="668" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -87,14 +87,14 @@ Nur für Jäger und Hexenmeister; andere Klassen sehen diesen Tab nicht.
 | **Rollen** <Badge type="warning" text="beta" /> | Sechs Rollen-Arten – Beweglichkeit, Stärke, Intelligenz, Willenskraft, Ausdauer, **Schutz** – mit der Anzahl in den Taschen. Nimmt den höchsten Rang, den du lesen kannst, und überspringt eine Rolle, wenn ein Klassenbuff schon so viel gibt. | die Arten, die zu deiner Klasse passen |
 | **Verfolgungs-Erinnerung** <Badge type="warning" text="beta" /> | Ein Häkchen je Verfolgung, gruppiert in **Fähigkeiten** und **Minimap**. Mehrere können gleichzeitig an sein. | Mineraliensuche, Kräutersuche, Schatzsuche (sobald gelernt) |
 
-<!-- screenshot: E04 Einstellungen, Tab Weitere Buffs, unten (Elixiere, Rollen, Verfolgung) -->
+<DocShot src="/shots/br/e04-settings-other-bottom.png" alt="Einstellungen, Tab Weitere Buffs, unten" :width="782" :height="668" />
 
 ::: tip Tipp
 Lass **Weitere Buffs nur in Instanzen** beim Leveln an – Essen und Fläschchen melden sich dann nur dort, wo es zählt.
 :::
 
 ## Vorräte
-<!-- screenshot: E05 Einstellungen, Tab Vorräte mit eigenen Items -->
+<DocShot src="/shots/br/e05-settings-supplies.png" alt="Einstellungen, Tab Vorräte" :width="782" :height="668" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -127,7 +127,7 @@ Trag die Reagenzien deines Berufs unter **Eigene Items** ein und hak **Auch ober
 
 Nur für Priester, Magier, Druiden und Paladine.
 
-<!-- screenshot: E06 Einstellungen, Tab Gruppe (Priester) -->
+<DocShot src="/shots/br/e06-settings-group.png" alt="Einstellungen, Tab Gruppe" :width="782" :height="668" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -136,7 +136,7 @@ Nur für Priester, Magier, Druiden und Paladine.
 | **Prüfen in** | **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**. | Immer |
 | **Segen des Paladins in Gruppenbuffs** <Badge type="warning" text="beta" /> | Paladine: dein Segen auf jedem Mitglied, gezaubert als Großer Segen. **Aus, solange Pally Power geladen ist.** | an in Beta |
 
-<!-- screenshot: E11 Auswahlliste Prüfen in aufgeklappt -->
+<DocShot src="/shots/br/e11-dropdown-check-in.png" alt="Auswahlliste Prüfen in aufgeklappt" :width="238" :height="122" />
 
 ## Neu anfangen
 `/br reset` setzt Position und Einstellungen zurück; die Beta-Schalter gehen auf den Standard deiner Version.

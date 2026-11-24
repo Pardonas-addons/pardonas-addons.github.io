@@ -14,7 +14,7 @@ Changes apply immediately – in combat, as soon as the fight is over. Buff choi
 Switches marked <Badge type="warning" text="beta" /> are experimental: on in beta versions, off by default in releases. The settings below a switch are greyed out or folded away while it is off. Once you tick or untick a switch yourself, your choice is kept.
 
 ## Display
-<!-- screenshot: E01 Settings, Display tab -->
+<DocShot src="/shots/br/e01-settings-display.png" alt="Settings, Display tab" :width="782" :height="668" />
 
 | Setting | What it does | Default |
 |---|---|---|
@@ -34,14 +34,14 @@ Switches marked <Badge type="warning" text="beta" /> are experimental: on in bet
 | **Threshold** | The warning appears when the remaining time – for poisons also the charges – drops to this share. 5–50 %. | 10 % |
 | **Opacity (relative)** | How faint the expiry line is compared to the list. 20–100 %. | 50 % |
 
-<!-- screenshot: E09 Auswahlliste Sound aufgeklappt -->
+<DocShot src="/shots/br/e09-dropdown-sound.png" alt="Sound list opened" :width="216" :height="564" />
 
 ::: tip
 Change **Style**, **Size** or **Opacity**, then click **Test** – the test reminder shows up right where your list sits.
 :::
 
 ## Class Buffs
-<!-- screenshot: E02 Settings, Class Buffs tab -->
+<DocShot src="/shots/br/e02-settings-class-buffs.png" alt="Settings, Class Buffs tab" :width="782" :height="668" />
 
 - One checkbox per self-buff of your class. Buffs you have not learned yet are greyed out with **not learned**, **from level …** or **Talent (level …+)**.
 - Situational buffs are off by default: Thorns, Righteous Fury, Vampiric Embrace, Shadowform and the warrior shouts.
@@ -75,7 +75,7 @@ For Hunters and Warlocks only; other classes don't see this tab.
 <!-- screenshot: E10 Auswahlliste Demon to summon aufgeklappt -->
 
 ## Other Buffs
-<!-- screenshot: E03 Settings, Other Buffs tab, top -->
+<DocShot src="/shots/br/e03-settings-other-top.png" alt="Settings, Other Buffs tab, top" :width="782" :height="668" />
 
 | Setting | What it does | Default |
 |---|---|---|
@@ -87,14 +87,14 @@ For Hunters and Warlocks only; other classes don't see this tab.
 | **Scrolls** <Badge type="warning" text="beta" /> | Six scroll types – Agility, Strength, Intellect, Spirit, Stamina, **Protection** – with the count in your bags. Uses the highest rank you can read and skips a scroll when a class buff already gives as much. | types that suit your class |
 | **Tracking reminder** <Badge type="warning" text="beta" /> | One checkbox per tracking, grouped into **Abilities** and **Minimap**. Several can be on at once. | Find Minerals, Find Herbs, Find Treasure (once learned) |
 
-<!-- screenshot: E04 Settings, Other Buffs tab, bottom (Elixirs, Scrolls, Tracking) -->
+<DocShot src="/shots/br/e04-settings-other-bottom.png" alt="Settings, Other Buffs tab, bottom" :width="782" :height="668" />
 
 ::: tip
 Leave **Other buffs only in instances** on while levelling – food and flask reminders then only show up where they matter.
 :::
 
 ## Supplies
-<!-- screenshot: E05 Settings, Supplies tab with own items -->
+<DocShot src="/shots/br/e05-settings-supplies.png" alt="Settings, Supplies tab" :width="782" :height="668" />
 
 | Setting | What it does | Default |
 |---|---|---|
@@ -127,7 +127,7 @@ Put the reagents of your profession under **Your items** and tick **Also restock
 
 For Priests, Mages, Druids and Paladins only.
 
-<!-- screenshot: E06 Settings, Group tab (Priest) -->
+<DocShot src="/shots/br/e06-settings-group.png" alt="Settings, Group tab" :width="782" :height="668" />
 
 | Setting | What it does | Default |
 |---|---|---|
@@ -136,7 +136,7 @@ For Priests, Mages, Druids and Paladins only.
 | **Check in** | **Always**, **Dungeons & raids only** or **Raids only**. | Always |
 | **Paladin blessings in group buffs** <Badge type="warning" text="beta" /> | Paladins: your blessing on every member, cast as Greater Blessing. **Off while Pally Power is loaded.** | on in beta |
 
-<!-- screenshot: E11 Auswahlliste Check in aufgeklappt -->
+<DocShot src="/shots/br/e11-dropdown-check-in.png" alt="Check in list opened" :width="238" :height="122" />
 
 ## Start over
 `/br reset` resets position and settings; the beta switches go back to the default of your version.

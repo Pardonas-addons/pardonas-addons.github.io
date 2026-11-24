@@ -44,6 +44,6 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 Setz **Auffüllen** für Munition auf das, was in deinen Köcher passt, plus einen Stapel, und lass **Kritisch** auf 50, damit du auch im Kampf rechtzeitig gewarnt wirst.
 :::
 
-<!-- screenshot: Jäger mit Tier füttern und Munitionswarnung, aus /br demo -->
+<DocShot src="/shots/br/c02-hunter-pet-ammo.png" alt="Tier füttern und knappe Munition" :width="362" :height="122" />
 
 Siehe auch: [Vorräte](../features#vorrate) · [Erste Schritte](../getting-started)

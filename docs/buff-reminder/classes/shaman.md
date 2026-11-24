@@ -35,6 +35,6 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 Enhancement shamans: cast your main-hand and off-hand imbue once each – the addon remembers both separately. Raise **Min.** for Ankh to 2 before a raid.
 :::
 
-<!-- screenshot: Schamane mit Schild und Waffenverzauberung, aus /br demo -->
+<DocShot src="/shots/br/c07-shaman-shield-imbue.png" alt="Shield and weapon imbue reminders" :width="362" :height="122" />
 
 See also: [Right-click menu](../features#right-click-menu) · [Supplies](../features#supplies)

@@ -40,6 +40,6 @@ With **Paladin blessings in group buffs** the addon checks your blessing on ever
 Cast your usual aura, seal and blessing once after login – from then on left-click and the keybinding know what you want. In raids, raise **Min.** for Symbol of Kings to one stack.
 :::
 
-<!-- screenshot: Paladin mit Rechtsklick-Menü Aura, aus /br demo -->
+<DocShot src="/shots/br/c04-paladin-aura-menu.png" alt="Right-click menu with all your auras" :width="360" :height="448" />
 
 See also: [Right-click menu](../features#right-click-menu) · [Group buffs](../features#group-priest-mage-druid-paladin)

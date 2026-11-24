@@ -38,6 +38,6 @@ Only the reagent of your highest learned rank is checked.
 Tick **Group buffs** with **Dungeons & raids only**, and raise **Min.** for your Rebirth seed to 2 or 3 before a raid.
 :::
 
-<!-- screenshot: Druide mit Gruppenzeile Mal der Wildnis -->
+<DocShot src="/shots/br/c01-druid-group.png" alt="Group reminder for Mark of the Wild" :width="362" :height="87" />
 
 See also: [Supplies](../features#supplies) · [Group buffs](../features#group-priest-mage-druid-paladin)

@@ -132,6 +132,8 @@ The home page and the handbook show real in-game screenshots from `docs/public/s
 | `br-style-classic.png` | 424 × 563 | Buff Reminder warning list, Classic style | Handbook: `buff-reminder/features.md` (style row) |
 | `br-style-compact.png` | 328 × 321 | Buff Reminder warning list, Compact style | Handbook: `buff-reminder/features.md` (style row) |
 
+The Buff Reminder screenshots in `docs/public/shots/br/` come from the Buff Reminder demo run (`/br demo shot`). They are cropped locally from `_raw-shots\br\` (not in the repo) and shown 1:1 in the handbook pages.
+
 A screenshot is described in `docs/.vitepress/theme/addons.ts` as `{ src, width, height, fit? }`:
 
 - `src` is the path below `docs/public/` (e.g. `'/shots/br-list-menu.png'`); the base path is added by `ShotFrame.vue`.

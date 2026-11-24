@@ -46,6 +46,6 @@ A reagent is only checked once you know a spell that uses it. Reagent vendors se
 Raise **Min.** for Rune of Portals before you offer portals in a city, and keep **Food/water below** at about one stack so you never start a dungeon with empty bags.
 :::
 
-<!-- screenshot: Magier mit Wasser, Manastein und Arkaner Intelligenz, aus /br demo -->
+<DocShot src="/shots/br/c03-mage-consumables.png" alt="Conjured water, mana gem and Arcane Intellect" :width="362" :height="173" />
 
 See also: [Supplies](../features#supplies) · [Group buffs](../features#group-priest-mage-druid-paladin)
