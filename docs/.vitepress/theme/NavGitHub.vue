@@ -26,13 +26,13 @@ const links = computed(() => [
 </template>
 
 <style scoped>
-/* Same as the default VPNavBarSocialLinks: only on wide screens, flush right. */
+/* Visible from the tablet nav bar up; below 768px it is in the mobile nav screen. Flush right. */
 .nav-github--bar {
   display: none;
   margin-right: -8px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .nav-github--bar {
     display: flex;
     align-items: center;
