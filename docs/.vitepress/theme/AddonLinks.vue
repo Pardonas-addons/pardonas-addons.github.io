@@ -6,9 +6,10 @@ import { usePardona } from './usePardona'
 
 /**
  * Handbook and store links of one addon in WoW chat-link style ("[Handbook]").
- * hideHandbook drops the handbook link where it would point to the current page.
+ * hideHandbook drops the handbook link where it would point to the current page;
+ * showRepo adds a link to the addon's GitHub repository after the store links.
  */
-const props = defineProps<{ id: AddonId; hideHandbook?: boolean }>()
+const props = defineProps<{ id: AddonId; hideHandbook?: boolean; showRepo?: boolean }>()
 
 const { texts, prefix } = usePardona()
 const addon = computed(() => getAddon(props.id))
@@ -34,6 +35,7 @@ const links = computed<Link[]>(() => {
     if (!link) continue
     list.push(link === 'soon' ? { label: `${label}: ${t.comingSoon}` } : { label, href: link, external: true })
   }
+  if (props.showRepo) list.push({ label: t.github, href: addon.value.repo, external: true })
   return list
 })
 </script>

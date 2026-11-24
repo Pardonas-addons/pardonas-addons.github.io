@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Shamans: checks your shield and the imbue on each weapon, recasts the one you used last with one click and warns when reagents run low."
+---
+
 # Shaman
 
 <ClassHeader cls="shaman" />

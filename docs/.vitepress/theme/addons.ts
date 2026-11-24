@@ -41,8 +41,15 @@ export interface Addon {
     /** True while the addon is in alpha (no public version yet). */
     alpha?: boolean
   }
+  /**
+   * Full version string of the current download for structured data (SEO),
+   * e.g. '0.2.0-beta1'. Defaults to `versions.stable`, then `versions.beta`.
+   */
+  softwareVersion?: string
   /** Handbook path without language prefix. */
   handbook: string
+  /** GitHub repository of the addon (AddonHeader link and the GitHub icon in the nav bar). */
+  repo: string
   /** Store links. Leave a store out when nothing is planned there yet. */
   stores: {
     curseforge?: StoreLink
@@ -66,6 +73,7 @@ export const addons: Addon[] = [
     quality: 'epic',
     versions: { stable: '1.4.1', beta: '1.5.0' },
     handbook: '/buff-reminder/',
+    repo: 'https://github.com/Pardonas-addons/pardonas-buff-reminder',
     stores: {
       curseforge: 'https://www.curseforge.com/wow/addons/pardonas-buff-reminder',
       wago: 'https://addons.wago.io/addons/pardonas-buff-reminder'
@@ -77,7 +85,9 @@ export const addons: Addon[] = [
     id: 'tooltips',
     quality: 'rare',
     versions: { beta: '0.2.0' },
+    softwareVersion: '0.2.0-beta1',
     handbook: '/tooltips/',
+    repo: 'https://github.com/Pardonas-addons/pardonas-tooltip',
     stores: {
       curseforge: 'https://www.curseforge.com/wow/addons/pardonas-tooltips',
       wago: 'soon'
@@ -90,6 +100,7 @@ export const addons: Addon[] = [
     quality: 'uncommon',
     versions: { alpha: true },
     handbook: '/ui/',
+    repo: 'https://github.com/Pardonas-addons/pardonas-ui',
     stores: {
       curseforge: 'soon'
     },
@@ -104,6 +115,18 @@ export const homeShots = {
   tooltip: { src: '/shots/tt-tooltip-hero.png', width: 486, height: 296, fit: 'fill' },
   minimap: { src: '/shots/ui-minimap.png', width: 303, height: 374, fit: 'fill' }
 } satisfies Record<string, Shot>
+
+/** GitHub organisation; the nav bar icon links here outside of the addon sections. */
+export const githubOrg = 'https://github.com/Pardonas-addons'
+
+/**
+ * GitHub link for a route path (with or without language prefix): the addon's
+ * repository inside its handbook section, otherwise the organisation.
+ */
+export function githubLinkForPath(path: string, localePrefix: string): string {
+  const p = localePrefix && path.startsWith(`${localePrefix}/`) ? path.slice(localePrefix.length) : path
+  return addons.find((a) => p.startsWith(a.handbook))?.repo ?? githubOrg
+}
 
 export function getAddon(id: AddonId): Addon {
   const addon = addons.find((a) => a.id === id)

@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Magier: hält Arkane Intelligenz und deine Rüstung aufrecht, erinnert an Essen, Wasser und Manastein und behält Runen und Pulver im Blick."
+---
+
 # Magier
 
 <ClassHeader cls="mage" />

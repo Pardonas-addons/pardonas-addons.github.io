@@ -6,6 +6,7 @@ import '@fontsource/cinzel/400.css'
 import '@fontsource/cinzel/600.css'
 import '@fontsource/cinzel/700.css'
 import PardonaFooter from './PardonaFooter.vue'
+import NavGitHub from './NavGitHub.vue'
 import HomePage from './HomePage.vue'
 import ShotFrame from './ShotFrame.vue'
 import DocShot from './DocShot.vue'
@@ -25,6 +26,8 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
+      'nav-bar-content-after': () => h(NavGitHub, { variant: 'bar' }),
+      'nav-screen-content-after': () => h(NavGitHub, { variant: 'screen' }),
       'layout-bottom': () => h(PardonaFooter)
     })
   },

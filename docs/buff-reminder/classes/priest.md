@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Priests: keeps Fortitude, Inner Fire, Divine Spirit and Shadow Protection up, casts prayers on your group and warns when candles run low."
+---
+
 # Priest
 
 <ClassHeader cls="priest" />

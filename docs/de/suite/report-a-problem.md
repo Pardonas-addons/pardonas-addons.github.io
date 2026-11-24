@@ -1,3 +1,7 @@
+---
+description: "So meldest du ein Problem mit einem Pardona-Addon auf GitHub: der richtige Issue-Tracker und was hinein gehört – Version, /pardona, Debug-Ausgabe, Lua-Fehler."
+---
+
 # Problem melden
 
 Bitte melde Probleme als GitHub-Issue beim betroffenen Addon:

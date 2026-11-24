@@ -1,3 +1,7 @@
+---
+description: "Die Module von Pardona's UI: eckige Minimap, Buffs und Debuffs, Beutefenster, Würfelfenster, Handelsfenster und das Zusammenspiel mit anderen Addons."
+---
+
 # Module
 
 ::: warning Hinweis

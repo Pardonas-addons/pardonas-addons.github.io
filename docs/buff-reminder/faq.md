@@ -1,3 +1,8 @@
+---
+title: "FAQ – Buff Reminder"
+description: "Answers to common Buff Reminder questions: missing beta features, reminders after loading screens, clicks in combat, the keybinding, food, restock and a reset."
+---
+
 # FAQ
 
 ## A feature from the description is missing in my settings

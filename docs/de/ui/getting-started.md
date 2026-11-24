@@ -1,3 +1,8 @@
+---
+title: "Erste Schritte – Pardona's UI"
+description: "Pardona's UI installieren, die Einstellungen mit /pui öffnen, Module ein- und ausschalten und ihren Status lesen. Pardona's UI ist noch in Entwicklung."
+---
+
 # Erste Schritte
 
 ::: warning Hinweis

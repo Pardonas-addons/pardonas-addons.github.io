@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Rogues: warns when a weapon has no poison, applies the best poison from your bags with one click and alerts you before the charges run out."
+---
+
 # Rogue
 
 <ClassHeader cls="rogue" />

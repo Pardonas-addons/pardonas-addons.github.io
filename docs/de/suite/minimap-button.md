@@ -1,3 +1,7 @@
+---
+description: "Der gemeinsame Pardona-Minimap-Button: Linksklick öffnet ein Menü aller installierten Pardona-Addons, Rechtsklick die Übersicht. Verschieben und ausblenden."
+---
+
 # Minimap-Button
 
 Alle installierten Pardona-Addons teilen sich **einen Minimap-Button** mit dem P-Emblem. Es gibt nie mehr als einen, egal wie viele Pardona-Addons du nutzt.

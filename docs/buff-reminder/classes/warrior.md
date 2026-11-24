@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Warriors: watches your shout and your consumables – food, flasks, elixirs, potions and sharpening stones – and uses the best one with a click."
+---
+
 # Warrior
 
 <ClassHeader cls="warrior" />

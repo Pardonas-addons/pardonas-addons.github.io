@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Hexenmeister: prüft Rüstung, Gesundheitsstein, Seelenstein und Dämon, beschwört per Klick den richtigen Dämon und zählt deine Seelensplitter."
+---
+
 # Hexenmeister
 
 <ClassHeader cls="warlock" />

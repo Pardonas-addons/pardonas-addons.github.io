@@ -1,3 +1,8 @@
+---
+title: "Features – ToolTips"
+description: "All ToolTips options: position, scale, fonts and color sets, players and mobs, item level and gear comparison, prices and disenchanting, experimental features."
+---
+
 # Features
 
 ## Appearance

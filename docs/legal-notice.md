@@ -1,4 +1,5 @@
 ---
+description: "Legal notice (Impressum) of pardonas-addons.de: provider information pursuant to § 5 DDG, e-mail contact, person responsible for content and the authority."
 sidebar: false
 aside: false
 prev: false

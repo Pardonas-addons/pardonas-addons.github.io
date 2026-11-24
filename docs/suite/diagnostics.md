@@ -1,3 +1,7 @@
+---
+description: "Type /pardona to print a diagnosis of all installed Pardona addons and the library versions they bring, and /pardona show to open the overview in the options."
+---
+
 # Diagnostics
 
 ## `/pardona`

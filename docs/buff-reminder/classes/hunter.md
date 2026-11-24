@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Hunters: watches your aspect and Trueshot Aura, calls, revives and feeds your pet, and warns before your ammunition runs out."
+---
+
 # Hunter
 
 <ClassHeader cls="hunter" />

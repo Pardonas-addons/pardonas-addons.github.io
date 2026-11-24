@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Druiden: hält Mal der Wildnis und Dornen aufrecht, zaubert Gabe der Wildnis auf die Gruppe und warnt, wenn die Reagenzien dafür knapp werden."
+---
+
 # Druide
 
 <ClassHeader cls="druid" />

@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Paladine: prüft Aura, Siegel und Segen, zaubert per Klick den zuletzt genutzten und hilft im Schlachtzug mit den Großen Segen."
+---
+
 # Paladin
 
 <ClassHeader cls="paladin" />

@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Schamanen: prüft deinen Schild und die Verzauberung jeder Waffe, zaubert per Klick die zuletzt genutzte und warnt bei knappen Reagenzien."
+---
+
 # Schamane
 
 <ClassHeader cls="shaman" />

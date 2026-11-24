@@ -1,4 +1,5 @@
 ---
+description: "Privacy policy of pardonas-addons.de: hosting on GitHub Pages, no cookies and no tracking, external links, contact by e-mail and your rights under the GDPR."
 sidebar: false
 aside: false
 prev: false

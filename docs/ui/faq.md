@@ -1,3 +1,8 @@
+---
+title: "FAQ – Pardona's UI"
+description: "Answers to common questions about Pardona's UI: conflicts with other addons, \"frame not found\", changes during combat, minimap buttons and reporting a bug."
+---
+
 # FAQ
 
 ::: warning

@@ -1,4 +1,5 @@
 ---
+description: "Datenschutzerklärung von pardonas-addons.de: Hosting bei GitHub Pages, keine Cookies, kein Tracking, externe Links, Kontakt per E-Mail und deine Rechte (DSGVO)."
 sidebar: false
 aside: false
 prev: false

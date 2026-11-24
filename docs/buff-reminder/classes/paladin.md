@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Paladins: watches your aura, seal and blessing, casts the one you used last with one click and helps with Greater Blessings in the raid."
+---
+
 # Paladin
 
 <ClassHeader cls="paladin" />
