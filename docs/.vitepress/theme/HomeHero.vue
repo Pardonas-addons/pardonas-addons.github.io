@@ -3,6 +3,8 @@ import { withBase } from 'vitepress'
 import { homeShots } from './addons'
 import { usePardona } from './usePardona'
 import ShotFrame from './ShotFrame.vue'
+import HeroShot from './HeroShot.vue'
+import heroShots from './hero-shots.json'
 import MockBuffList from './MockBuffList.vue'
 import MockItemTooltip from './MockItemTooltip.vue'
 import MockMinimap from './MockMinimap.vue'
@@ -14,6 +16,7 @@ const { texts, prefix } = usePardona()
   <section class="home-hero">
     <div class="home-hero-inner">
       <div class="home-hero-text">
+        <img class="home-hero-logo" :src="withBase('/pardona.svg')" alt="" aria-hidden="true" width="112" height="112" />
         <p class="home-hero-eyebrow">{{ texts.home.eyebrow }}</p>
         <h1 class="home-hero-title">
           <template v-for="(line, i) in texts.home.title" :key="line"><br v-if="i" />{{ line }}</template>
@@ -31,32 +34,35 @@ const { texts, prefix } = usePardona()
       <div class="home-hero-collage">
         <div class="collage-stage">
           <img class="collage-emblem" :src="withBase('/pardona.svg')" alt="" width="420" height="420" />
-          <!-- The mocks are the fallback when an entry in homeShots is removed. -->
-          <ShotFrame
+          <!--
+            Pre-rendered tilted screenshots (scripts/hero-shots.mjs). When an entry in
+            homeShots (addons.ts) is removed, the tilted ShotFrame with a mock is the fallback.
+          -->
+          <HeroShot
+            v-if="homeShots.buffList"
             class="collage-buffs"
-            v-bind="homeShots.buffList"
+            v-bind="heroShots.buffList"
             :alt="texts.shotAlt.hero.buffList"
-            loading="eager"
-            :tilt="-5"
-          >
+          />
+          <ShotFrame v-else class="collage-buffs collage-fallback" loading="eager" :tilt="-5">
             <MockBuffList variant="short" />
           </ShotFrame>
-          <ShotFrame
+          <HeroShot
+            v-if="homeShots.tooltip"
             class="collage-item"
-            v-bind="homeShots.tooltip"
+            v-bind="heroShots.tooltip"
             :alt="texts.shotAlt.hero.tooltip"
-            loading="eager"
-            :tilt="4"
-          >
+          />
+          <ShotFrame v-else class="collage-item collage-fallback" loading="eager" :tilt="4">
             <MockItemTooltip />
           </ShotFrame>
-          <ShotFrame
+          <HeroShot
+            v-if="homeShots.minimap"
             class="collage-minimap"
-            v-bind="homeShots.minimap"
+            v-bind="heroShots.minimap"
             :alt="texts.shotAlt.hero.minimap"
-            loading="eager"
-            :tilt="-2"
-          >
+          />
+          <ShotFrame v-else class="collage-minimap collage-fallback" loading="eager" :tilt="-2">
             <MockMinimap />
           </ShotFrame>
         </div>
@@ -95,6 +101,14 @@ const { texts, prefix } = usePardona()
 }
 
 /* Text column */
+.home-hero-logo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 22px -6px;
+  filter: drop-shadow(0 0 24px rgba(255, 209, 64, 0.35)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+}
+
 .home-hero-eyebrow {
   display: flex;
   align-items: center;
@@ -212,7 +226,8 @@ const { texts, prefix } = usePardona()
   transform: rotate(45deg);
 }
 
-/* Collage: a fixed 560 x 580 stage, scaled per breakpoint with --k. */
+/* Collage: a fixed 560 x 580 stage, scaled per breakpoint with --k. At --k = 1 the stage
+   has no transform, so the pre-rendered screenshots sit on whole pixels at 1:1. */
 .home-hero-collage {
   --k: 1;
   position: relative;
@@ -227,7 +242,7 @@ const { texts, prefix } = usePardona()
   left: 0;
   width: 560px;
   height: 580px;
-  transform: scale(var(--k));
+  transform: none;
   transform-origin: top left;
 }
 
@@ -243,26 +258,27 @@ const { texts, prefix } = usePardona()
   pointer-events: none;
 }
 
-.collage-buffs {
+/* Position, size and stacking of the pre-rendered screenshots come from hero-shots.json.
+   The rules below only place the mock fallbacks (same frame boxes as in scripts/hero-shots.mjs). */
+.collage-fallback {
   position: absolute;
+}
+
+.collage-buffs.collage-fallback {
   top: 10px;
   left: 0;
   z-index: 1;
   width: 360px;
 }
 
-/* Sizes follow the screenshots' aspect ratios: buff list ~237px high, tooltip ~201px, minimap ~302px.
-   The tooltip sits below the buff list and right of the minimap so no text is covered. */
-.collage-item {
-  position: absolute;
+.collage-item.collage-fallback {
   top: 245px;
   right: 0;
   z-index: 2;
   width: 320px;
 }
 
-.collage-minimap {
-  position: absolute;
+.collage-minimap.collage-fallback {
   bottom: 10px;
   left: 0;
   z-index: 3;
@@ -292,6 +308,10 @@ const { texts, prefix } = usePardona()
   .home-hero-collage {
     --k: 0.78;
   }
+
+  .collage-stage {
+    transform: scale(var(--k));
+  }
 }
 
 @media (max-width: 959px) {
@@ -308,11 +328,22 @@ const { texts, prefix } = usePardona()
   .home-hero-collage {
     --k: 0.8;
   }
+
+  .collage-stage {
+    transform: scale(var(--k));
+  }
 }
 
 @media (max-width: 639px) {
   .home-hero {
     padding: 36px 16px 48px;
+  }
+
+  .home-hero-logo {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 16px;
+    margin-left: -4px;
   }
 
   .home-hero-title {
@@ -338,13 +369,20 @@ const { texts, prefix } = usePardona()
     display: none;
   }
 
-  .collage-buffs {
-    position: relative;
-    top: auto;
-    left: auto;
+  /* Only the buff list: centred, at most its natural 1x width, no transform.
+     (.collage-stage raises the specificity above HeroShot's own position: absolute.) */
+  .collage-stage .collage-buffs {
+    position: static;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .collage-stage .collage-buffs.collage-fallback {
     width: 100%;
     max-width: 360px;
-    margin: 0 auto;
   }
 }
 

@@ -1,0 +1,29 @@
+{
+  "buffList": {
+    "src": "/shots/hero/buff-list.png",
+    "src2x": "/shots/hero/buff-list@2x.png",
+    "width": 381,
+    "height": 266,
+    "left": -10,
+    "top": -6,
+    "z": 1
+  },
+  "tooltip": {
+    "src": "/shots/hero/tooltip.png",
+    "src2x": "/shots/hero/tooltip@2x.png",
+    "width": 335,
+    "height": 221,
+    "left": 233,
+    "top": 233,
+    "z": 2
+  },
+  "minimap": {
+    "src": "/shots/hero/minimap.png",
+    "src2x": "/shots/hero/minimap@2x.png",
+    "width": 253,
+    "height": 306,
+    "left": -6,
+    "top": 270,
+    "z": 3
+  }
+}

@@ -20,8 +20,6 @@ const props = withDefaults(
     loading?: 'lazy' | 'eager'
     /** Rotation in degrees. */
     tilt?: number
-    /** Turn the frame slightly towards one side. */
-    perspective?: 'left' | 'right'
   }>(),
   { alt: '', width: 1600, height: 1000, fit: 'fill', loading: 'lazy', tilt: 0 }
 )
@@ -38,13 +36,9 @@ const imgAttrs = computed(() => ({
 }))
 
 const transform = computed(() => {
-  const parts: string[] = []
-  if (props.perspective) parts.push(`perspective(1200px) rotateY(${props.perspective === 'right' ? 6 : -6}deg)`)
-  if (props.tilt) parts.push(`rotate(${props.tilt}deg)`)
   // translateZ(0) gives the rotated frame its own anti-aliased compositing layer
   // (without it, GPU-composited browsers can draw stair-step edges).
-  if (parts.length) parts.push('translateZ(0)')
-  return parts.length ? parts.join(' ') : undefined
+  return props.tilt ? `rotate(${props.tilt}deg) translateZ(0)` : undefined
 })
 </script>
 
@@ -74,7 +68,7 @@ const transform = computed(() => {
     0 0 40px rgba(115, 64, 166, 0.35);
 }
 
-/* Tilted / turned frames: own layer, smooth edges. The transparent outline keeps the
+/* Tilted frames (hero collage fallback): own layer, smooth edges. The transparent outline keeps the
    visible gold edge inside the layer instead of on its border, where it would alias. */
 .shot-frame--transformed {
   backface-visibility: hidden;

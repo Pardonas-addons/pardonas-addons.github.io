@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from 'vitepress'
 import { addons, qualityColors, type AddonId, type Quality } from './addons'
 import { usePardona } from './usePardona'
 import ShotFrame from './ShotFrame.vue'
@@ -21,6 +22,11 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
 
 <template>
   <section class="home-addons">
+    <div class="home-addons-seal" aria-hidden="true">
+      <span class="home-addons-seal-line home-addons-seal-line--left" />
+      <img :src="withBase('/pardona.svg')" alt="" width="84" height="84" />
+      <span class="home-addons-seal-line home-addons-seal-line--right" />
+    </div>
     <h2 class="home-addons-title">{{ texts.home.addonsTitle }}</h2>
     <p class="home-addons-subline">{{ texts.home.addonsSubline }}</p>
 
@@ -37,7 +43,6 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
         :height="a.shot?.height"
         :fit="a.shot?.fit"
         :alt="texts.shotAlt.addons[a.id]"
-        :perspective="i % 2 === 1 ? 'left' : 'right'"
       >
         <component :is="mocks[a.id].component" v-bind="mocks[a.id].props" />
       </ShotFrame>
@@ -59,6 +64,36 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
   max-width: 1180px;
   margin: 0 auto;
   padding: 72px 24px 88px;
+}
+
+/* Pardona logo between two gold lines, above the heading. */
+.home-addons-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  max-width: 520px;
+  margin: -8px auto 28px;
+}
+
+.home-addons-seal-line {
+  flex: 1;
+  height: 1px;
+}
+
+.home-addons-seal-line--left {
+  background: linear-gradient(90deg, transparent, #d9ad40);
+}
+
+.home-addons-seal-line--right {
+  background: linear-gradient(90deg, #d9ad40, transparent);
+}
+
+.home-addons-seal img {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  filter: drop-shadow(0 0 20px rgba(255, 209, 64, 0.35));
 }
 
 .home-addons-title {
@@ -147,13 +182,18 @@ const legend: Quality[] = ['epic', 'rare', 'uncommon']
   .showcase-row--flip .showcase-tooltip {
     justify-content: center;
   }
-
-  .showcase-shot {
-    transform: none !important;
-  }
 }
 
 @media (max-width: 639px) {
+  .home-addons-seal {
+    gap: 16px;
+  }
+
+  .home-addons-seal img {
+    width: 64px;
+    height: 64px;
+  }
+
   .home-addons {
     padding: 56px 16px 64px;
   }
