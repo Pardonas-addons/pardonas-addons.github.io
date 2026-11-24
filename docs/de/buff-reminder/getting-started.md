@@ -13,6 +13,8 @@ Nach dem Einloggen erscheint die Warnliste in der Bildschirmmitte. Die Buffs dei
 
 Die Einstellungen öffnest du mit `/br` oder über **Optionen › Addons › Pardona's Addons › Buff Reminder**.
 
+Jede Einstellung erklärt die Seite [Einstellungen](./settings).
+
 <DocShot src="/shots/br-settings-display.png" alt="Einstellungen des Buff Reminders, Tab Anzeige" :width="1102" :height="878" />
 
 ## Liste verschieben

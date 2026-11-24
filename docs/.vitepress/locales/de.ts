@@ -12,6 +12,7 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'Überblick', link: `${p}/buff-reminder/` },
         { text: 'Erste Schritte', link: `${p}/buff-reminder/getting-started` },
         { text: 'Funktionen', link: `${p}/buff-reminder/features` },
+        { text: 'Einstellungen', link: `${p}/buff-reminder/settings` },
         { text: 'Berufe', link: `${p}/buff-reminder/professions` },
         { text: 'FAQ', link: `${p}/buff-reminder/faq` }
       ]

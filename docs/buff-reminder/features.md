@@ -6,6 +6,8 @@ description: "All Buff Reminder settings tab by tab: display, styles and sounds,
 # Features
 
 ## Display
+All settings: [Settings › Display](./settings#display)
+
 - **Move** / **Lock**, **Test**, **Unmute all**
 - **Addon enabled**, **Left-click casts buff**
 - **Style:** **Pardona** (purple and gold), **Classic** (stone and gold) or **Compact** (slim bars, optionally **Icons only**)
@@ -22,12 +24,18 @@ description: "All Buff Reminder settings tab by tab: display, styles and sounds,
 </DocShotRow>
 
 ## Class Buffs
+All settings: [Settings › Class Buffs](./settings#class-buffs)
+
 All self-buffs of your class with a tick box each, e.g. Power Word: Fortitude and Inner Fire for Priests. Buffs you have not learned yet show **not learned** or **from level …**; talent buffs show **Talent**.
 
 ## Pet (Hunters and Warlocks only)
+All settings: [Settings › Pet](./settings#pet)
+
 **Pet reminder** (beta): **Pet missing**, **Pet dead**, **Feed pet** (**Only when unhappy**, **Warn when no pet food**) for Hunters; **Demon missing** with **Demon to summon** for Warlocks. See the class pages.
 
 ## Other Buffs
+All settings: [Settings › Other Buffs](./settings#other-buffs)
+
 - General buffs: Well Fed, **Flask**, **Well-Rested (sleeping bag)**
 - **Other buffs only in instances**
 - **Stones, oils, poisons by click** (beta): sharpening stones, weightstones, wizard and mana oils, rogue poisons
@@ -36,6 +44,8 @@ All self-buffs of your class with a tick box each, e.g. Power Word: Fortitude an
 - **Tracking reminder** (beta): tick every tracking you want to keep on (**Abilities** and **Minimap**) – several at once
 
 ## Supplies
+All settings: [Settings › Supplies](./settings#supplies)
+
 - **Class consumables** (beta): conjured food and water (**Food/water below**), mana gem, healthstone, soulstone
 - **Supplies warning** (beta): reagents of your class spells, **Ammunition** (Hunter), soul shards (Warlock), **Pet food** and **Your items**. Each has **Min.** and **Critical**.
 - Outside of towns, left-click a supply warning: it waits until the next rested area (inn or city), vendor or bank. Below **Critical** it always comes back after combat; low ammo during a fight shows a red warning.
@@ -55,6 +65,8 @@ All self-buffs of your class with a tick box each, e.g. Power Word: Fortitude an
 <!-- screenshot: Fenster Restock beim Händler, aus /br demo -->
 
 ## Group (Priest, Mage, Druid, Paladin)
+All settings: [Settings › Group](./settings#group)
+
 - **Group buffs** (beta) with **Check group buffs** and **Check in**: **Always**, **Dungeons & raids only**, **Raids only**
 - A group reminder shows how many players miss a buff. Left-click casts the group version on one of them, **Ctrl+Left-click** the single version.
 - **Paladin blessings in group buffs** (beta) – **Off while Pally Power is loaded**

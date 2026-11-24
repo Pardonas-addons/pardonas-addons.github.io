@@ -6,6 +6,8 @@ description: "Alle Einstellungen des Buff Reminders Tab für Tab: Anzeige, Stile
 # Funktionen
 
 ## Anzeige
+Alle Einstellungen: [Einstellungen › Anzeige](./settings#anzeige)
+
 - **Verschieben** / **Fixieren**, **Test**, **Stumm aufheben**
 - **Addon aktiv**, **Linksklick zaubert Buff**
 - **Stil:** **Pardona** (Lila und Gold), **Classic** (Stein und Gold) oder **Compact** (schmale Balken, wahlweise **Nur Icons**)
@@ -22,12 +24,18 @@ description: "Alle Einstellungen des Buff Reminders Tab für Tab: Anzeige, Stile
 </DocShotRow>
 
 ## Klassenbuffs
+Alle Einstellungen: [Einstellungen › Klassenbuffs](./settings#klassenbuffs)
+
 Alle eigenen Buffs deiner Klasse mit je einem Häkchen, z. B. Machtwort: Seelenstärke und Inneres Feuer beim Priester. Noch nicht gelernte Buffs zeigen **nicht erlernt** bzw. **ab Stufe …**, Talent-Buffs **Talent**.
 
 ## Tier (nur Jäger und Hexenmeister)
+Alle Einstellungen: [Einstellungen › Tier](./settings#tier)
+
 **Tier-Erinnerung** (beta): **Tier fehlt**, **Tier ist tot**, **Tier füttern** (**Nur wenn unglücklich**, **Warnen, wenn kein Tierfutter da ist**) für Jäger; **Dämon fehlt** mit **Dämon beschwören** für Hexenmeister. Details auf den Klassenseiten.
 
 ## Weitere Buffs
+Alle Einstellungen: [Einstellungen › Weitere Buffs](./settings#weitere-buffs)
+
 - Allgemeine Buffs: Satt, **Fläschchen**, **Ausgeruht (Schlafsack)**
 - **Weitere Buffs nur in Instanzen**
 - **Steine, Öle, Gifte per Klick** (beta): Wetzsteine, Gewichtssteine, Zauber- und Manaöle, Schurkengifte
@@ -36,6 +44,8 @@ Alle eigenen Buffs deiner Klasse mit je einem Häkchen, z. B. Machtwort: Seelens
 - **Verfolgungs-Erinnerung** (beta): Häkchen bei jeder Verfolgung, die an bleiben soll (**Fähigkeiten** und **Minimap**) – mehrere gleichzeitig
 
 ## Vorräte
+Alle Einstellungen: [Einstellungen › Vorräte](./settings#vorrate)
+
 - **Klassen-Verbrauchsgüter** (beta): herbeigezaubertes Essen und Wasser (**Essen/Wasser unter**), Manastein, Gesundheitsstein, Seelenstein
 - **Vorratswarnung** (beta): Reagenzien deiner Klassenzauber, **Munition** (Jäger), Seelensplitter (Hexenmeister), **Tierfutter** und **Eigene Items**. Jeder Eintrag hat **Min.** und **Kritisch**.
 - Außerhalb von Städten Linksklick auf eine Vorratswarnung: Sie wartet bis zum nächsten Erholungsgebiet (Gasthaus oder Stadt), Händler oder bis zur Bank. Unter **Kritisch** kommt sie nach dem Kampf immer zurück; knappe Munition im Kampf zeigt eine rote Warnung.
@@ -55,6 +65,8 @@ Alle eigenen Buffs deiner Klasse mit je einem Häkchen, z. B. Machtwort: Seelens
 <!-- screenshot: Fenster Restock beim Händler, aus /br demo -->
 
 ## Gruppe (Priester, Magier, Druide, Paladin)
+Alle Einstellungen: [Einstellungen › Gruppe](./settings#gruppe)
+
 - **Gruppen-Buffs** (beta) mit **Gruppen-Buffs prüfen** und **Prüfen in**: **Immer**, **Nur Dungeon & Raid**, **Nur Raid**
 - Eine Gruppen-Erinnerung zeigt, wie vielen Spielern ein Buff fehlt. Linksklick zaubert die Gruppenversion auf einen von ihnen, **Strg+Linksklick** die Einzelversion.
 - **Segen des Paladins in Gruppenbuffs** (beta) – **Aus, solange Pally Power geladen ist**
