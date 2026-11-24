@@ -258,10 +258,19 @@ Until then the workflow only builds and stays green.
 
 A custom domain can be added later with a `docs/public/CNAME` file containing the domain name.
 
+## Visitor statistics
+
+Page views are counted with **Umami Cloud** (EU region) without loading Umami's script: `docs/.vitepress/theme/analytics.ts` sends one request per page view to Umami's collect API (`https://gateway.umami.is/api/send`), in the same format as Umami's own tracker. The website ID is the constant `WEBSITE_ID` in that file.
+
+- It only runs on `pardonas-addons.de` and `www.pardonas-addons.de` (never in dev, preview or forks) and sends nothing when Do Not Track or Global Privacy Control is on.
+- No cookies, no browser storage; the only state is in memory.
+- To switch the statistics off, set `WEBSITE_ID` to `''`.
+- If anything about the statistics changes (service, data sent, storage region or retention), update the privacy policy in `docs/privacy.md` and `docs/de/privacy.md` (section 4) as well.
+
 ## Rules
 
-- **No external resources** on the site: no external fonts (e.g. Google Fonts), no CDNs, no analytics, no embedded videos, no third-party scripts, no cookies, no external images. Fonts only from npm packages bundled by Vite (Cinzel) or VitePress (Inter).
+- **No external resources** on the site: no external fonts (e.g. Google Fonts), no CDNs, no third-party analytics scripts, no embedded videos, no third-party scripts, no cookies, no external images. Fonts only from npm packages bundled by Vite (Cinzel) or VitePress (Inter). The only exception is the first-party module `docs/.vitepress/theme/analytics.ts`, which posts page views to `gateway.umami.is` (see "Visitor statistics"); no third-party script is loaded.
 - **No Blizzard or WoW logos or artwork.** The text "Made for WoW Forever" is fine. Plain outgoing hyperlinks (CurseForge, Wago, GitHub) are fine.
-- **No tracking** of any kind.
+- **No tracking** beyond the page view statistics in `analytics.ts`: they only run on pardonas-addons.de, use no cookies or browser storage and respect Do Not Track / Global Privacy Control.
 - **Images must be stripped of metadata** before committing (EXIF, XMP, embedded provenance data; for SVG: `<metadata>`, editor namespaces and comments).
 - All texts in the repository are in English, except the German pages under `docs/de/`.
