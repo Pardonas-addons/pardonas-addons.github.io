@@ -7,6 +7,7 @@ import '@fontsource/cinzel/600.css'
 import '@fontsource/cinzel/700.css'
 import PardonaFooter from './PardonaFooter.vue'
 import NavGitHub from './NavGitHub.vue'
+import { setupAnalytics } from './analytics'
 import HomePage from './HomePage.vue'
 import ShotFrame from './ShotFrame.vue'
 import DocShot from './DocShot.vue'
@@ -31,7 +32,9 @@ export default {
       'layout-bottom': () => h(PardonaFooter)
     })
   },
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
+    // First-party page view statistics (Umami Cloud); see analytics.ts.
+    setupAnalytics(router)
     app.component('HomePage', HomePage)
     app.component('ShotFrame', ShotFrame)
     app.component('DocShot', DocShot)
