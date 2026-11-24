@@ -1,4 +1,6 @@
 ---
+title: "Pardona's ToolTips – WoW Forever addon"
+titleTemplate: false
 description: "Pardona's ToolTips for WoW Forever makes the game's tooltips easier to read: color sets, class colors, item level, gear comparison and disenchant information."
 ---
 

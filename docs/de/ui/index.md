@@ -1,4 +1,6 @@
 ---
+title: "Pardona's UI – Addon für WoW Forever"
+titleTemplate: false
 description: "Pardona's UI ist in Entwicklung und gibt Teilen der Oberfläche von WoW Forever den lila-goldenen Pardona-Look – nur optisch, mit einem Schalter pro Modul."
 ---
 

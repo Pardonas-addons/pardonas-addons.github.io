@@ -1,4 +1,6 @@
 ---
+title: "Pardona's Buff Reminder – WoW Forever addon"
+titleTemplate: false
 description: "Pardona's Buff Reminder for WoW Forever shows every missing buff in one small list. Each reminder is a button: one click casts the buff or uses the item."
 ---
 

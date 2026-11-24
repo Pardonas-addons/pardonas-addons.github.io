@@ -44,12 +44,15 @@ export interface PardonaTexts {
       minimap: string
     }
   }
+  /** aria-label of the GitHub icon in the nav bar. */
+  githubAria: string
   /** Alt text of the Pardona emblem. */
   emblemAlt: string
   links: {
     handbook: string
     curseforge: string
     wago: string
+    github: string
     comingSoon: string
   }
   versions: {

@@ -113,6 +113,7 @@ Header cells do not wrap (`white-space: nowrap`); on narrow screens VitePress sc
 ## Addon data and versions
 
 - **`docs/.vitepress/theme/addons.ts`** is the single source of truth for each addon: `id`, `quality` (`epic`/`rare`/`uncommon`), `versions` (`stable`, `beta`, `alpha`), `handbook` path, `stores` (CurseForge/Wago URL, or `'soon'`), `available` and an optional `shot` (see "Screenshots"); `homeShots` holds the hero collage images. After a release, update the version numbers there; the tooltips and headers on all pages and in all languages pick them up.
+- **GitHub links** come from `repo` in `addons.ts`: the `[GitHub]` link in the addon header and the GitHub icon in the nav bar (`theme/NavGitHub.vue`), which points to the addon's repository inside its handbook section and to the organisation everywhere else.
 - **All texts** (tooltip lines, status labels, link labels, home page texts) are in the language files under `themeConfig.pardona` (`docs/.vitepress/locales/<code>.ts`); the types are in `locales/types.ts`.
 
 ## Screenshots

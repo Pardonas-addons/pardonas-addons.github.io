@@ -53,7 +53,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: { src: '/pardona.svg', alt: "Pardona's Addons" },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Pardonas-addons' }],
+    // No `socialLinks`: the GitHub icon is rendered by theme/NavGitHub.vue and
+    // points to the repository of the current addon section.
     search: {
       provider: 'local',
       options: { locales: searchLocales }

@@ -21,7 +21,7 @@ const color = computed(() => qualityColors[addon.value.quality])
         <span class="addon-header-name">{{ texts.addons[id].name }}</span>
         <span class="addon-header-pill">{{ texts.status[id] }}</span>
       </div>
-      <AddonLinks :id="id" hide-handbook />
+      <AddonLinks :id="id" hide-handbook show-repo />
     </div>
   </div>
 </template>

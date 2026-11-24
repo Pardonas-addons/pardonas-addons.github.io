@@ -117,11 +117,13 @@ const en: PardonaLocale = {
             minimap: 'Minimap in the Pardona style'
           }
         },
+        githubAria: 'GitHub repository',
         emblemAlt: 'Pardona emblem',
         links: {
           handbook: 'Handbook',
           curseforge: 'CurseForge',
           wago: 'Wago',
+          github: 'GitHub',
           comingSoon: 'coming soon'
         },
         versions: { stable: 'Version', beta: 'Beta', alpha: 'Alpha' },
