@@ -13,6 +13,8 @@ After login the reminder list appears in the middle of the screen. Missing buffs
 
 Open the settings with `/br` or via **Options › AddOns › Pardona's Addons › Buff Reminder**.
 
+Every setting is explained on [Settings](./settings).
+
 <DocShot src="/shots/br-settings-display.png" alt="Buff Reminder settings, Display tab" :width="1102" :height="878" />
 
 ## Move the list
