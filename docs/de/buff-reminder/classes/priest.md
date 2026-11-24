@@ -42,6 +42,6 @@ Geprüft wird nur die Kerze, die dein höchster Gebetsrang braucht.
 Schattenpriester: Schattengestalt und Vampirumarmung anhaken. Heiler: **Gruppen-Buffs** mit **Nur Dungeon & Raid** anhaken und die **Warnung vor Ablauf** einschalten, damit du Seelenstärke erneuerst, bevor der Schlachtzug es merkt.
 :::
 
-<!-- screenshot: Priester mit Gruppenzeile Seelenstärke und Kerzen-Warnung, aus /br demo -->
+<DocShot src="/shots/br/c05-priest-group-candles.png" alt="Gruppen-Erinnerung für Seelenstärke und knappe Kerzen" :width="362" :height="138" />
 
 Siehe auch: [Gruppen-Buffs](../features#gruppe-priester-magier-druide-paladin) · [Erste Schritte](../getting-started)

@@ -42,6 +42,6 @@ Only the candle your highest prayer rank needs is checked.
 Shadow priests: tick Shadowform and Vampiric Embrace. Healers: tick **Group buffs** with **Dungeons & raids only** and turn on the **Expiry warning** so you renew Fortitude before the raid notices.
 :::
 
-<!-- screenshot: Priester mit Gruppenzeile Seelenstärke und Kerzen-Warnung, aus /br demo -->
+<DocShot src="/shots/br/c05-priest-group-candles.png" alt="Group reminder for Fortitude and low candles" :width="362" :height="138" />
 
 See also: [Group buffs](../features#group-priest-mage-druid-paladin) · [Getting started](../getting-started)

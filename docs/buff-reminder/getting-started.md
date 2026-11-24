@@ -15,7 +15,7 @@ Open the settings with `/br` or via **Options › AddOns › Pardona's Addons �
 
 Every setting is explained on [Settings](./settings).
 
-<DocShot src="/shots/br-settings-display.png" alt="Buff Reminder settings, Display tab" :width="1102" :height="878" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Buff Reminder settings, Display tab" :width="782" :height="668" />
 
 ## Move the list
 - Click **Move** in the **Display** tab (or type `/br move`), drag the list, then click **Lock** (or `/br lock`).
@@ -33,6 +33,8 @@ Every setting is explained on [Settings](./settings).
 | Group buff | group version on the player who misses it; **Ctrl+Left-click**: single version | mute |
 | Pet (Hunter) / Demon (Warlock) | call, revive, feed or summon | choose the spell or food, mute |
 | Supplies low | outside of towns: **remind me in the next town**; at an open vendor: **restock** | mute |
+
+<DocShot src="/shots/br/s02-mixed-list.png" alt="Reminder list with a missing buff, food, tracking, a group buff and a low supply" :width="362" :height="290" />
 
 The small hint line under each reminder always tells you what a click does. Left-click needs **Left-click casts buff** to be on (default).
 

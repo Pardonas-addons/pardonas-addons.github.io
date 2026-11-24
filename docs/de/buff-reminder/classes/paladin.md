@@ -40,6 +40,6 @@ Mit **Segen des Paladins in Gruppenbuffs** prüft das Addon deinen Segen auf all
 Zauber nach dem Einloggen einmal deine übliche Aura, dein Siegel und deinen Segen – ab dann wissen Linksklick und Taste, was du willst. Im Schlachtzug setz **Min.** für Symbol der Könige auf einen Stapel.
 :::
 
-<!-- screenshot: Paladin mit Rechtsklick-Menü Aura, aus /br demo -->
+<DocShot src="/shots/br/c04-paladin-aura-menu.png" alt="Rechtsklick-Menü mit allen Auren" :width="360" :height="448" />
 
 Siehe auch: [Rechtsklick-Menü](../features#rechtsklick-menu) · [Gruppen-Buffs](../features#gruppe-priester-magier-druide-paladin)

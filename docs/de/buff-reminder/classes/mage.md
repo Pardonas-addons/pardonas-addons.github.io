@@ -46,6 +46,6 @@ Ein Reagenz wird erst geprüft, wenn du einen Zauber kennst, der es braucht. Rea
 Erhöh **Min.** für Rune der Portale, bevor du in der Stadt Portale anbietest, und lass **Essen/Wasser unter** bei etwa einem Stapel, damit du nie mit leeren Taschen in einen Dungeon gehst.
 :::
 
-<!-- screenshot: Magier mit Wasser, Manastein und Arkaner Intelligenz, aus /br demo -->
+<DocShot src="/shots/br/c03-mage-consumables.png" alt="Herbeigezaubertes Wasser, Manastein und Arkane Intelligenz" :width="362" :height="173" />
 
 Siehe auch: [Vorräte](../features#vorrate) · [Gruppen-Buffs](../features#gruppe-priester-magier-druide-paladin)

@@ -28,7 +28,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 Zwergische Bergleute: Mineraliensuche und Schatzsuche zusammen anlassen – ein Klick nach jeder Wiederbelebung holt beide zurück.
 :::
 
-<!-- screenshot: Zeile "Verfolgung aus: Kräutersuche, Schatzsuche" -->
+<DocShot src="/shots/br/s11-tracking-off.png" alt="Verfolgung aus: eine Zeile für alle fehlenden Verfolgungen" :width="362" :height="71" />
 
 ## Alchemie: Fläschchen und Elixiere
 - **Fläschchen** (Tab **Weitere Buffs**): Der Linksklick trinkt ein Fläschchen aus den Taschen. Favoriten (★) zuerst, dann das zuletzt genutzte, dann die höhere Itemstufe. Jedes Fläschchen zählt, auch neue – das Addon lernt ihre Wirkung.
@@ -42,13 +42,17 @@ Zwergische Bergleute: Mineraliensuche und Schatzsuche zusammen anlassen – ein 
 - Rechtsklick zeigt **Essen in den Taschen** mit der Kategorie jedes Essens (z. B. **Ausdauer**, **Willenskraft**, **Beruf**), einem **XP**-Abzeichen für Essen mit Erfahrungsbonus und der Zeile, die der Linksklick nehmen würde, als **beste Wahl**.
 - Während du isst, zählt die Erinnerung herunter – **Isst … s**, dann **Gleich satt …** – mit dem Hinweis **Sitzen bleiben**.
 
-<!-- screenshot: Menü "Essen in den Taschen" mit XP-Abzeichen -->
+<DocShot src="/shots/br/s12-food-menu.png" alt="Rechtsklick-Menü: Essen in den Taschen mit XP-Abzeichen und bester Wahl" :width="360" :height="429" />
+
+<DocShot src="/shots/br/s13-eating.png" alt="Countdown beim Essen" :width="362" :height="71" />
 
 ## Schmiedekunst und Verzauberkunst: Steine und Öle
 - Mit **Steine, Öle, Gifte per Klick** (beta) erscheinen die Zeilen **Waffe (Haupthand): Stein/Öl** und **Waffe (Nebenhand): Stein/Öl**, wenn eine Waffe keine temporäre Verbesserung hat und du ein passendes Item dabei hast.
 - Wetzsteine passen auf Klingenwaffen (Äxte, Schwerter, Stangenwaffen, Dolche), Gewichtssteine auf stumpfe Waffen (Streitkolben, Stäbe). Elementarer und Geweihter Wetzstein passen auf beide. Zauber- und Manaöle passen auf jede Waffe; Faustwaffen nehmen nur Öle. Items über deiner Stufe werden übersprungen.
 - Rechtsklick zeigt **Steine & Öle in den Taschen** mit ★-Favoriten.
 - Schamanen nutzen stattdessen ihre Waffenverzauberungen; Schurken bekommen diese Zeilen nur, solange ihre Gift-Erinnerung aus ist.
+
+<DocShot src="/shots/br/s05-stones-oils-menu.png" alt="Rechtsklick-Menü: Steine und Öle in den Taschen" :width="360" :height="378" />
 
 ## Erste Hilfe und Handwerks-Reagenzien: Eigene Items
 - Trag jedes Item unter **Eigene Items** im Tab **Vorräte** ein: Klick auf **Item hinzufügen:**, dann das Item per Shift-Klick wählen oder auf das Feld ziehen. Bis zu 20 Items pro Charakter, jedes mit **Min.**, **Kritisch** und **Auffüllen**. **Gezählt werden nur Items in den Taschen.**
@@ -60,7 +64,7 @@ Zwergische Bergleute: Mineraliensuche und Schatzsuche zusammen anlassen – ein 
 Trag die Reagenzien deines täglichen Handwerks unter **Eigene Items** ein und hak **Auch oberhalb der Mindestmenge auffüllen** an – jeder Besuch beim Handwerkswarenhändler füllt dich auf.
 :::
 
-<!-- screenshot: Tab Vorräte mit eigenen Items und Fenster Auffüllen beim Handwerkswarenhändler -->
+<DocShot src="/shots/br/s08-restock-trade.png" alt="Fenster Auffüllen beim Handwerkswarenhändler" :width="495" :height="245" />
 
 ## Ingenieurskunst, Lederverarbeitung, Schneiderei, Kürschnerei
 Für diese Berufe gibt es keine eigene Erinnerung. Für ihre Reagenzien nutzt du **Eigene Items** wie oben beschrieben.

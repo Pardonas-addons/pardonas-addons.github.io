@@ -15,7 +15,7 @@ Die Einstellungen öffnest du mit `/br` oder über **Optionen › Addons › Par
 
 Jede Einstellung erklärt die Seite [Einstellungen](./settings).
 
-<DocShot src="/shots/br-settings-display.png" alt="Einstellungen des Buff Reminders, Tab Anzeige" :width="1102" :height="878" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen des Buff Reminders, Tab Anzeige" :width="782" :height="668" />
 
 ## Liste verschieben
 - Im Tab **Anzeige** auf **Verschieben** klicken (oder `/br move`), die Liste ziehen, dann **Fixieren** (oder `/br lock`).
@@ -33,6 +33,8 @@ Mit **Neue Warnungen erscheinen** **unterhalb** oder **oberhalb** legst du fest,
 | Gruppenbuff | Gruppenversion auf den Spieler, dem er fehlt; **Strg+Linksklick**: Einzelversion | stummschalten |
 | Tier (Jäger) / Dämon (Hexenmeister) | rufen, wiederbeleben, füttern oder beschwören | Zauber oder Futter wählen, stummschalten |
 | Vorrat knapp | außerhalb von Städten: **in der nächsten Stadt erinnern**; bei offenem Händler: **auffüllen** | stummschalten |
+
+<DocShot src="/shots/br/s02-mixed-list.png" alt="Erinnerungsliste mit fehlendem Buff, Essen, Verfolgung, Gruppenbuff und knappem Vorrat" :width="362" :height="290" />
 
 Die kleine Hinweiszeile unter jeder Erinnerung sagt dir immer, was ein Klick tut. Der Linksklick braucht **Linksklick zaubert Buff** (standardmäßig an).
 

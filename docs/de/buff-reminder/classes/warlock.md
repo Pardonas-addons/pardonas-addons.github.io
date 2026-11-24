@@ -41,6 +41,6 @@ Seelensplitter kann man nicht kaufen, deshalb gibt es für sie kein **Auffüllen
 Stell **Dämon beschwören** auf den Dämon, den du am meisten spielst, und erhöh **Min.** für Seelensplitter vor einem Raid, damit es für Gesundheitssteine, Seelenstein und Beschwörungen reicht.
 :::
 
-<!-- screenshot: Hexenmeister mit Dämonenauswahl im Rechtsklick-Menü, aus /br demo -->
+<DocShot src="/shots/br/c08-warlock-demon-menu.png" alt="Rechtsklick-Menü: Dämon beschwören" :width="360" :height="378" />
 
 Siehe auch: [Vorräte](../features#vorrate) · [Erste Schritte](../getting-started)

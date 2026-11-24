@@ -37,6 +37,6 @@ Trag auch deine Gifte unter **Eigene Items** ein: Du wirst gewarnt, bevor der le
 Schalt die **Warnung vor Ablauf** ein und leg **Oberste Warnung auslösen** auf eine Taste – ein Druck erneuert das Gift, das zuerst ausläuft.
 :::
 
-<!-- screenshot: Schurke mit Gift-Warnung nach Ladungen, aus /br demo -->
+<DocShot src="/shots/br/c06-rogue-poison-charges.png" alt="Fehlendes Gift in der Nebenhand und Gift mit wenigen Ladungen" :width="362" :height="122" />
 
 Siehe auch: [Anzeige: Warnung vor Ablauf](../features#anzeige) · [Vorräte](../features#vorrate)

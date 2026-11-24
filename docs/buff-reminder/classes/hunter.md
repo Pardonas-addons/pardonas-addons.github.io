@@ -44,6 +44,6 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 Set **Refill to** for ammunition to what fits your quiver plus one stack, and keep **Critical** at 50 so you are warned in time even during a fight.
 :::
 
-<!-- screenshot: Jäger mit Tier füttern und Munitionswarnung, aus /br demo -->
+<DocShot src="/shots/br/c02-hunter-pet-ammo.png" alt="Feed pet and low ammunition" :width="362" :height="122" />
 
 See also: [Supplies](../features#supplies) · [Getting started](../getting-started)
