@@ -1,3 +1,8 @@
+---
+title: "FAQ – Pardona's UI"
+description: "Antworten zu Pardona's UI: Konflikte mit anderen Addons, „Frame nicht gefunden“, Umschalten im Kampf, Minimap-Buttons an der falschen Stelle und Fehler melden."
+---
+
 # FAQ
 
 ::: warning Hinweis

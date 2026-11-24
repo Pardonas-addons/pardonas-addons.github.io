@@ -41,6 +41,11 @@ export interface Addon {
     /** True while the addon is in alpha (no public version yet). */
     alpha?: boolean
   }
+  /**
+   * Full version string of the current download for structured data (SEO),
+   * e.g. '0.2.0-beta1'. Defaults to `versions.stable`, then `versions.beta`.
+   */
+  softwareVersion?: string
   /** Handbook path without language prefix. */
   handbook: string
   /** Store links. Leave a store out when nothing is planned there yet. */
@@ -77,6 +82,7 @@ export const addons: Addon[] = [
     id: 'tooltips',
     quality: 'rare',
     versions: { beta: '0.2.0' },
+    softwareVersion: '0.2.0-beta1',
     handbook: '/tooltips/',
     stores: {
       curseforge: 'https://www.curseforge.com/wow/addons/pardonas-tooltips',

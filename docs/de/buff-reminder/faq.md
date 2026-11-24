@@ -1,3 +1,8 @@
+---
+title: "FAQ – Buff Reminder"
+description: "Antworten zum Buff Reminder: fehlende Beta-Funktionen, Erinnerungen nach Ladebildschirmen, Klicks im Kampf, die Taste, Essen, Auffüllen und Neuanfang."
+---
+
 # FAQ
 
 ## Eine Funktion aus der Beschreibung fehlt in meinen Einstellungen

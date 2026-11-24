@@ -1,5 +1,6 @@
 import { defineConfig, type MarkdownRenderer } from 'vitepress'
 import { locales, searchLocales } from './locales'
+import { hostname, seoHead, sitemapItems, titleTemplate } from './seo'
 
 /** Puts a small <OrnamentDivider> right after every H1 of the Markdown pages. */
 function ornamentAfterH1(md: MarkdownRenderer) {
@@ -25,8 +26,20 @@ export default defineConfig({
   appearance: 'force-dark',
 
   title: "Pardona's Addons",
+  titleTemplate,
 
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/pardona.svg' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/pardona.svg' }],
+    ['meta', { name: 'theme-color', content: '#140821' }]
+  ],
+
+  // Canonical URL, hreflang, Open Graph / Twitter and JSON-LD per page (see ./seo.ts).
+  transformHead: ({ pageData, siteConfig }) => seoHead(pageData, siteConfig),
+
+  sitemap: {
+    hostname,
+    transformItems: sitemapItems
+  },
 
   locales,
 

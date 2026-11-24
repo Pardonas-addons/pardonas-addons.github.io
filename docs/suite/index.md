@@ -1,3 +1,7 @@
+---
+description: "Pardona's Addons are a small family of addons for WoW Forever. Each works on its own; together they share one minimap button, one look and one settings group."
+---
+
 # The suite
 
 Pardona's Addons are a small family of addons for WoW Forever that share one look and one way of working.

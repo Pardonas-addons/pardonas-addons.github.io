@@ -41,12 +41,15 @@ const transform = computed(() => {
   const parts: string[] = []
   if (props.perspective) parts.push(`perspective(1200px) rotateY(${props.perspective === 'right' ? 6 : -6}deg)`)
   if (props.tilt) parts.push(`rotate(${props.tilt}deg)`)
+  // translateZ(0) gives the rotated frame its own anti-aliased compositing layer
+  // (without it, GPU-composited browsers can draw stair-step edges).
+  if (parts.length) parts.push('translateZ(0)')
   return parts.length ? parts.join(' ') : undefined
 })
 </script>
 
 <template>
-  <figure class="shot-frame" :style="{ transform }">
+  <figure class="shot-frame" :class="{ 'shot-frame--transformed': transform }" :style="{ transform }">
     <div class="shot-inner">
       <img v-if="src && fit === 'fill'" class="shot-img" v-bind="imgAttrs" />
       <div v-else-if="src" class="shot-scene shot-scene--center">
@@ -71,6 +74,14 @@ const transform = computed(() => {
     0 0 40px rgba(115, 64, 166, 0.35);
 }
 
+/* Tilted / turned frames: own layer, smooth edges. The transparent outline keeps the
+   visible gold edge inside the layer instead of on its border, where it would alias. */
+.shot-frame--transformed {
+  backface-visibility: hidden;
+  will-change: transform;
+  outline: 1px solid transparent;
+}
+
 .shot-inner {
   overflow: hidden;
   border-radius: 8px;
@@ -79,6 +90,7 @@ const transform = computed(() => {
 
 .shot-img {
   display: block;
+  image-rendering: auto;
   width: 100%;
   height: auto;
 }
@@ -113,6 +125,7 @@ const transform = computed(() => {
 
 .shot-img-center {
   position: absolute;
+  image-rendering: auto;
   inset: 0;
   margin: auto;
   width: auto;

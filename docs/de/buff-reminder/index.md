@@ -1,3 +1,7 @@
+---
+description: "Pardona's Buff Reminder für WoW Forever zeigt jeden fehlenden Buff in einer kleinen Liste. Jede Erinnerung ist ein Button: Ein Klick bufft dich wieder."
+---
+
 # Buff Reminder
 
 <AddonHeader id="buffReminder" />

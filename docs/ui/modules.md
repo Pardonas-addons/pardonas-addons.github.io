@@ -1,3 +1,7 @@
+---
+description: "The modules of Pardona's UI: square minimap, buffs and debuffs, loot window, group loot rolls and trade window, and how they work with other interface addons."
+---
+
 # Modules
 
 ::: warning

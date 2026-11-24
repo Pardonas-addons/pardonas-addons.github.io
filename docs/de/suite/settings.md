@@ -1,3 +1,7 @@
+---
+description: "Wo die Einstellungen aller Pardona-Addons liegen: Optionen › Addons › Pardona's Addons, mit einer Übersichtsseite und einer Unterseite pro installiertem Addon."
+---
+
 # Einstellungen
 
 Die Optionen aller Pardona-Addons findest du an einer Stelle:

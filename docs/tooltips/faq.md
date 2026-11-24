@@ -1,3 +1,8 @@
+---
+title: "FAQ – ToolTips"
+description: "Answers to common ToolTips questions: health shown as a percentage, missing resource bar, prices without TSM, the gear comparison, tooltip position and a reset."
+---
+
 # FAQ
 
 ## The health bar only shows a percentage

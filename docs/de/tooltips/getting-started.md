@@ -1,3 +1,8 @@
+---
+title: "Erste Schritte – ToolTips"
+description: "Pardona's ToolTips mit der CurseForge-App oder von Hand installieren, optionale Addons kennenlernen, die Einstellungen öffnen und die Chat-Befehle nutzen."
+---
+
 # Erste Schritte
 
 ## Installation

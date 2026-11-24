@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pardonas-addons.de/sitemap.xml

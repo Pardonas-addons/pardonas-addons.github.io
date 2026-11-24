@@ -1,3 +1,7 @@
+---
+description: "Mit /pardona gibst du eine Diagnose aller installierten Pardona-Addons und ihrer Bibliotheksversionen aus, mit /pardona show öffnest du die Übersicht."
+---
+
 # Diagnose
 
 ## `/pardona`

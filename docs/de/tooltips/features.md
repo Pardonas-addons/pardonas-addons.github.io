@@ -1,3 +1,8 @@
+---
+title: "Funktionen – ToolTips"
+description: "Alle Optionen von ToolTips: Position, Skalierung, Schriften und Farb-Sets, Spieler und Mobs, Itemstufe und Vergleich, Preise und Entzauberung, Experimentelles."
+---
+
 # Funktionen
 
 ## Erscheinungsbild

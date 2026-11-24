@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Mages: keeps Arcane Intellect and your armor up, reminds you to conjure food, water and a mana gem, and watches your runes and powder."
+---
+
 # Mage
 
 <ClassHeader cls="mage" />

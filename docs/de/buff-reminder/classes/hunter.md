@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Jäger: prüft Aspekt und Aura des Volltreffers, ruft, belebt und füttert dein Tier und warnt, bevor dir die Munition ausgeht."
+---
+
 # Jäger
 
 <ClassHeader cls="hunter" />

@@ -1,3 +1,7 @@
+---
+description: "The shared Pardona minimap button: left-click opens a menu of all installed Pardona addons, right-click opens the overview. How to move or hide the button."
+---
+
 # Minimap button
 
 All installed Pardona addons share **one minimap button** with the P emblem. There is never more than one, no matter how many Pardona addons you use.

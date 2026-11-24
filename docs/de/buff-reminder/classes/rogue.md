@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Schurken: warnt, wenn eine Waffe kein Gift hat, trägt per Klick das beste Gift aus den Taschen auf und warnt, bevor die Ladungen ausgehen."
+---
+
 # Schurke
 
 <ClassHeader cls="rogue" />

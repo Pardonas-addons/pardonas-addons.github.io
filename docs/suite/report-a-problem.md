@@ -1,3 +1,7 @@
+---
+description: "How to report a problem with a Pardona addon on GitHub: which issue tracker to use and what to include – version, /pardona output, debug output, Lua error."
+---
+
 # Report a problem
 
 Please report problems as a GitHub issue of the affected addon:

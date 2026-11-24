@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Krieger: prüft deinen Ruf und deine Verbrauchsgüter – Essen, Fläschchen, Elixiere, Tränke und Wetzsteine – und nutzt per Klick das beste."
+---
+
 # Krieger
 
 <ClassHeader cls="warrior" />

@@ -1,3 +1,8 @@
+---
+title: "Features – Buff Reminder"
+description: "All Buff Reminder settings tab by tab: display, styles and sounds, class buffs, pet, other buffs, supplies with vendor restock, group and the right-click menu."
+---
+
 # Features
 
 ## Display

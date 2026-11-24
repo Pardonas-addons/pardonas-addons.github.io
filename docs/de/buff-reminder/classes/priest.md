@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder für Priester: hält Seelenstärke, Inneres Feuer, Göttlichen Willen und Schattenschutz aufrecht, zaubert Gebete auf die Gruppe und zählt die Kerzen."
+---
+
 # Priester
 
 <ClassHeader cls="priest" />

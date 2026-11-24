@@ -1,3 +1,7 @@
+---
+description: "Pardona's UI, in development for WoW Forever, gives parts of the default interface the purple-gold Pardona look – visual changes only, one switch per module."
+---
+
 # UI
 
 <AddonHeader id="ui" />

@@ -1,4 +1,5 @@
 ---
+description: "Impressum von pardonas-addons.de: Anbieterkennzeichnung nach § 5 DDG, Kontakt per E-Mail, Verantwortlicher nach § 18 Abs. 2 MStV und die Aufsichtsbehörde."
 sidebar: false
 aside: false
 prev: false

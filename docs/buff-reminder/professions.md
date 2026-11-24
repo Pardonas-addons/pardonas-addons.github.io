@@ -1,16 +1,68 @@
+---
+description: "What the Buff Reminder does for each profession: tracking for gatherers, flasks and elixirs, buff food, stones and oils, and reagent warnings with restock."
+---
+
 # Professions
 
-## Gathering and Find Treasure
-The **Tracking reminder** (beta, **Other Buffs** tab) keeps your trackings on – Find Herbs, Find Minerals, fishing, Find Treasure (Dwarves) and any minimap tracking like flight masters. Tick all you want; several can be active at once. When one is off, a single reminder lists them all (**Tracking off: …**), and one click turns them all back on.
+You don't need the profession yourself: the Buff Reminder works with the items in your bags – whether you made them, bought them or got them from a guildmate. This page shows what it does for each profession.
 
-## Blacksmithing and Enchanting
-Sharpening stones, weightstones, wizard oils and mana oils: with **Stones, oils, poisons by click** (beta) a reminder appears when your weapon has no temporary enhancement, and left-click applies the best one from your bags (**Main hand: weapon enhancement**, **Off hand: weapon enhancement**).
+Features marked <Badge type="warning" text="beta" /> are experimental: on in beta versions, off by default in releases – see [Versions](./#versions).
 
-## Alchemy
-Tick **Flask** in **Other Buffs**; with **Elixirs** (beta) you choose which elixirs to keep active. Left-click drinks the best one from your bags.
+## At a glance
+| Profession | What the Buff Reminder does | Setting | Tab |
+|---|---|---|---|
+| [Herbalism, Mining, Fishing](#gathering-herbalism-mining-fishing) | keeps your tracking on, several at once | **Tracking reminder** <Badge type="warning" text="beta" /> | **Other Buffs** |
+| [Alchemy](#alchemy-flasks-and-elixirs) | drinks the best flask or elixir with one click | **Flask**, **Elixirs** <Badge type="warning" text="beta" /> | **Other Buffs** |
+| [Cooking](#cooking-buff-food) | eats the best buff food with one click, counts down while you eat | Well Fed | **Other Buffs** |
+| [Blacksmithing, Enchanting](#blacksmithing-and-enchanting-stones-and-oils) | applies sharpening stones, weightstones and oils with one click | **Stones, oils, poisons by click** <Badge type="warning" text="beta" /> | **Other Buffs** |
+| [First Aid](#first-aid-and-crafting-reagents-your-items) | warns when your bandages run low | **Your items** <Badge type="warning" text="beta" /> | **Supplies** |
+| [Every crafting profession](#first-aid-and-crafting-reagents-your-items) | warns when crafting reagents run low and refills them at the vendor | **Your items**, **Restock at vendors** <Badge type="warning" text="beta" /> | **Supplies** |
+| [Find Treasure (Dwarves)](#gathering-herbalism-mining-fishing) | keeps it on next to your other trackings | **Tracking reminder** <Badge type="warning" text="beta" /> | **Other Buffs** |
 
-## Cooking
-Tick Well Fed in **Other Buffs**. Left-click eats the best food from your bags; the menu shows each food's category (e.g. **Stamina**, **Spirit**) and an **XP** badge for food with an experience bonus. While you eat, the reminder shows **Eating … s** – **Stay seated**. Any food that gives Well Fed is recognized, not only food with an XP bonus; XP food comes first.
+## Gathering: Herbalism, Mining, Fishing
+- Tick every tracking you want to keep on under **Abilities** and **Minimap** – Find Herbs, Find Minerals, Find Fish (if the game has it), Find Treasure and minimap trackings like flight masters or vendors. **Several can be active at once.**
+- Find Minerals, Find Herbs and Find Treasure are on by default once you have learned them.
+- When one is off – after dying, for example – a single line **Tracking off: …** lists all of them, and one click turns them all back on.
 
-## First Aid and everything else
-Add bandages, potions or any other item under **Your items** in the **Supplies** tab with a minimum amount.
+::: tip Recommended setup
+Dwarven miners: keep Find Minerals and Find Treasure on together – one click after every resurrection brings both back.
+:::
+
+<!-- screenshot: Zeile "Tracking off: Find Herbs, Find Treasure" -->
+
+## Alchemy: flasks and elixirs
+- **Flask** (on the **Other Buffs** tab): left-click drinks a flask from your bags. Favorites (★) come first, then the flask you used last, then the higher item level. Any flask counts, including new ones – the addon learns their effect.
+- **Elixirs** (beta): tick the elixirs you want to keep active; every elixir you carry appears in the list. Left-click drinks the one that is missing.
+- With the **Expiry warning** (beta) you renew a flask or elixir before it runs out.
+- **Other buffs only in instances** applies to flasks and elixirs as well.
+
+## Cooking: buff food
+- Tick Well Fed on the **Other Buffs** tab. Any food that gives Well Fed is recognized.
+- Left-click eats the best food: favorites first, then food with an experience bonus (while you can still gain experience), then the food whose stats suit your class best, then the bigger stack. Only food you are high enough level for is offered.
+- Right-click shows **Food in your bags** with each food's category (e.g. **Stamina**, **Spirit**, **Profession**), an **XP** badge for food with an experience bonus and the line left-click would use marked **best choice**.
+- While you eat, the reminder counts down – **Eating … s**, then **Almost well fed …** – with the hint **Stay seated**.
+
+<!-- screenshot: Menü "Food in your bags" mit XP-Abzeichen -->
+
+## Blacksmithing and Enchanting: stones and oils
+- With **Stones, oils, poisons by click** (beta) the lines **Main hand: weapon enhancement** and **Off hand: weapon enhancement** appear when a weapon has no temporary enhancement and you carry a matching item.
+- Sharpening stones fit edged weapons (axes, swords, polearms, daggers), weightstones blunt weapons (maces, staves). Elemental and Consecrated Sharpening Stones fit both. Wizard oils and mana oils fit every weapon; fist weapons only take oils. Items above your level are skipped.
+- Right-click shows **Stones & oils in your bags** with ★ favorites.
+- Shamans use their own imbues instead; rogues get these lines only while their poison reminder is off.
+
+## First Aid and crafting reagents: Your items
+- Add any item under **Your items** on the **Supplies** tab: click **Add item:**, then Shift-click the item or drag it onto the field. Up to 20 items per character, each with **Min.**, **Critical** and **Refill to**. **Only items in your bags are counted.**
+- First Aid: add your bandages to be warned before the last one is gone.
+- Crafters: add the reagents you buy all the time – e.g. Crystal Vial (Alchemy), Silken Thread (Tailoring, Leatherworking), Strong Flux (Blacksmithing), Salt (Leatherworking) or Hot Spices (Cooking).
+- With **Restock at vendors** (beta) the **Restock** window opens at the trade supplies vendor and refills them up to **Refill to** with one click on **Buy**.
+
+::: tip Recommended setup
+Put the reagents of your daily crafting under **Your items** and tick **Also restock above the minimum** – every visit to the trade supplies vendor tops you up.
+:::
+
+<!-- screenshot: Reiter Supplies mit eigenen Items und Fenster Restock beim Handwerkswarenhändler -->
+
+## Engineering, Leatherworking, Tailoring, Skinning
+These professions have no reminder of their own. Use **Your items** for their reagents, as described above.
+
+See also: [Features: Other Buffs](./features#other-buffs) · [Features: Supplies](./features#supplies) · [Classes](./classes/)

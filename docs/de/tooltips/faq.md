@@ -1,3 +1,8 @@
+---
+title: "FAQ – ToolTips"
+description: "Antworten zu ToolTips: Lebensbalken nur in Prozent, fehlender Ressourcenbalken, Preise ohne TSM, der Ausrüstungsvergleich, die Tooltip-Position, Zurücksetzen."
+---
+
 # FAQ
 
 ## Der Lebensbalken zeigt nur einen Prozentwert

@@ -1,3 +1,8 @@
+---
+title: "Erste Schritte – Buff Reminder"
+description: "Pardona's Buff Reminder installieren, die Einstellungen mit /br öffnen, die Liste verschieben und Erinnerungen per Linksklick, Rechtsklick und Taste nutzen."
+---
+
 # Erste Schritte
 
 ## Installieren

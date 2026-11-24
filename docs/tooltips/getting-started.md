@@ -1,3 +1,8 @@
+---
+title: "Getting started – ToolTips"
+description: "Install Pardona's ToolTips with the CurseForge app or by hand, see which optional addons add features, open the settings and use the chat commands."
+---
+
 # Getting started
 
 ## Installation

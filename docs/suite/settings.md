@@ -1,3 +1,7 @@
+---
+description: "Where to find the settings of every Pardona addon: Options › AddOns › Pardona's Addons, with an overview page and one sub-page for each installed addon."
+---
+
 # Settings
 
 The options of all Pardona addons are in one place:

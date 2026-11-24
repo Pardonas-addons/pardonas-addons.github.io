@@ -1,3 +1,8 @@
+---
+title: "Getting started – Buff Reminder"
+description: "Install Pardona's Buff Reminder, open the settings with /br, move the list and learn how left-click, right-click and the keybinding handle reminders."
+---
+
 # Getting started
 
 ## Install

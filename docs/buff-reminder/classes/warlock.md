@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Warlocks: watches your armor, healthstone, soulstone and demon, summons the right demon with one click and keeps an eye on your soul shards."
+---
+
 # Warlock
 
 <ClassHeader cls="warlock" />

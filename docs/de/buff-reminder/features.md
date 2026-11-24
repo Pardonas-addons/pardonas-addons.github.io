@@ -1,3 +1,8 @@
+---
+title: "Funktionen – Buff Reminder"
+description: "Alle Einstellungen des Buff Reminders Tab für Tab: Anzeige, Stile und Sounds, Klassenbuffs, Tier, weitere Buffs, Vorräte mit Auffüllen, Gruppe und Rechtsklick."
+---
+
 # Funktionen
 
 ## Anzeige

@@ -1,3 +1,8 @@
+---
+title: "Getting started – Pardona's UI"
+description: "Install Pardona's UI, open its settings with /pui, switch modules on and off and read their status. Pardona's UI is in development and not released yet."
+---
+
 # Getting started
 
 ::: warning

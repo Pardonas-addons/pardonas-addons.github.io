@@ -1,3 +1,7 @@
+---
+description: "Buff Reminder for Druids: keeps Mark of the Wild and Thorns up, casts Gift of the Wild on your group and warns when the reagents for your group buff run low."
+---
+
 # Druid
 
 <ClassHeader cls="druid" />
