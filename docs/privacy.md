@@ -37,7 +37,7 @@ The data is stored in the EU and deleted after six months. The legal basis is Ar
 
 ## 5. External links
 
-This site links to other websites, such as CurseForge, Wago and GitHub. Once you follow such a link, the privacy policy of that website applies.
+This site links to other websites, such as CurseForge, Wago, GitHub and YouTube. Once you follow such a link, the privacy policy of that website applies.
 
 ## 6. Contact by e-mail
 

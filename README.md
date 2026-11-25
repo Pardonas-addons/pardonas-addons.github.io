@@ -23,7 +23,7 @@ docs/.vitepress/theme/    Custom "Pardona" theme (extends the default theme)
   addons.ts               Addon data: quality, versions, handbook path, store links, screenshots
   classes.ts              Buff Reminder classes: order and class colours (see "Class pages")
   usePardona.ts           Localized texts and path prefix of the current language
-  PardonaFooter.vue       Footer shown on every page (legal notice, privacy, trademark note)
+  PardonaFooter.vue       Footer shown on every page (legal notice, privacy, YouTube channel, trademark note)
   Home*.vue               Sections of the home page (see "Design")
   Addon*.vue, Mock*.vue,  Building blocks (see "Design")
   ShotFrame.vue, OrnamentDivider.vue,
@@ -183,6 +183,28 @@ Screenshots that do not exist yet are kept in the page as an HTML comment (`<!--
 4. Add or adjust the alt text in every language file (`shotAlt`).
 
 Do not use images that contain Blizzard or WoW logos or artwork beyond the in-game interface you are showing.
+
+## Videos
+
+Videos are only **linked, never embedded**: the site shows a local preview image with a play button and links to YouTube in a new tab. No iframe, script or image is loaded from YouTube or Google. Embedding a video would send visitor data to YouTube, and the privacy policy would have to be updated first.
+
+To give an addon a video:
+
+1. Fetch the preview image once and commit it (sharp is installed only temporarily; behind an HTTPS proxy add `NODE_USE_ENV_PROXY=1`):
+
+   ```bash
+   npm i --no-save sharp
+   ```
+
+   ```bash
+   node scripts/video-thumb.mjs <youtubeId> docs/public/video/<name>.jpg
+   ```
+
+   The script takes the largest available YouTube preview, crops letterbox bars to 16:9 and writes a JPEG without metadata. It prints the size.
+2. Set `video: { youtubeId, thumb: { src: '/video/<name>.jpg', width, height } }` for the addon in `docs/.vitepress/theme/addons.ts`.
+3. Put `<AddonVideo id="…" />` on the addon's page (EN and DE). The `[Video]` link in the addon's card on the home page appears automatically.
+
+The footer links to the YouTube channel (`youtubeChannel` in `addons.ts`) in the same way.
 
 ## SEO
 

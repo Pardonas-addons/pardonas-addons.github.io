@@ -104,8 +104,15 @@ const en: PardonaLocale = {
         footer: {
           legalNotice: 'Legal notice',
           privacy: 'Privacy',
+          youtube: 'YouTube channel',
           trademark:
             "World of Warcraft is a trademark of Blizzard Entertainment. Pardona's Addons are not affiliated with Blizzard."
+        },
+        video: {
+          watch: 'Watch the video on YouTube',
+          note: 'youtube.com · opens in a new tab',
+          aria: 'Watch the Buff Reminder video on YouTube (opens in a new tab)',
+          alt: 'Preview image of the Buff Reminder video'
         },
         placeholderShot: 'Placeholder screenshot',
         shotAlt: {
@@ -129,6 +136,7 @@ const en: PardonaLocale = {
           wago: 'Wago',
           github: 'GitHub',
           changelog: 'Changelog',
+          video: 'Video',
           comingSoon: 'coming soon'
         },
         versions: { stable: 'Version', beta: 'Beta', alpha: 'Alpha' },

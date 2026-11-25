@@ -37,7 +37,7 @@ Die Daten werden in der EU gespeichert und nach sechs Monaten gelöscht. Rechtsg
 
 ## 5. Externe Links
 
-Diese Website verlinkt auf andere Websites, etwa CurseForge, Wago und GitHub. Sobald du einem solchen Link folgst, gilt die Datenschutzerklärung der jeweiligen Website.
+Diese Website verlinkt auf andere Websites, etwa CurseForge, Wago, GitHub und YouTube. Sobald du einem solchen Link folgst, gilt die Datenschutzerklärung der jeweiligen Website.
 
 ## 6. Kontakt per E-Mail
 

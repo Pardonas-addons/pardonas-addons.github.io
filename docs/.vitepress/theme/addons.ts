@@ -59,6 +59,11 @@ export interface Addon {
   available: boolean
   /** Screenshot for the home page showcase. Unset = mock placeholder. */
   shot?: Shot
+  /**
+   * Video on YouTube. The site only links to it (AddonVideo.vue, [Video] link) and never
+   * embeds anything: the preview image is a local copy made with scripts/video-thumb.mjs.
+   */
+  video?: { youtubeId: string; thumb: Shot }
 }
 
 export const qualityColors: Record<Quality, string> = {
@@ -79,6 +84,7 @@ export const addons: Addon[] = [
       wago: 'https://addons.wago.io/addons/pardonas-buff-reminder'
     },
     available: true,
+    video: { youtubeId: '-YVPeKhhIGg', thumb: { src: '/video/br-intro.jpg', width: 1280, height: 720 } },
     shot: { src: '/shots/br-list-menu.png', width: 798, height: 563, fit: 'fill' }
   },
   {
@@ -117,6 +123,14 @@ export const homeShots = {
 
 /** GitHub organisation; the nav bar icon links here outside of the addon sections. */
 export const githubOrg = 'https://github.com/Pardonas-addons'
+
+/** YouTube channel of Pardona's Addons (footer link). */
+export const youtubeChannel = 'https://www.youtube.com/channel/UCWCFr4SUO5nJZWhA7UDi97A'
+
+/** Watch page of a YouTube video (a plain link; nothing is embedded). */
+export function youtubeUrl(id: string): string {
+  return 'https://www.youtube.com/watch?v=' + id
+}
 
 /**
  * GitHub link for a route path (with or without language prefix): the addon's

@@ -58,7 +58,7 @@ const versionLine = computed<[VersionPart, VersionPart?]>(() => {
       <div :class="addon.available ? 'tt-white' : 'tt-red'">{{ t.requirement }}</div>
       <div v-if="t.price" class="tt-white tt-price">{{ t.price }} <span class="tt-coin" aria-hidden="true" /></div>
       <div class="tt-sep" />
-      <AddonLinks :id="id" />
+      <AddonLinks :id="id" show-video />
     </div>
   </div>
 </template>

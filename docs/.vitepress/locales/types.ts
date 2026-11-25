@@ -29,7 +29,20 @@ export interface PardonaTexts {
   footer: {
     legalNotice: string
     privacy: string
+    /** Link to the YouTube channel. */
+    youtube: string
     trademark: string
+  }
+  /** Video card (AddonVideo.vue): a local preview image linking to YouTube. */
+  video: {
+    /** Main line of the caption. */
+    watch: string
+    /** Small second line of the caption. */
+    note: string
+    /** aria-label of the link. */
+    aria: string
+    /** Alt text of the preview image. */
+    alt: string
   }
   /** Caption of a ShotFrame that shows a mock instead of a screenshot. */
   placeholderShot: string
@@ -59,6 +72,7 @@ export interface PardonaTexts {
     wago: string
     github: string
     changelog: string
+    video: string
     comingSoon: string
   }
   versions: {
