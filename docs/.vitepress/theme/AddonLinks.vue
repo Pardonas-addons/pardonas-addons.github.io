@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
-import { changelogPath, getAddon, type AddonId } from './addons'
+import { changelogPath, getAddon, youtubeUrl, type AddonId } from './addons'
 import { data as changelogs } from './changelog.data'
 import { usePardona } from './usePardona'
 
@@ -9,9 +9,17 @@ import { usePardona } from './usePardona'
  * Handbook and store links of one addon in WoW chat-link style ("[Handbook]").
  * hideHandbook drops the handbook link where it would point to the current page;
  * showRepo adds a link to the addon's GitHub repository after the store links;
- * showChangelog adds a link to its changelog page after that (only if it has one).
+ * showChangelog adds a link to its changelog page after that (only if it has one);
+ * showVideo adds [Video] after the store links, an external link to the addon's video on
+ * YouTube (only if it has one; nothing is embedded).
  */
-const props = defineProps<{ id: AddonId; hideHandbook?: boolean; showRepo?: boolean; showChangelog?: boolean }>()
+const props = defineProps<{
+  id: AddonId
+  hideHandbook?: boolean
+  showRepo?: boolean
+  showChangelog?: boolean
+  showVideo?: boolean
+}>()
 
 const { texts, prefix } = usePardona()
 const addon = computed(() => getAddon(props.id))
@@ -37,6 +45,8 @@ const links = computed<Link[]>(() => {
     if (!link) continue
     list.push(link === 'soon' ? { label: `${label}: ${t.comingSoon}` } : { label, href: link, external: true })
   }
+  const video = addon.value.video
+  if (props.showVideo && video) list.push({ label: t.video, href: youtubeUrl(video.youtubeId), external: true })
   if (props.showRepo) list.push({ label: t.github, href: addon.value.repo, external: true })
   if (props.showChangelog && changelogs[props.id]) {
     list.push({ label: t.changelog, href: withBase(`${prefix.value}${changelogPath(addon.value)}`) })

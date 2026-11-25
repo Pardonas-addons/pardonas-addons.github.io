@@ -16,6 +16,8 @@ Pardona's Buff Reminder zeigt alle fehlenden Buffs in einer kleinen Liste auf de
 - Eine Taste erledigt die dringendste Erinnerung.
 - Optional: Warnung vor dem Ablauf eines Buffs, Gruppenbuffs für Gruppe und Schlachtzug, Reagenzien und Vorräte, Tier-Erinnerungen für Jäger und Hexenmeister.
 
+<AddonVideo id="buffReminder" />
+
 <DocShot src="/shots/br-list-hero.png" alt="Warnliste des Buff Reminders im Stil Pardona" :width="424" :height="272" />
 
 ## Für wen

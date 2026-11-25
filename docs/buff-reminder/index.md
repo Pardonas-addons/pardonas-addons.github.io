@@ -16,6 +16,8 @@ Pardona's Buff Reminder shows every buff you are missing in one small list on yo
 - One keybinding handles the most urgent reminder.
 - Optional: warnings before a buff expires, group buffs for your party or raid, reagents and supplies, pet reminders for Hunters and Warlocks.
 
+<AddonVideo id="buffReminder" />
+
 <DocShot src="/shots/br-list-hero.png" alt="Buff Reminder warning list in the Pardona style" :width="424" :height="272" />
 
 ## Who it is for

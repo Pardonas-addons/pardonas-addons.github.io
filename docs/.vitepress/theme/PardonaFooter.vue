@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import { useSidebar } from 'vitepress/theme'
+import { youtubeChannel } from './addons'
 import { usePardona } from './usePardona'
 
 const { texts, prefix } = usePardona()
@@ -14,6 +15,8 @@ const { hasSidebar } = useSidebar()
         <a :href="withBase(`${prefix}/legal-notice`)">{{ texts.footer.legalNotice }}</a>
         <span aria-hidden="true"> · </span>
         <a :href="withBase(`${prefix}/privacy`)">{{ texts.footer.privacy }}</a>
+        <span aria-hidden="true"> · </span>
+        <a :href="youtubeChannel" target="_blank" rel="noopener noreferrer">{{ texts.footer.youtube }}</a>
       </p>
       <p class="pardona-footer-note">{{ texts.footer.trademark }}</p>
     </div>
