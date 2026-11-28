@@ -18,19 +18,19 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 | **Blessing** | no blessing is on you | casts the blessing you used last | **Class Buffs** |
 | Righteous Fury | you don't have it (off by default) | casts it | **Class Buffs** |
 | Greater Blessing <Badge type="warning" text="beta" /> | party or raid members miss your blessing | Greater Blessing on one of them | **Group** |
-| Symbols <Badge type="warning" text="beta" /> | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
+| Symbols | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
 
 ## Class Buffs
 - **Aura:** Devotion, Retribution, Concentration, Shadow, Frost and Fire Resistance, Crusader.
 - **Seal:** Righteousness, Command, Light, Wisdom, Justice, Crusader (later seals only if the game has them).
 - **Blessing:** Might, Wisdom, Kings, Sanctuary. A Greater Blessing counts as well.
-- Left-click casts the variant you used last – the addon remembers it per character as soon as you cast one yourself. With the **Variant menu on right-click** (beta) you pick a different one; the current one is marked **last used**.
+- Left-click casts the variant you used last – the addon remembers it per character as soon as you cast one yourself. With the **Variant menu on right-click** you pick a different one; the current one is marked **last used**.
 - Righteous Fury is for tanking and therefore off by default.
 
 ## Group <Badge type="warning" text="beta" />
 With **Paladin blessings in group buffs** the addon checks your blessing on every party or raid member and casts the matching Greater Blessing on one who misses it. **Off while Pally Power is loaded** – then Pally Power handles the blessings.
 
-## Supplies <Badge type="warning" text="beta" />
+## Supplies
 | Reagent | For | From level | Min. | Refill to |
 |---|---|---|---|---|
 | Symbol of Kings | Greater Blessings | 52 | 10 | 20 |

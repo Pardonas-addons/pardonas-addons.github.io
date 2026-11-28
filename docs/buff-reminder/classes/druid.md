@@ -16,7 +16,7 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 | Mark of the Wild | you don't have it | casts it (highest rank) | **Class Buffs** |
 | Thorns | you don't have it (off by default) | casts it | **Class Buffs** |
 | Gift of the Wild <Badge type="warning" text="beta" /> | party or raid members miss it | group version on one of them | **Group** |
-| Reagents <Badge type="warning" text="beta" /> | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
+| Reagents | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
 
 ## Class Buffs
 - Mark of the Wild from level 1, Thorns from level 6. Thorns is situational and therefore off by default – tick it if you tank.
@@ -25,7 +25,7 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 ## Group <Badge type="warning" text="beta" />
 Tick **Group buffs** and choose **Check in**: **Always**, **Dungeons & raids only** or **Raids only**. A group line shows how many players miss Mark of the Wild. Left-click casts Gift of the Wild on one of them, **Ctrl+Left-click** the single version.
 
-## Supplies <Badge type="warning" text="beta" />
+## Supplies
 Only the reagent of your highest learned rank is checked.
 
 | Reagent | For | From level | Min. | Refill to |

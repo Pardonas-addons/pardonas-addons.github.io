@@ -16,7 +16,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 | Mal der Wildnis | er dir fehlt | zaubert ihn (höchster Rang) | **Klassenbuffs** |
 | Dornen | er dir fehlt (standardmäßig aus) | zaubert ihn | **Klassenbuffs** |
 | Gabe der Wildnis <Badge type="warning" text="beta" /> | Gruppen- oder Schlachtzugsmitgliedern fehlt er | Gruppenversion auf einen von ihnen | **Gruppe** |
-| Reagenzien <Badge type="warning" text="beta" /> | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
+| Reagenzien | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
 
 ## Klassenbuffs
 - Mal der Wildnis ab Stufe 1, Dornen ab Stufe 6. Dornen ist situativ und deshalb standardmäßig aus – hak es an, wenn du tankst.
@@ -25,7 +25,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 ## Gruppe <Badge type="warning" text="beta" />
 Hak **Gruppen-Buffs** an und wähle **Prüfen in**: **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**. Eine Gruppenzeile zeigt, wie vielen Spielern Mal der Wildnis fehlt. Linksklick zaubert Gabe der Wildnis auf einen von ihnen, **Strg+Linksklick** die Einzelversion.
 
-## Vorräte <Badge type="warning" text="beta" />
+## Vorräte
 Geprüft wird nur das Reagenz deines höchsten erlernten Rangs.
 
 | Reagenz | Wofür | Ab Stufe | Min. | Auffüllen |

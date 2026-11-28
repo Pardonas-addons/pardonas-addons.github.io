@@ -14,15 +14,15 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 | Reminder | Shows when | Left-click | Tab |
 |---|---|---|---|
 | **Armor** | no armor is active | casts the armor you used last | **Class Buffs** |
-| Healthstone <Badge type="warning" text="beta" /> | none in your bags | creates one | **Class Buffs** |
-| Soulstone <Badge type="warning" text="beta" /> | none in your bags | creates one | **Class Buffs** |
+| Healthstone | none in your bags | creates one | **Class Buffs** |
+| Soulstone | none in your bags | creates one | **Class Buffs** |
 | **Demon missing** <Badge type="warning" text="beta" /> | no demon is out | summons the demon set under **Demon to summon** | **Pet** |
-| Soul shards <Badge type="warning" text="beta" /> | fewer than **Min.** in your bags | outside of towns: remind me in the next town | **Supplies** |
+| Soul shards | fewer than **Min.** in your bags | outside of towns: remind me in the next town | **Supplies** |
 
 ## Class Buffs
-- **Armor** – Demon Skin, Demon Armor or Fel Armor (Fel Armor only if the game has it). Left-click casts the one you used last; with the **Variant menu on right-click** (beta) you pick another one.
+- **Armor** – Demon Skin, Demon Armor or Fel Armor (Fel Armor only if the game has it). Left-click casts the one you used last; with the **Variant menu on right-click** you pick another one.
 
-## Class consumables <Badge type="warning" text="beta" />
+## Class consumables
 - Healthstone from level 10, Soulstone from level 18 – each appears when you carry none of any rank (improved healthstones count too).
 - Left-click creates the highest rank you know.
 
@@ -30,7 +30,7 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 - **Demon missing:** left-click summons the demon chosen under **Demon to summon** – default **Last summoned**. Right-click lists every demon you know; the one you pick becomes your choice.
 - Without a soul shard, left-click summons your Imp.
 
-## Supplies <Badge type="warning" text="beta" />
+## Supplies
 | Supply | Min. | Critical |
 |---|---|---|
 | Soul shards | 5 | 1 |

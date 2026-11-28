@@ -19,7 +19,7 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 | Shadow Protection | you don't have it | casts it | **Class Buffs** |
 | Vampiric Embrace, Shadowform | you don't have it (off by default) | casts it | **Class Buffs** |
 | Prayers <Badge type="warning" text="beta" /> | party or raid members miss a buff | group version on one of them | **Group** |
-| Candles, feathers <Badge type="warning" text="beta" /> | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
+| Candles, feathers | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
 
 ## Class Buffs
 - Power Word: Fortitude from level 1, Inner Fire from 12, Shadow Protection from 30. Divine Spirit is a talent.
@@ -29,7 +29,7 @@ Features marked <Badge type="warning" text="beta" /> are experimental: on in bet
 ## Group <Badge type="warning" text="beta" />
 Prayer of Fortitude, Prayer of Shadow Protection and Prayer of Spirit (Spirit only for players who use mana). A group line shows how many players miss the buff; left-click casts the prayer on one of them, **Ctrl+Left-click** the single version. **Check in**: **Always**, **Dungeons & raids only** or **Raids only**.
 
-## Supplies <Badge type="warning" text="beta" />
+## Supplies
 | Reagent | For | From level | Min. | Refill to |
 |---|---|---|---|---|
 | Holy Candle | Prayer of Fortitude (rank 1) | 48 | 10 | 20 |

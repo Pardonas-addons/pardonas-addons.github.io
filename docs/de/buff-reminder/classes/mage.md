@@ -15,16 +15,16 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 |---|---|---|---|
 | Arkane Intelligenz | sie dir fehlt | zaubert sie (höchster Rang) | **Klassenbuffs** |
 | **Rüstung** | keine Rüstung aktiv ist | zaubert die zuletzt genutzte | **Klassenbuffs** |
-| Herbeigezaubertes Wasser / Essen <Badge type="warning" text="beta" /> | weniger als **Essen/Wasser unter** in den Taschen | zaubert den höchsten Rang herbei | **Klassenbuffs** |
-| Manastein <Badge type="warning" text="beta" /> | kein Manastein in den Taschen | zaubert ihn herbei | **Klassenbuffs** |
+| Herbeigezaubertes Wasser / Essen | weniger als **Essen/Wasser unter** in den Taschen | zaubert den höchsten Rang herbei | **Klassenbuffs** |
+| Manastein | kein Manastein in den Taschen | zaubert ihn herbei | **Klassenbuffs** |
 | Arkane Brillanz <Badge type="warning" text="beta" /> | Gruppen- oder Schlachtzugsmitgliedern mit Mana fehlt sie | Gruppenversion auf einen von ihnen | **Gruppe** |
-| Runen, Pulver, Federn <Badge type="warning" text="beta" /> | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
+| Runen, Pulver, Federn | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
 
 ## Klassenbuffs
 - Arkane Intelligenz ab Stufe 1; der Linksklick zaubert die Einzelversion.
-- **Rüstung** – Frost, Eis, Magie oder Glühend. Der Linksklick zaubert die zuletzt genutzte; mit dem **Variantenmenü per Rechtsklick** (beta) wählst du eine andere.
+- **Rüstung** – Frost, Eis, Magie oder Glühend. Der Linksklick zaubert die zuletzt genutzte; mit dem **Variantenmenü per Rechtsklick** wählst du eine andere.
 
-## Klassen-Verbrauchsgüter <Badge type="warning" text="beta" />
+## Klassen-Verbrauchsgüter
 - Herbeigezaubertes Wasser ab Stufe 4, Essen ab Stufe 6: Die Zeile erscheint, wenn die Summe aller Ränge in den Taschen unter **Essen/Wasser unter** fällt (0–60, Standard 20; 0 schaltet sie ab).
 - Manastein ab Stufe 28: erscheint, wenn du keinen Manastein irgendeines Rangs dabei hast.
 - Der Linksklick zaubert den höchsten Rang herbei, den du kennst. Diese Erinnerungen gelten überall, auch außerhalb von Instanzen.
@@ -32,7 +32,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 ## Gruppe <Badge type="warning" text="beta" />
 Arkane Brillanz für alle in Gruppe oder Schlachtzug, die Mana nutzen. **Prüfen in**: **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**. Linksklick zaubert die Gruppenversion, **Strg+Linksklick** Arkane Intelligenz.
 
-## Vorräte <Badge type="warning" text="beta" />
+## Vorräte
 | Reagenz | Wofür | Ab Stufe | Min. | Auffüllen |
 |---|---|---|---|---|
 | Arkanes Pulver | Arkane Brillanz | 56 | 10 | 20 |

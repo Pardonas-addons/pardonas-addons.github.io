@@ -15,7 +15,7 @@ All settings: [Settings › Display](./settings#display)
 - **Sound:** **Off**, **Ping**, **Bell**, **Alarm**, **Ready check**, **Quest complete**, **Map ping**, **Coins**, **Group invite**, **Alarm clock**, **Boss emote**, plus LibSharedMedia sounds if installed; you hear a preview when you pick one
 - **Size** and **Opacity** of the list
 - The current key for **Use top warning**
-- **Expiry warning** (beta): warns before a buff runs out. **Threshold** sets when (share of the buff's duration), **Opacity (relative)** how faint the warning is compared to the list. When the buff runs out, the warning turns into a missing reminder right away. Poisons also run out of charges: the warning appears when the time **or** the charges run low, e.g. "Main-hand poison expires · 12 charges".
+- **Expiry warning**: warns before a buff runs out. **Threshold** sets when (share of the buff's duration), **Opacity (relative)** how faint the warning is compared to the list. When the buff runs out, the warning turns into a missing reminder right away. Poisons also run out of charges: the warning appears when the time **or** the charges run low, e.g. "Main-hand poison expires · 12 charges".
 
 <DocShotRow>
   <DocShot src="/shots/br-style-pardona.png" alt="Warning list in the Pardona style" :width="424" :height="563" caption="Pardona" />
@@ -41,27 +41,37 @@ All settings: [Settings › Other Buffs](./settings#other-buffs)
 
 - General buffs: Well Fed, **Flask**, **Well-Rested (sleeping bag)**
 - **Other buffs only in instances**
-- **Stones, oils, poisons by click** (beta): sharpening stones, weightstones, wizard and mana oils, rogue poisons
-- **Elixirs** (beta): tick the elixirs you want to keep active – elixirs you carry appear in the list
-- **Scrolls** (beta): pick scrolls by stat; the reminder uses the highest rank you can use and skips scrolls a class buff already covers
-- **Tracking reminder** (beta): tick every tracking you want to keep on (**Abilities** and **Minimap**) – several at once
+- **Stones, oils, poisons by click**: sharpening stones, weightstones, wizard and mana oils, rogue poisons
+- **Elixirs**: tick the elixirs you want to keep active – elixirs you carry appear in the list
+- **Scrolls**: pick scrolls by stat; the reminder uses the highest rank you can use and skips scrolls a class buff already covers
+- **Tracking reminder**: tick every tracking you want to keep on (**Abilities** and **Minimap**) – several at once
 
 <DocShotRow>
   <DocShot src="/shots/br/s06-elixir-scroll.png" alt="Reminders for an elixir and a scroll" :width="362" :height="122" />
   <DocShot src="/shots/br/s05-stones-oils-menu.png" alt="Right-click menu: stones and oils in your bags" :width="360" :height="378" />
 </DocShotRow>
 
+## Ranks <Badge type="warning" text="beta" />
+All settings: [Settings › Ranks](./settings#ranks)
+
+**Low spell rank warning** (beta): after a fight, the addon tells you if you cast a lower rank of a spell than the highest one you know – any spell, not only buffs, heals and damage spells too. Each spell gets one line, e.g. **Lesser Heal: Rank 1 used - Rank 3 known (2x)**.
+
+- Left-click dismisses the line. If you use the low rank again, it comes back after the next fight.
+- Right-click opens a menu: **Accept Rank N of &lt;spell&gt;** keeps this rank on purpose, **Accept all ranks of &lt;spell&gt;** stops the warning for this spell, **Replace on action bars with Rank M** swaps the spell on all your action buttons (out of combat only; macros are not changed). The usual mute buttons are there too.
+- Accepted ranks are saved per character and listed on the **Ranks** tab; the **x** removes one again.
+- The **Use top warning** key skips these lines.
+
 ## Supplies
 All settings: [Settings › Supplies](./settings#supplies)
 
-- **Class consumables** (beta): conjured food and water (**Food/water below**), mana gem, healthstone, soulstone
-- **Supplies warning** (beta): reagents of your class spells, **Ammunition** (Hunter), soul shards (Warlock), **Pet food** and **Your items**. Each has **Min.** and **Critical**.
+- **Class consumables**: conjured food and water (**Food/water below**), mana gem, healthstone, soulstone
+- **Supplies warning**: reagents of your class spells, **Ammunition** (Hunter), soul shards (Warlock), **Pet food** and **Your items**. Each has **Min.** and **Critical**.
 - Outside of towns, left-click a supply warning: it waits until the next rested area (inn or city), vendor or bank. Below **Critical** it always comes back after combat; low ammo during a fight shows a red warning.
 - **Add item:** click the field, then Shift-click an item (bags, bank, chat link) or drag it onto the field. **Only items in your bags are counted.**
 
-<DocShot src="/shots/br/e05-settings-supplies.png" alt="Supplies tab with your own items" :width="782" :height="668" />
+<DocShot src="/shots/br/e05-settings-supplies.png" alt="Supplies tab with your own items" :width="821" :height="708" />
 
-### Restock at vendors <Badge type="warning" text="beta" />
+### Restock at vendors
 - Every supply except pet food has a **Refill to** amount next to **Min.** and **Critical** (default: twice the Min., ammunition 1000).
 - When you open a vendor who sells one of your low supplies, the **Restock** window opens next to the vendor. One line per item: tick box, icon, name, count and target, amount and price. The amount is rounded up to the vendor's bundle size.
 - Below the list: **Total** and **Your gold**. **Not enough gold** or **Not enough bag space** tell you why you can't buy everything.

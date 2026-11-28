@@ -76,7 +76,7 @@ export const addons: Addon[] = [
   {
     id: 'buffReminder',
     quality: 'epic',
-    versions: { stable: '1.4.1', beta: '1.5.0' },
+    versions: { stable: '1.6.0' },
     handbook: '/buff-reminder/',
     repo: 'https://github.com/Pardonas-addons/pardonas-buff-reminder',
     stores: {
@@ -125,7 +125,7 @@ export const homeShots = {
 export const githubOrg = 'https://github.com/Pardonas-addons'
 
 /** YouTube channel of Pardona's Addons (footer link). */
-export const youtubeChannel = 'https://www.youtube.com/channel/UCWCFr4SUO5nJZWhA7UDi97A'
+export const youtubeChannel = 'https://www.youtube.com/@pardonas-addons'
 
 /** Watch page of a YouTube video (a plain link; nothing is embedded). */
 export function youtubeUrl(id: string): string {

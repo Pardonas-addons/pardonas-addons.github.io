@@ -8,21 +8,19 @@ description: "Buff Reminder for Warriors: watches your shout and your consumable
 
 Warriors have only one self-buff, but they burn through consumables: food, flasks, elixirs, potions and sharpening stones. That is where the Buff Reminder helps most.
 
-Features marked <Badge type="warning" text="beta" /> are experimental: on in beta versions, off by default in releases – see [Versions](../#versions).
-
 ## At a glance
 | Reminder | Shows when | Left-click | Tab |
 |---|---|---|---|
 | **Shout** | no shout is active (off by default) | casts the shout you used last | **Class Buffs** |
 | Well Fed, **Flask** | you don't have it (off by default) | eats or drinks the best item from your bags | **Other Buffs** |
-| **Main hand: weapon enhancement** <Badge type="warning" text="beta" /> | your weapon has no stone | applies the best stone from your bags | **Other Buffs** |
-| Elixirs, scrolls <Badge type="warning" text="beta" /> | a wanted one is missing | uses the best one from your bags | **Other Buffs** |
-| **Your items** <Badge type="warning" text="beta" /> | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
+| **Main hand: weapon enhancement** | your weapon has no stone | applies the best stone from your bags | **Other Buffs** |
+| Elixirs, scrolls | a wanted one is missing | uses the best one from your bags | **Other Buffs** |
+| **Your items** | fewer than **Min.** in your bags | outside of towns: remind me in the next town; at a vendor: restock | **Supplies** |
 
 ## Class Buffs
 - **Shout** – Battle Shout or Commanding Shout (Commanding only if the game has it). Off by default because shouts are short; tick it if you want the reminder. Left-click casts the one you used last.
 
-## Weapon enhancements <Badge type="warning" text="beta" />
+## Weapon enhancements
 With **Stones, oils, poisons by click** sharpening stones go on edged weapons (axes, swords, polearms, daggers), weightstones on blunt weapons (maces, staves). Elemental and Consecrated Sharpening Stones fit both. The off-hand line appears when you wield two weapons.
 
 ## Consumables for every warrior

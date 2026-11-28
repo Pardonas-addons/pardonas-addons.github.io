@@ -24,7 +24,9 @@ Pardona's Buff Reminder zeigt alle fehlenden Buffs in einer kleinen Liste auf de
 Für jede Klasse. Klassen mit vielen eigenen Buffs (Priester, Magier, Paladin, Hexenmeister, Schamane, Jäger) profitieren am meisten; Essen, Fläschchen, Rollen und Vorräte helfen allen.
 
 ## Versionen
-- **Stabil:** 1.4.1
-- **Beta:** 1.5.0-beta4 – neu: Tier-Erinnerungen, Vorräte mit eigenen Items und Auffüllen beim Händler per Klick, Gift-Warnung nach Ladungen, mehrere Verfolgungen gleichzeitig, Größe und Deckkraft, eine klügere Taste.
+- **Stabil:** 1.6.0 – neu: **Warnung bei niedrigen Zauberrängen** (beta) im neuen Tab **Ränge**.
+- **Beta:** zurzeit keine.
 
-Funktionen mit **(beta)** sind experimentell: in Beta-Versionen an, in Releases standardmäßig aus. Du kannst sie in den Einstellungen jederzeit einschalten.
+Seit 1.5.0 sind Warnung vor Ablauf, Vorräte und Auffüllen beim Händler, Steine, Öle und Gifte per Klick, Elixiere, Rollen, Verfolgung und das Variantenmenü keine Beta mehr und standardmäßig an.
+
+Funktionen mit **(beta)** sind experimentell: in Beta-Versionen an, in Releases standardmäßig aus. Du kannst sie in den Einstellungen jederzeit einschalten. Zurzeit in Beta: Tier-Erinnerungen, Gruppenbuffs und die Rang-Warnung.

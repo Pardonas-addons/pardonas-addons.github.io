@@ -24,7 +24,9 @@ Pardona's Buff Reminder shows every buff you are missing in one small list on yo
 Every class. Classes with many self-buffs (Priest, Mage, Paladin, Warlock, Shaman, Hunter) get the most out of it; every class benefits from the food, flask, scroll and supply reminders.
 
 ## Versions
-- **Stable:** 1.4.1
-- **Beta:** 1.5.0-beta4 – new: pet reminders, supplies with your own items and one-click restocking at vendors, poison warnings by charges, several trackings at once, size and opacity, a smarter keybinding.
+- **Stable:** 1.6.0 – new: **Low spell rank warning** (beta) on the new **Ranks** tab.
+- **Beta:** none at the moment.
 
-Features marked **(beta)** are experimental: on in beta builds, off by default in releases. You can switch them on in the settings at any time.
+Since 1.5.0 the expiry warning, supplies and restocking at vendors, stones, oils and poisons by click, elixirs, scrolls, tracking and the variant menu are no longer beta and are on by default.
+
+Features marked **(beta)** are experimental: on in beta builds, off by default in releases. You can switch them on in the settings at any time. Currently in beta: pet reminders, group buffs and the low spell rank warning.

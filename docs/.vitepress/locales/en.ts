@@ -141,7 +141,7 @@ const en: PardonaLocale = {
         },
         versions: { stable: 'Version', beta: 'Beta', alpha: 'Alpha' },
         status: {
-          buffReminder: 'Stable + beta',
+          buffReminder: 'Stable',
           tooltips: 'Beta',
           ui: 'Alpha – in development'
         },

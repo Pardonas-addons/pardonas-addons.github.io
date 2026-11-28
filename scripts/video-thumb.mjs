@@ -58,7 +58,7 @@ if (height > target) {
 
 const file = resolve(out)
 mkdirSync(dirname(file), { recursive: true })
-// No withMetadata(): sharp writes only the JFIF header, no EXIF, ICC or XMP.
+// No withMetadata(): sharp writes no APPn segments at all (no JFIF, EXIF, ICC or XMP).
 await img.jpeg({ quality: 82, progressive: true }).toFile(file)
 
 console.log(`Source: ${src.url} (${src.width}x${src.height})`)
