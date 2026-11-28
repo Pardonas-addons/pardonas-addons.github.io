@@ -15,7 +15,7 @@ Alle Einstellungen: [Einstellungen › Anzeige](./settings#anzeige)
 - **Ton:** **Aus**, **Ping**, **Glocke**, **Alarm**, **Bereitschaftscheck**, **Quest abgeschlossen**, **Kartenmarkierung**, **Münzen**, **Gruppeneinladung**, **Wecker**, **Boss-Emote**, dazu LibSharedMedia-Töne, falls installiert; beim Auswählen hörst du eine Vorschau
 - **Größe** und **Deckkraft** der Liste
 - Die aktuelle Taste für **Oberste Warnung auslösen**
-- **Warnung vor Ablauf** (beta): warnt, bevor ein Buff ausläuft. **Schwelle** legt fest, wann (Anteil an der Laufzeit des Buffs), **Deckkraft (relativ)**, wie blass die Warnung im Vergleich zur Liste ist. Läuft der Buff ab, wird die Warnung sofort zur Fehlt-Erinnerung. Gifte laufen auch nach Ladungen ab: Die Warnung erscheint, wenn die Zeit **oder** die Ladungen knapp werden, z. B. „Gift Haupthand läuft ab · 12 Ladungen“.
+- **Warnung vor Ablauf**: warnt, bevor ein Buff ausläuft. **Schwelle** legt fest, wann (Anteil an der Laufzeit des Buffs), **Deckkraft (relativ)**, wie blass die Warnung im Vergleich zur Liste ist. Läuft der Buff ab, wird die Warnung sofort zur Fehlt-Erinnerung. Gifte laufen auch nach Ladungen ab: Die Warnung erscheint, wenn die Zeit **oder** die Ladungen knapp werden, z. B. „Gift Haupthand läuft ab · 12 Ladungen“.
 
 <DocShotRow>
   <DocShot src="/shots/br-style-pardona.png" alt="Warnliste im Stil Pardona" :width="424" :height="563" caption="Pardona" />
@@ -41,27 +41,37 @@ Alle Einstellungen: [Einstellungen › Weitere Buffs](./settings#weitere-buffs)
 
 - Allgemeine Buffs: Satt, **Fläschchen**, **Ausgeruht (Schlafsack)**
 - **Weitere Buffs nur in Instanzen**
-- **Steine, Öle, Gifte per Klick** (beta): Wetzsteine, Gewichtssteine, Zauber- und Manaöle, Schurkengifte
-- **Elixiere** (beta): Häkchen bei den Elixieren, die aktiv bleiben sollen – Elixiere aus deinen Taschen erscheinen in der Liste
-- **Rollen** (beta): Rollen nach Wert wählen; die Erinnerung nimmt den höchsten Rang, den du benutzen kannst, und überspringt Rollen, die ein Klassenbuff schon abdeckt
-- **Verfolgungs-Erinnerung** (beta): Häkchen bei jeder Verfolgung, die an bleiben soll (**Fähigkeiten** und **Minimap**) – mehrere gleichzeitig
+- **Steine, Öle, Gifte per Klick**: Wetzsteine, Gewichtssteine, Zauber- und Manaöle, Schurkengifte
+- **Elixiere**: Häkchen bei den Elixieren, die aktiv bleiben sollen – Elixiere aus deinen Taschen erscheinen in der Liste
+- **Rollen**: Rollen nach Wert wählen; die Erinnerung nimmt den höchsten Rang, den du benutzen kannst, und überspringt Rollen, die ein Klassenbuff schon abdeckt
+- **Verfolgungs-Erinnerung**: Häkchen bei jeder Verfolgung, die an bleiben soll (**Fähigkeiten** und **Minimap**) – mehrere gleichzeitig
 
 <DocShotRow>
   <DocShot src="/shots/br/s06-elixir-scroll.png" alt="Erinnerungen für ein Elixier und eine Rolle" :width="362" :height="122" />
   <DocShot src="/shots/br/s05-stones-oils-menu.png" alt="Rechtsklick-Menü: Steine und Öle in den Taschen" :width="360" :height="378" />
 </DocShotRow>
 
+## Ränge <Badge type="warning" text="beta" />
+Alle Einstellungen: [Einstellungen › Ränge](./settings#range)
+
+**Warnung bei niedrigen Zauberrängen** (beta): Nach einem Kampf meldet das Addon, wenn du einen niedrigeren Rang eines Zaubers gewirkt hast als den höchsten erlernten – bei allen Zaubern, nicht nur Buffs, auch bei Heil- und Schadenszaubern. Je Zauber erscheint eine Zeile, z. B. **Geringes Heilen: Rang 1 gewirkt - Rang 3 erlernt (2x)**.
+
+- Linksklick schließt die Zeile. Wirkst du den niedrigen Rang wieder, kommt sie nach dem nächsten Kampf zurück.
+- Rechtsklick öffnet ein Menü: **Rang N von &lt;Zauber&gt; akzeptieren** behält den Rang bewusst, **Alle Ränge von &lt;Zauber&gt; akzeptieren** beendet die Warnung für diesen Zauber, **Auf Aktionsleisten durch Rang M ersetzen** tauscht den Zauber auf allen Aktionstasten (nur außerhalb des Kampfes; Makros bleiben unverändert). Dazu kommen die üblichen Stummschalt-Knöpfe.
+- Akzeptierte Ränge gelten pro Charakter und stehen im Tab **Ränge**; das **X** entfernt einen wieder.
+- Die Taste **Oberste Warnung auslösen** überspringt diese Zeilen.
+
 ## Vorräte
 Alle Einstellungen: [Einstellungen › Vorräte](./settings#vorrate)
 
-- **Klassen-Verbrauchsgüter** (beta): herbeigezaubertes Essen und Wasser (**Essen/Wasser unter**), Manastein, Gesundheitsstein, Seelenstein
-- **Vorratswarnung** (beta): Reagenzien deiner Klassenzauber, **Munition** (Jäger), Seelensplitter (Hexenmeister), **Tierfutter** und **Eigene Items**. Jeder Eintrag hat **Min.** und **Kritisch**.
+- **Klassen-Verbrauchsgüter**: herbeigezaubertes Essen und Wasser (**Essen/Wasser unter**), Manastein, Gesundheitsstein, Seelenstein
+- **Vorratswarnung**: Reagenzien deiner Klassenzauber, **Munition** (Jäger), Seelensplitter (Hexenmeister), **Tierfutter** und **Eigene Items**. Jeder Eintrag hat **Min.** und **Kritisch**.
 - Außerhalb von Städten Linksklick auf eine Vorratswarnung: Sie wartet bis zum nächsten Erholungsgebiet (Gasthaus oder Stadt), Händler oder bis zur Bank. Unter **Kritisch** kommt sie nach dem Kampf immer zurück; knappe Munition im Kampf zeigt eine rote Warnung.
 - **Item hinzufügen:** ins Feld klicken, dann ein Item per Shift-Klick wählen (Taschen, Bank, Chat-Link) oder auf das Feld ziehen. **Gezählt werden nur Items in den Taschen.**
 
-<DocShot src="/shots/br/e05-settings-supplies.png" alt="Tab Vorräte mit eigenen Items" :width="782" :height="668" />
+<DocShot src="/shots/br/e05-settings-supplies.png" alt="Tab Vorräte mit eigenen Items" :width="821" :height="708" />
 
-### Beim Händler auffüllen <Badge type="warning" text="beta" />
+### Beim Händler auffüllen
 - Jeder Vorrat außer Tierfutter hat neben **Min.** und **Kritisch** eine Menge **Auffüllen** (Standard: doppelte Mindestmenge, Munition 1000).
 - Öffnest du einen Händler, der einen deiner knappen Vorräte verkauft, geht neben dem Händler das Fenster **Auffüllen** auf. Je Item eine Zeile: Häkchen, Icon, Name, Bestand und Ziel, Menge und Preis. Die Menge wird auf die Bündelgröße des Händlers aufgerundet.
 - Unter der Liste: **Summe** und **Dein Gold**. **Nicht genug Gold** bzw. **Nicht genug Taschenplatz** sagen dir, warum nicht alles geht.

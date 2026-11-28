@@ -14,15 +14,15 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 | Erinnerung | Erscheint, wenn | Linksklick | Tab |
 |---|---|---|---|
 | **Rüstung** | keine Rüstung aktiv ist | zaubert die zuletzt genutzte | **Klassenbuffs** |
-| Gesundheitsstein <Badge type="warning" text="beta" /> | keiner in den Taschen | erschafft einen | **Klassenbuffs** |
-| Seelenstein <Badge type="warning" text="beta" /> | keiner in den Taschen | erschafft einen | **Klassenbuffs** |
+| Gesundheitsstein | keiner in den Taschen | erschafft einen | **Klassenbuffs** |
+| Seelenstein | keiner in den Taschen | erschafft einen | **Klassenbuffs** |
 | **Dämon fehlt** <Badge type="warning" text="beta" /> | kein Dämon draußen ist | beschwört den Dämon aus **Dämon beschwören** | **Tier** |
-| Seelensplitter <Badge type="warning" text="beta" /> | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern | **Vorräte** |
+| Seelensplitter | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern | **Vorräte** |
 
 ## Klassenbuffs
-- **Rüstung** – Dämonenhaut, Dämonenrüstung oder Teufelsrüstung (Teufelsrüstung nur, wenn das Spiel sie kennt). Der Linksklick zaubert die zuletzt genutzte; mit dem **Variantenmenü per Rechtsklick** (beta) wählst du eine andere.
+- **Rüstung** – Dämonenhaut, Dämonenrüstung oder Teufelsrüstung (Teufelsrüstung nur, wenn das Spiel sie kennt). Der Linksklick zaubert die zuletzt genutzte; mit dem **Variantenmenü per Rechtsklick** wählst du eine andere.
 
-## Klassen-Verbrauchsgüter <Badge type="warning" text="beta" />
+## Klassen-Verbrauchsgüter
 - Gesundheitsstein ab Stufe 10, Seelenstein ab Stufe 18 – je eine Zeile, wenn du keinen irgendeines Rangs dabei hast (verbesserte Gesundheitssteine zählen mit).
 - Der Linksklick erschafft den höchsten Rang, den du kennst.
 
@@ -30,7 +30,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 - **Dämon fehlt:** Linksklick beschwört den Dämon aus **Dämon beschwören** – Standard **Zuletzt beschworen**. Rechtsklick zeigt jeden Dämon, den du kennst; der gewählte wird deine Wahl.
 - Ohne Seelensplitter beschwört der Linksklick deinen Wichtel.
 
-## Vorräte <Badge type="warning" text="beta" />
+## Vorräte
 | Vorrat | Min. | Kritisch |
 |---|---|---|
 | Seelensplitter | 5 | 1 |

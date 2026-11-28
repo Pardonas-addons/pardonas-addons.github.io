@@ -15,7 +15,7 @@ Open the settings with `/br` or via **Options › AddOns › Pardona's Addons �
 
 Every setting is explained on [Settings](./settings).
 
-<DocShot src="/shots/br/e01-settings-display.png" alt="Buff Reminder settings, Display tab" :width="782" :height="668" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Buff Reminder settings, Display tab" :width="821" :height="708" />
 
 ## Move the list
 - Click **Move** in the **Display** tab (or type `/br move`), drag the list, then click **Lock** (or `/br lock`).
@@ -43,7 +43,7 @@ The small hint line under each reminder always tells you what a click does. Left
 In combat the list cannot change (WoW protects clickable buttons in combat). Reminders already shown can still be clicked; new ones appear after combat.
 
 ## One key for everything
-Bind **Use top warning** under **Options › Keybindings › Pardona's Addons › Buff Reminder**. The key does the most urgent thing: first the topmost missing reminder, then the topmost buff that is about to expire. Supply warnings and the eating line are skipped. A reminder you just used is skipped for 1.5 seconds, so no item is used twice by accident. In combat, items work once per fight; spells as often as you like.
+Bind **Use top warning** under **Options › Keybindings › Pardona's Addons › Buff Reminder**. The key does the most urgent thing: first the topmost missing reminder, then the topmost buff that is about to expire. Supply warnings and the eating line are skipped. A reminder you just used is skipped for 1.5 seconds, so no item is used twice by accident. In combat, items work once per fight; spells as often as you like. Lines of the low spell rank warning are skipped too.
 
 Macro alternative: `/click PardonasBuffReminderKeyButton`
 

@@ -19,7 +19,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 | Schattenschutz | er dir fehlt | zaubert ihn | **Klassenbuffs** |
 | Vampirumarmung, Schattengestalt | sie dir fehlt (standardmäßig aus) | zaubert sie | **Klassenbuffs** |
 | Gebete <Badge type="warning" text="beta" /> | Gruppen- oder Schlachtzugsmitgliedern fehlt ein Buff | Gruppenversion auf einen von ihnen | **Gruppe** |
-| Kerzen, Federn <Badge type="warning" text="beta" /> | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
+| Kerzen, Federn | weniger als **Min.** in den Taschen | außerhalb von Städten: in der nächsten Stadt erinnern; beim Händler: auffüllen | **Vorräte** |
 
 ## Klassenbuffs
 - Machtwort: Seelenstärke ab Stufe 1, Inneres Feuer ab 12, Schattenschutz ab 30. Göttlicher Willen ist ein Talent.
@@ -29,7 +29,7 @@ Funktionen mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-
 ## Gruppe <Badge type="warning" text="beta" />
 Gebet der Seelenstärke, Gebet des Schattenschutzes und Gebet der Willenskraft (Willenskraft nur für Spieler mit Mana). Eine Gruppenzeile zeigt, wie vielen Spielern der Buff fehlt; Linksklick zaubert das Gebet auf einen von ihnen, **Strg+Linksklick** die Einzelversion. **Prüfen in**: **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**.
 
-## Vorräte <Badge type="warning" text="beta" />
+## Vorräte
 | Reagenz | Wofür | Ab Stufe | Min. | Auffüllen |
 |---|---|---|---|---|
 | Heilige Kerze | Gebet der Seelenstärke (Rang 1) | 48 | 10 | 20 |

@@ -1,20 +1,20 @@
 ---
 title: "Einstellungen – Buff Reminder"
-description: "Alle Einstellungen des Buff Reminders Tab für Tab erklärt: Anzeige, Klassenbuffs, Tier, weitere Buffs, Vorräte und Gruppe – Wirkung und Standardwert."
+description: "Alle Einstellungen des Buff Reminders Tab für Tab: Anzeige, Klassenbuffs, Tier, weitere Buffs, Ränge, Vorräte und Gruppe – Wirkung und Standardwert."
 ---
 
 # Einstellungen
 
 Die Einstellungen öffnest du mit `/br` oder über **Optionen › Addons › Pardona's Addons › Buff Reminder**. `/br` öffnet den zuletzt genutzten Tab.
 
-Die Einstellungen haben bis zu sechs Tabs: **Anzeige**, **Klassenbuffs**, **Tier** (Jäger und Hexenmeister), **Weitere Buffs**, **Vorräte** und **Gruppe** (Priester, Magier, Druiden und Paladine). **Weitere Buffs** enthält alles, was als Buff aktiv bleiben soll, **Vorräte** alles, wovon du genug dabeihaben solltest.
+Die Einstellungen haben bis zu sieben Tabs: **Anzeige**, **Klassenbuffs**, **Tier** (Jäger und Hexenmeister), **Weitere Buffs**, **Ränge**, **Vorräte** und **Gruppe** (Priester, Magier, Druiden und Paladine). **Weitere Buffs** enthält alles, was als Buff aktiv bleiben soll, **Vorräte** alles, wovon du genug dabeihaben solltest.
 
-Änderungen gelten sofort – im Kampf, sobald er vorbei ist. Buff-Auswahl, Vorräte, Elixiere, Rollen und Verfolgungen gelten pro Charakter; Aussehen, Ton und die Beta-Schalter für alle deine Charaktere.
+Änderungen gelten sofort – im Kampf, sobald er vorbei ist. Buff-Auswahl, Vorräte, Elixiere, Rollen, Verfolgungen und akzeptierte Ränge gelten pro Charakter; Aussehen, Ton und die Beta-Schalter für alle deine Charaktere.
 
 Schalter mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Versionen an, in Releases standardmäßig aus. Die Einstellungen unter einem Schalter sind ausgegraut oder eingeklappt, solange er aus ist. Sobald du einen Schalter selbst an- oder abhakst, bleibt deine Wahl erhalten.
 
 ## Anzeige
-<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen, Tab Anzeige" :width="782" :height="668" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen, Tab Anzeige" :width="821" :height="708" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -30,18 +30,18 @@ Schalter mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Ve
 | **Größe** | 50–200 % der normalen Größe. | 100 % |
 | **Deckkraft** | 30–100 %. | 100 % |
 | Tastenzeile | Zeigt die Taste für **Oberste Warnung auslösen** oder **nicht belegt** und wo du sie belegst. | – |
-| **Warnung vor Ablauf** <Badge type="warning" text="beta" /> | Warnt kurz bevor ein Buff ausläuft, als blasse Zeile unter den fehlenden Buffs. | an in Beta |
+| **Warnung vor Ablauf** | Warnt kurz bevor ein Buff ausläuft, als blasse Zeile unter den fehlenden Buffs. | an |
 | **Schwelle** | Die Warnung erscheint, wenn die Restzeit – bei Giften auch die Ladungen – auf diesen Anteil fällt. 5–50 %. | 10 % |
 | **Deckkraft (relativ)** | Wie blass die Ablauf-Zeile im Vergleich zur Liste ist. 20–100 %. | 50 % |
 
-<DocShot src="/shots/br/e09-dropdown-sound.png" alt="Auswahlliste Ton aufgeklappt" :width="216" :height="564" />
+<DocShot src="/shots/br/e09-dropdown-sound.png" alt="Auswahlliste Ton aufgeklappt" :width="230" :height="672" />
 
 ::: tip Tipp
 Ändere **Stil**, **Größe** oder **Deckkraft** und klick dann auf **Test** – die Test-Erinnerung erscheint genau dort, wo deine Liste sitzt.
 :::
 
 ## Klassenbuffs
-<DocShot src="/shots/br/e02-settings-class-buffs.png" alt="Einstellungen, Tab Klassenbuffs" :width="782" :height="668" />
+<DocShot src="/shots/br/e02-settings-class-buffs.png" alt="Einstellungen, Tab Klassenbuffs" :width="821" :height="708" />
 
 - Ein Häkchen je eigenem Buff deiner Klasse. Noch nicht gelernte Buffs sind ausgegraut mit **nicht erlernt**, **ab Stufe …** oder **Talent (ab Stufe …)**.
 - Situative Buffs sind standardmäßig aus: Dornen, Zorn der Gerechtigkeit, Vampirumarmung, Schattengestalt und die Kriegerrufe.
@@ -49,7 +49,7 @@ Schalter mit <Badge type="warning" text="beta" /> sind experimentell: in Beta-Ve
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
-| **Variantenmenü per Rechtsklick** <Badge type="warning" text="beta" /> | Rechtsklick auf eine Erinnerung mit Varianten – Aura, Siegel, Segen, Aspekt, Rüstung, Schild, Waffenverzauberung, Ruf – listet alle Varianten, die du kennst. Ein Klick zaubert sie und macht sie zur Variante des Linksklicks. | an in Beta |
+| **Variantenmenü per Rechtsklick** | Rechtsklick auf eine Erinnerung mit Varianten – Aura, Siegel, Segen, Aspekt, Rüstung, Schild, Waffenverzauberung, Ruf – listet alle Varianten, die du kennst. Ein Klick zaubert sie und macht sie zur Variante des Linksklicks. | an |
 
 Was jede Klasse im Einzelnen bekommt: siehe [Klassen](./classes/).
 
@@ -75,33 +75,41 @@ Nur für Jäger und Hexenmeister; andere Klassen sehen diesen Tab nicht.
 <!-- screenshot: E10 Auswahlliste Dämon beschwören aufgeklappt -->
 
 ## Weitere Buffs
-<DocShot src="/shots/br/e03-settings-other-top.png" alt="Einstellungen, Tab Weitere Buffs, oben" :width="782" :height="668" />
+<DocShot src="/shots/br/e03-settings-other-top.png" alt="Einstellungen, Tab Weitere Buffs, oben" :width="821" :height="708" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
 | Satt, **Fläschchen**, **Ausgeruht (Schlafsack)** | Erinnerungen für Essen, Fläschchen und den Schlafsack-Buff. | aus |
 | **Waffe (Haupthand): Stein/Öl**, **Waffe (Nebenhand): Stein/Öl** | Erinnerungen für Steine und Öle (brauchen **Steine, Öle, Gifte per Klick**). | an |
 | **Weitere Buffs nur in Instanzen** | Essen, Fläschchen, Steine, Öle, Elixiere und Rollen nur in Dungeons und Raids. **Gilt auch für Steine, Öle, Gifte, Elixiere und Rollen; nicht für die Verfolgungs-Erinnerung.** | an |
-| **Steine, Öle, Gifte per Klick** <Badge type="warning" text="beta" /> | Trägt Wetzsteine, Gewichtssteine, Öle und Schurkengifte per Klick auf. | an in Beta |
-| **Elixiere** <Badge type="warning" text="beta" /> | Jedes Elixier, das du dabeihattest, erscheint in der Liste (**Elixiere aus deinen Taschen erscheinen hier.**); hak die an, die aktiv bleiben sollen. | keins angehakt |
-| **Rollen** <Badge type="warning" text="beta" /> | Sechs Rollen-Arten – Beweglichkeit, Stärke, Intelligenz, Willenskraft, Ausdauer, **Schutz** – mit der Anzahl in den Taschen. Nimmt den höchsten Rang, den du lesen kannst, und überspringt eine Rolle, wenn ein Klassenbuff schon so viel gibt. | die Arten, die zu deiner Klasse passen |
-| **Verfolgungs-Erinnerung** <Badge type="warning" text="beta" /> | Ein Häkchen je Verfolgung, gruppiert in **Fähigkeiten** und **Minimap**. Mehrere können gleichzeitig an sein. | Mineraliensuche, Kräutersuche, Schatzsuche (sobald gelernt) |
+| **Steine, Öle, Gifte per Klick** | Trägt Wetzsteine, Gewichtssteine, Öle und Schurkengifte per Klick auf. | an |
+| **Elixiere** | Jedes Elixier, das du dabeihattest, erscheint in der Liste (**Elixiere aus deinen Taschen erscheinen hier.**); hak die an, die aktiv bleiben sollen. | keins angehakt |
+| **Rollen** | Sechs Rollen-Arten – Beweglichkeit, Stärke, Intelligenz, Willenskraft, Ausdauer, **Schutz** – mit der Anzahl in den Taschen. Nimmt den höchsten Rang, den du lesen kannst, und überspringt eine Rolle, wenn ein Klassenbuff schon so viel gibt. | die Arten, die zu deiner Klasse passen |
+| **Verfolgungs-Erinnerung** | Ein Häkchen je Verfolgung, gruppiert in **Fähigkeiten** und **Minimap**. Mehrere können gleichzeitig an sein. | Mineraliensuche, Kräutersuche, Schatzsuche (sobald gelernt) |
 
-<DocShot src="/shots/br/e04-settings-other-bottom.png" alt="Einstellungen, Tab Weitere Buffs, unten" :width="782" :height="668" />
+<DocShot src="/shots/br/e04-settings-other-bottom.png" alt="Einstellungen, Tab Weitere Buffs, unten" :width="821" :height="708" />
 
 ::: tip Tipp
 Lass **Weitere Buffs nur in Instanzen** beim Leveln an – Essen und Fläschchen melden sich dann nur dort, wo es zählt.
 :::
 
-## Vorräte
-<DocShot src="/shots/br/e05-settings-supplies.png" alt="Einstellungen, Tab Vorräte" :width="782" :height="668" />
+## Ränge
+<DocShot src="/shots/br/e12-settings-ranks.png" alt="Einstellungen, Tab Ränge" :width="821" :height="708" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
-| **Klassen-Verbrauchsgüter** <Badge type="warning" text="beta" /> | Magier: herbeigezaubertes Wasser, Essen und Manastein. Hexenmeister: Gesundheitsstein und Seelenstein. Die Einträge selbst stehen unter **Klassenbuffs**. | an in Beta |
+| **Warnung bei niedrigen Zauberrängen** <Badge type="warning" text="beta" /> | Warnt nach einem Kampf, wenn du einen niedrigeren Rang eines Zaubers gewirkt hast als den höchsten erlernten. | an in Beta |
+| **Akzeptierte Ränge** | Zauber, deren niedrigen Rang du per Rechtsklick akzeptiert hast: Icon, Name, **Rang N** oder **alle Ränge**. Das **X** entfernt einen Eintrag. Leer: **Noch keine akzeptierten Ränge.** Gilt pro Charakter. | leer |
+
+## Vorräte
+<DocShot src="/shots/br/e05-settings-supplies.png" alt="Einstellungen, Tab Vorräte" :width="821" :height="708" />
+
+| Einstellung | Wirkung | Standard |
+|---|---|---|
+| **Klassen-Verbrauchsgüter** | Magier: herbeigezaubertes Wasser, Essen und Manastein. Hexenmeister: Gesundheitsstein und Seelenstein. Die Einträge selbst stehen unter **Klassenbuffs**. | an |
 | **Essen/Wasser unter** | Magier: warnt, wenn herbeigezaubertes Essen oder Wasser unter diese Zahl fällt. 0–60, 0 = aus. | 20 |
-| **Vorratswarnung** <Badge type="warning" text="beta" /> | Warnt, wenn Reagenzien, Munition, Seelensplitter, Tierfutter oder eigene Items knapp werden. | an in Beta |
-| **Beim Händler auffüllen** <Badge type="warning" text="beta" /> | Öffnet das Fenster **Auffüllen** bei einem Händler, der einen knappen Vorrat verkauft. Ohne deinen Klick wird nichts gekauft. | an in Beta |
+| **Vorratswarnung** | Warnt, wenn Reagenzien, Munition, Seelensplitter, Tierfutter oder eigene Items knapp werden. | an |
+| **Beim Händler auffüllen** | Öffnet das Fenster **Auffüllen** bei einem Händler, der einen knappen Vorrat verkauft. Ohne deinen Klick wird nichts gekauft. | an |
 | **Auch oberhalb der Mindestmenge auffüllen** | Aus: nur Vorräte unter **Min.** werden angeboten. An: alles unter **Auffüllen**, bei jedem Händlerbesuch. | aus |
 
 Unter den Schaltern: **Klicke außerhalb von Städten links auf eine Vorratswarnung, um im nächsten Erholungsgebiet erinnert zu werden.**
@@ -127,7 +135,7 @@ Trag die Reagenzien deines Berufs unter **Eigene Items** ein und hak **Auch ober
 
 Nur für Priester, Magier, Druiden und Paladine.
 
-<DocShot src="/shots/br/e06-settings-group.png" alt="Einstellungen, Tab Gruppe" :width="782" :height="668" />
+<DocShot src="/shots/br/e06-settings-group.png" alt="Einstellungen, Tab Gruppe" :width="821" :height="708" />
 
 | Einstellung | Wirkung | Standard |
 |---|---|---|
@@ -136,7 +144,7 @@ Nur für Priester, Magier, Druiden und Paladine.
 | **Prüfen in** | **Immer**, **Nur Dungeon & Raid** oder **Nur Raid**. | Immer |
 | **Segen des Paladins in Gruppenbuffs** <Badge type="warning" text="beta" /> | Paladine: dein Segen auf jedem Mitglied, gezaubert als Großer Segen. **Aus, solange Pally Power geladen ist.** | an in Beta |
 
-<DocShot src="/shots/br/e11-dropdown-check-in.png" alt="Auswahlliste Prüfen in aufgeklappt" :width="238" :height="122" />
+<DocShot src="/shots/br/e11-dropdown-check-in.png" alt="Auswahlliste Prüfen in aufgeklappt" :width="240" :height="126" />
 
 ## Neu anfangen
 `/br reset` setzt Position und Einstellungen zurück; die Beta-Schalter gehen auf den Standard deiner Version.

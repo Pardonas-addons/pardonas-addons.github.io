@@ -21,13 +21,16 @@ Sie reagiert nur auf fehlende oder ablaufende Buffs, nicht auf Vorratswarnungen 
 Du hast sie vermutlich außerhalb einer Stadt angeklickt: Sie kommt im nächsten Gasthaus, in der nächsten Stadt, beim Händler oder an der Bank wieder. Unter ihrer **Kritisch**-Menge kommt sie immer zurück.
 
 ## Das Fenster „Auffüllen“ geht nicht auf
-Es öffnet sich nur mit **Beim Händler auffüllen** (beta), wenn ein Vorrat unter **Min.** liegt (mit **Auch oberhalb der Mindestmenge auffüllen**: unter **Auffüllen**) und der Händler genau dieses Item für Gold verkauft. Hast du es geschlossen, bleibt es bis zum nächsten Besuch zu – ein Linksklick auf die Vorratswarnung öffnet es wieder.
+Es öffnet sich nur mit **Beim Händler auffüllen**, wenn ein Vorrat unter **Min.** liegt (mit **Auch oberhalb der Mindestmenge auffüllen**: unter **Auffüllen**) und der Händler genau dieses Item für Gold verkauft. Hast du es geschlossen, bleibt es bis zum nächsten Besuch zu – ein Linksklick auf die Vorratswarnung öffnet es wieder.
 
 ## Mein Essen wird nicht angeboten
 Angeboten wird nur Essen, das „Satt“ gibt (normales Essen und Wasser nicht). Fehlt ein Buff-Essen, melde es mit `/br debug` und dem Namen des Items.
 
 ## Segen werden in meiner Gruppe nicht geprüft
 Mit geladenem Pally Power überlässt das Addon die Segen Pally Power (**Aus, solange Pally Power geladen ist**).
+
+## Ich nutze bewusst einen niedrigeren Rang
+Rechtsklick auf die Zeile und **Rang N von &lt;Zauber&gt; akzeptieren** oder **Alle Ränge von &lt;Zauber&gt; akzeptieren** wählen. Akzeptierte Ränge stehen im Tab **Ränge**; das **X** entfernt sie wieder. Ganz abschalten: dort **Warnung bei niedrigen Zauberrängen** abhaken.
 
 ## Neu anfangen
 `/br reset` setzt Position und Einstellungen zurück.

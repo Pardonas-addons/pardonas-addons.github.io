@@ -15,7 +15,7 @@ Die Einstellungen öffnest du mit `/br` oder über **Optionen › Addons › Par
 
 Jede Einstellung erklärt die Seite [Einstellungen](./settings).
 
-<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen des Buff Reminders, Tab Anzeige" :width="782" :height="668" />
+<DocShot src="/shots/br/e01-settings-display.png" alt="Einstellungen des Buff Reminders, Tab Anzeige" :width="821" :height="708" />
 
 ## Liste verschieben
 - Im Tab **Anzeige** auf **Verschieben** klicken (oder `/br move`), die Liste ziehen, dann **Fixieren** (oder `/br lock`).
@@ -43,7 +43,7 @@ Die kleine Hinweiszeile unter jeder Erinnerung sagt dir immer, was ein Klick tut
 Im Kampf kann sich die Liste nicht ändern (WoW schützt anklickbare Knöpfe im Kampf). Schon angezeigte Erinnerungen lassen sich weiter anklicken; neue erscheinen nach dem Kampf.
 
 ## Eine Taste für alles
-Belege **Oberste Warnung auslösen** unter **Optionen › Tastaturbelegung › Pardona's Addons › Buff Reminder**. Die Taste erledigt das Dringendste: zuerst die oberste fehlende Erinnerung, dann den obersten Buff, der gleich abläuft. Vorratswarnungen und die Zeile „Isst …“ überspringt sie. Eine eben benutzte Erinnerung wird 1,5 Sekunden übersprungen, damit kein Item versehentlich doppelt verbraucht wird. Im Kampf gehen Items einmal pro Kampf, Zauber beliebig oft.
+Belege **Oberste Warnung auslösen** unter **Optionen › Tastaturbelegung › Pardona's Addons › Buff Reminder**. Die Taste erledigt das Dringendste: zuerst die oberste fehlende Erinnerung, dann den obersten Buff, der gleich abläuft. Vorratswarnungen und die Zeile „Isst …“ überspringt sie. Eine eben benutzte Erinnerung wird 1,5 Sekunden übersprungen, damit kein Item versehentlich doppelt verbraucht wird. Im Kampf gehen Items einmal pro Kampf, Zauber beliebig oft. Auch Zeilen der Rang-Warnung überspringt die Taste.
 
 Makro-Alternative: `/click PardonasBuffReminderKeyButton`
 
